@@ -1,0 +1,917 @@
+Symbol	Name	LastSale	MarketCap	ADR TSO	IPOyear	Sector	Industry	Summary Quote
+MSFT	Microsoft Corporation	133.43	1022449795065.6	n/a	1986	Technology	Computer Software: Prepackaged Software	https://www.nasdaq.com/symbol/msft
+AMZN	Amazon.com, Inc.	1878.27	924732004907.52	n/a	1997	Consumer Services	Catalog/Specialty Distribution	https://www.nasdaq.com/symbol/amzn
+AAPL	Apple Inc.	195.57	899832237750	n/a	1980	Technology	Computer Manufacturing	https://www.nasdaq.com/symbol/aapl
+GOOGL	Alphabet Inc.	1087.58	755045688317.7	n/a	n/a	Technology	Computer Software: Programming, Data Processing	https://www.nasdaq.com/symbol/googl
+GOOG	Alphabet Inc.	1086.35	754191768425.25	n/a	2004	Technology	Computer Software: Programming, Data Processing	https://www.nasdaq.com/symbol/goog
+FB	Facebook, Inc.	188.84	539041652906.24	n/a	2012	Technology	Computer Software: Programming, Data Processing	https://www.nasdaq.com/symbol/fb
+CSCO	Cisco Systems, Inc.	56.08	240063507088.64	n/a	1990	Technology	Computer Communications Equipment	https://www.nasdaq.com/symbol/csco
+INTC	Intel Corporation	46.85	209747450000	n/a	n/a	Technology	Semiconductors	https://www.nasdaq.com/symbol/intc
+CMCSA	Comcast Corporation	42.75	194033315634.75	n/a	n/a	Consumer Services	Television Services	https://www.nasdaq.com/symbol/cmcsa
+PEP	Pepsico, Inc.	133.81	187577756726.03	n/a	n/a	Consumer Non-Durables	Beverages (Production/Distribution)	https://www.nasdaq.com/symbol/pep
+NFLX	Netflix, Inc.	360.3	157530349065.9	n/a	2002	Consumer Services	Consumer Electronics/Video Chains	https://www.nasdaq.com/symbol/nflx
+ADBE	Adobe Inc.	287.97	140515233055.71	n/a	1986	Technology	Computer Software: Prepackaged Software	https://www.nasdaq.com/symbol/adbe
+PYPL	PayPal Holdings, Inc.	114.44	134459334007.72	n/a	n/a	Miscellaneous	Business Services	https://www.nasdaq.com/symbol/pypl
+COST	Costco Wholesale Corporation	266.36	117142247582.96	n/a	n/a	Consumer Services	Department/Specialty Retail Stores	https://www.nasdaq.com/symbol/cost
+AMGN	Amgen Inc.	184.44	112496537188.08	n/a	1983	Health Care	Biotechnology: Biological Products (No Diagnostic Substances)	https://www.nasdaq.com/symbol/amgn
+AVGO	Broadcom Inc.	276.51	110071324499.76	n/a	2009	Technology	Semiconductors	https://www.nasdaq.com/symbol/avgo
+TXN	Texas Instruments Incorporated	111.48	104591223943.08	n/a	n/a	Technology	Semiconductors	https://www.nasdaq.com/symbol/txn
+SBUX	Starbucks Corporation	84.25	102043600000	n/a	1992	Consumer Services	Restaurants	https://www.nasdaq.com/symbol/sbux
+NVDA	NVIDIA Corporation	151.48	92251320000	n/a	1999	Technology	Semiconductors	https://www.nasdaq.com/symbol/nvda
+QCOM	QUALCOMM Incorporated	72.55	88198957081.3	n/a	1991	Technology	Radio And Television Broadcasting And Communications Equipment	https://www.nasdaq.com/symbol/qcom
+CHTR	Charter Communications, Inc.	390.91	87332450598.25	n/a	n/a	Consumer Services	Television Services	https://www.nasdaq.com/symbol/chtr
+GILD	Gilead Sciences, Inc.	68.48	87304878080	n/a	1992	Health Care	Biotechnology: Biological Products (No Diagnostic Substances)	https://www.nasdaq.com/symbol/gild
+MDLZ	Mondelez International, Inc.	55.48	79915376575.08	n/a	n/a	Consumer Non-Durables	Packaged Foods	https://www.nasdaq.com/symbol/mdlz
+BKNG	Booking Holdings Inc.	1845.47	79892878457.15	n/a	n/a	Miscellaneous	Business Services	https://www.nasdaq.com/symbol/bkng
+QQQ	Invesco QQQ Trust, Series 1	184.93	73370977500	n/a	n/a	n/a	n/a	https://www.nasdaq.com/symbol/qqq
+ADP	Automatic Data Processing, Inc.	165.52	72038977788.24	n/a	n/a	Technology	EDP Services	https://www.nasdaq.com/symbol/adp
+CME	CME Group Inc.	198.32	70992989984.48	n/a	2002	Finance	Investment Bankers/Brokers/Service	https://www.nasdaq.com/symbol/cme
+INTU	Intuit Inc.	257.49	66752579203.65	n/a	1993	Technology	Computer Software: Prepackaged Software	https://www.nasdaq.com/symbol/intu
+CELG	Celgene Corporation	93.19	65723136159.84	n/a	1987	Health Care	Major Pharmaceuticals	https://www.nasdaq.com/symbol/celg
+TMUS	T-Mobile US, Inc.	74.58	63713918560.38	n/a	n/a	Public Utilities	Telecommunications Equipment	https://www.nasdaq.com/symbol/tmus
+CSX	CSX Corporation	76.09	61569263345.94	n/a	n/a	Transportation	Railroads	https://www.nasdaq.com/symbol/csx
+ISRG	Intuitive Surgical, Inc.	520.53	60094489948.74	n/a	2000	Health Care	Industrial Specialties	https://www.nasdaq.com/symbol/isrg
+ILMN	Illumina, Inc.	358.08	52637760000	n/a	2000	Capital Goods	Biotechnology: Laboratory Analytical Instruments	https://www.nasdaq.com/symbol/ilmn
+AMOV	America Movil, S.A.B. de C.V.	15.19	50140555282.58	n/a	n/a	Public Utilities	Telecommunications Equipment	https://www.nasdaq.com/symbol/amov
+WBA	Walgreens Boots Alliance, Inc.	52.95	48412130885.1	n/a	n/a	Health Care	Medical/Nursing Services	https://www.nasdaq.com/symbol/wba
+BIIB	Biogen Inc.	240.29	46590644365.13	n/a	n/a	Health Care	Biotechnology: Biological Products (No Diagnostic Substances)	https://www.nasdaq.com/symbol/biib
+WDAY	Workday, Inc.	204.52	46221520000	n/a	n/a	Technology	EDP Services	https://www.nasdaq.com/symbol/wday
+VRTX	Vertex Pharmaceuticals Incorporated	180.15	46140263004	n/a	1991	Health Care	Major Pharmaceuticals	https://www.nasdaq.com/symbol/vrtx
+MAR	Marriott International	133.28	44380751795.52	n/a	n/a	Consumer Services	Hotels/Resorts	https://www.nasdaq.com/symbol/mar
+EQIX	Equinix, Inc.	500.05	42039222001.85	n/a	2000	Consumer Services	Real Estate Investment Trusts	https://www.nasdaq.com/symbol/eqix
+BND	Vanguard Total Bond Market ETF	82.95	41335894343.1	n/a	n/a	n/a	n/a	https://www.nasdaq.com/symbol/bnd
+ADI	Analog Devices, Inc.	110.28	40777268113.56	n/a	n/a	Technology	Semiconductors	https://www.nasdaq.com/symbol/adi
+AMAT	Applied Materials, Inc.	41.98	39297684919.42	n/a	1972	Technology	Semiconductors	https://www.nasdaq.com/symbol/amat
+TSLA	Tesla, Inc. 	219.76	39158730911.44	n/a	2010	Capital Goods	Auto Manufacturing	https://www.nasdaq.com/symbol/tsla
+KHC	The Kraft Heinz Company	30.68	37427722506.72	n/a	n/a	Consumer Non-Durables	Packaged Foods	https://www.nasdaq.com/symbol/khc
+ROST	Ross Stores, Inc.	101.51	37020251168.08	n/a	1985	Consumer Services	Clothing/Shoe/Accessory Stores	https://www.nasdaq.com/symbol/rost
+MU	Micron Technology, Inc.	32.68	36166531519.48	n/a	n/a	Technology	Semiconductors	https://www.nasdaq.com/symbol/mu
+CTSH	Cognizant Technology Solutions Corporation	63.16	35955910490.4	n/a	1998	Technology	EDP Services	https://www.nasdaq.com/symbol/ctsh
+ADSK	Autodesk, Inc.	163.16	35833130672.8	n/a	n/a	Technology	Computer Software: Prepackaged Software	https://www.nasdaq.com/symbol/adsk
+AABA	Altaba Inc.	68.64	35659260162.24	n/a	n/a	Technology	EDP Services	https://www.nasdaq.com/symbol/aaba
+FISV	Fiserv, Inc.	90.28	35429468574.64	n/a	1986	Technology	EDP Services	https://www.nasdaq.com/symbol/fisv
+ATVI	Activision Blizzard, Inc	46.2	35389510417.8	n/a	n/a	Technology	Computer Software: Prepackaged Software	https://www.nasdaq.com/symbol/atvi
+MNST	Monster Beverage Corporation	63.33	34424680492.68	n/a	n/a	Consumer Non-Durables	Beverages (Production/Distribution)	https://www.nasdaq.com/symbol/mnst
+REGN	Regeneron Pharmaceuticals, Inc.	312.9	34305971758.8	n/a	1991	Health Care	Major Pharmaceuticals	https://www.nasdaq.com/symbol/regn
+EBAY	eBay Inc.	39.02	34006999187.02	n/a	1998	Miscellaneous	Business Services	https://www.nasdaq.com/symbol/ebay
+BIDU	Baidu, Inc.	113.26	31561571850.2	278664770	2005	Technology	Computer Software: Programming, Data Processing	https://www.nasdaq.com/symbol/bidu
+XEL	Xcel Energy Inc.	60.99	31389917919.09	n/a	n/a	Public Utilities	Power Generation	https://www.nasdaq.com/symbol/xel
+AMD	Advanced Micro Devices, Inc.	28.86	31213929045.78	n/a	n/a	Technology	Semiconductors	https://www.nasdaq.com/symbol/amd
+PAYX	Paychex, Inc.	84.8	30477120000	n/a	1983	Consumer Services	Diversified Commercial Services	https://www.nasdaq.com/symbol/payx
+TEAM	Atlassian Corporation Plc	125.74	30311187056.18	n/a	2015	Technology	Computer Software: Prepackaged Software	https://www.nasdaq.com/symbol/team
+MELI	MercadoLibre, Inc.	614.54	30308198979.02	n/a	2007	Miscellaneous	Business Services	https://www.nasdaq.com/symbol/meli
+ORLY	O&#39;Reilly Automotive, Inc.	374.46	29311502817.96	n/a	1993	Consumer Services	Other Specialty Stores	https://www.nasdaq.com/symbol/orly
+EA	Electronic Arts Inc.	96.9	28717170045.6	n/a	n/a	Technology	Computer Software: Prepackaged Software	https://www.nasdaq.com/symbol/ea
+ALXN	Alexion Pharmaceuticals, Inc.	125.15	28063287332.1	n/a	1996	Health Care	Major Pharmaceuticals	https://www.nasdaq.com/symbol/alxn
+GOLD	Barrick Gold Corporation	16.01	28041772568.88	n/a	n/a	Basic Industries	Precious Metals	https://www.nasdaq.com/symbol/gold
+XLNX	Xilinx, Inc.	109.95	27598814699.4	n/a	1990	Technology	Semiconductors	https://www.nasdaq.com/symbol/xlnx
+NXPI	NXP Semiconductors N.V.	95.11	27122985119.44	n/a	2010	Technology	Semiconductors	https://www.nasdaq.com/symbol/nxpi
+AMTD	TD Ameritrade Holding Corporation	48.29	26719071262.73	n/a	1997	Finance	Investment Bankers/Brokers/Service	https://www.nasdaq.com/symbol/amtd
+JD	JD.com, Inc.	28.5	26369122744.5	925232377	2014	Consumer Services	Other Specialty Stores	https://www.nasdaq.com/symbol/jd
+LRCX	Lam Research Corporation	175.82	26360082328.78	n/a	1984	Technology	Industrial Machinery/Components	https://www.nasdaq.com/symbol/lrcx
+DLTR	Dollar Tree, Inc.	108.95	25884228999.4	n/a	1995	Consumer Services	Department/Specialty Retail Stores	https://www.nasdaq.com/symbol/dltr
+SBAC	SBA Communications Corporation	228.33	25858629371.25	n/a	1999	Consumer Services	Real Estate Investment Trusts	https://www.nasdaq.com/symbol/sbac
+SIRI	Sirius XM Holdings Inc.	5.54	25524357476.22	n/a	n/a	Consumer Services	Broadcasting	https://www.nasdaq.com/symbol/siri
+VCIT	Vanguard Intermediate-Term Corporate Bond ETF	89.61	25193593512.81	n/a	n/a	n/a	n/a	https://www.nasdaq.com/symbol/vcit
+TROW	T. Rowe Price Group, Inc.	105.92	25047476168.64	n/a	1986	Finance	Investment Bankers/Brokers/Service	https://www.nasdaq.com/symbol/trow
+WLTW	Willis Towers Watson Public Limited Company	192.31	24853409391.18	n/a	n/a	Finance	Specialty Insurers	https://www.nasdaq.com/symbol/wltw
+VRSN	VeriSign, Inc.	207.9	24778220336.1	n/a	1998	Technology	EDP Services	https://www.nasdaq.com/symbol/vrsn
+PCAR	PACCAR Inc.	71.3	24726276872.6	n/a	n/a	Capital Goods	Auto Manufacturing	https://www.nasdaq.com/symbol/pcar
+SHV	iShares Short Treasury Bond ETF	110.62	24590826000	n/a	n/a	n/a	n/a	https://www.nasdaq.com/symbol/shv
+VCSH	Vanguard Short-Term Corporate Bond ETF	80.69	24246968903.91	n/a	n/a	n/a	n/a	https://www.nasdaq.com/symbol/vcsh
+CTAS	Cintas Corporation	231.45	24202926935.7	n/a	1983	Consumer Non-Durables	Apparel	https://www.nasdaq.com/symbol/ctas
+INFO	IHS Markit Ltd.	59.26	23689086391.36	n/a	1996	Technology	Computer Software: Programming, Data Processing	https://www.nasdaq.com/symbol/info
+VRSK	Verisk Analytics, Inc.	144.33	23621863553.16	n/a	2009	Technology	EDP Services	https://www.nasdaq.com/symbol/vrsk
+IDXX	IDEXX Laboratories, Inc.	271.31	23334377934.92	n/a	1991	Health Care	Biotechnology: In Vitro & In Vivo Diagnostic Substances	https://www.nasdaq.com/symbol/idxx
+CERN	Cerner Corporation	71.25	23185187831.25	n/a	1986	Technology	EDP Services	https://www.nasdaq.com/symbol/cern
+ZM	Zoom Video Communications, Inc.	85.03	23166635309.73	n/a	2019	Technology	Computer Software: Programming, Data Processing	https://www.nasdaq.com/symbol/zm
+LULU	lululemon athletica inc.	177.26	23092646297.38	n/a	2007	Consumer Non-Durables	Apparel	https://www.nasdaq.com/symbol/lulu
+UAL	United Continental Holdings, Inc.	85.06	22381786508.82	n/a	n/a	Transportation	Air Freight/Delivery Services	https://www.nasdaq.com/symbol/ual
+ALGN	Align Technology, Inc.	276.02	22082950289.84	n/a	2001	Health Care	Industrial Specialties	https://www.nasdaq.com/symbol/algn
+FOXA	Fox Corporation	35.34	21929354524.86	n/a	n/a	Consumer Services	Broadcasting	https://www.nasdaq.com/symbol/foxa
+FOX	Fox Corporation	35.19	21836275770.51	n/a	n/a	Consumer Services	Broadcasting	https://www.nasdaq.com/symbol/fox
+HBANO	Huntington Bancshares Incorporated	26.77	21327366591.29	n/a	n/a	Finance	Major Banks	https://www.nasdaq.com/symbol/hbano
+ULTA	Ulta Beauty, Inc.	348.69	20383630406.67	n/a	2007	Consumer Services	Other Specialty Stores	https://www.nasdaq.com/symbol/ulta
+MCHP	Microchip Technology Incorporated	83.94	19971551081.52	n/a	1993	Technology	Semiconductors	https://www.nasdaq.com/symbol/mchp
+FITB	Fifth Third Bancorp	27.09	19834558795.17	n/a	n/a	Finance	Major Banks	https://www.nasdaq.com/symbol/fitb
+CSGP	CoStar Group, Inc.	538.44	19675446181.44	n/a	1998	Miscellaneous	Business Services	https://www.nasdaq.com/symbol/csgp
+CDNS	Cadence Design Systems, Inc.	69.43	19511912900	n/a	n/a	Technology	Computer Software: Prepackaged Software	https://www.nasdaq.com/symbol/cdns
+LBTYA	Liberty Global plc	26.25	19363151430	n/a	n/a	Consumer Services	Television Services	https://www.nasdaq.com/symbol/lbtya
+EXPE	Expedia Group, Inc.	129.75	19320098077.5	n/a	n/a	Consumer Services	Transportation Services	https://www.nasdaq.com/symbol/expe
+LBTYK	Liberty Global plc	25.67	18935317988.88	n/a	n/a	Consumer Services	Television Services	https://www.nasdaq.com/symbol/lbtyk
+MTCH	Match Group, Inc.	67.11	18866347270.53	n/a	2015	Technology	Computer Software: Programming, Data Processing	https://www.nasdaq.com/symbol/mtch
+INCY	Incyte Corporation	87.61	18786961277.89	n/a	n/a	Health Care	Biotechnology: Commercial Physical & Biological Resarch	https://www.nasdaq.com/symbol/incy
+SNPS	Synopsys, Inc.	124.64	18683425693.6	n/a	1992	Technology	Computer Software: Prepackaged Software	https://www.nasdaq.com/symbol/snps
+NTRS	Northern Trust Corporation	85.76	18667944272.64	n/a	n/a	Finance	Major Banks	https://www.nasdaq.com/symbol/ntrs
+LYFT	Lyft, Inc.	64.04	18610545733.88	n/a	2019	Miscellaneous	Business Services	https://www.nasdaq.com/symbol/lyft
+NTES	NetEase, Inc.	254.6	18574600400.6	72956011	n/a	Miscellaneous	Business Services	https://www.nasdaq.com/symbol/ntes
+FAST	Fastenal Company	32.14	18404316822.44	n/a	1987	Consumer Services	RETAIL: Building Materials	https://www.nasdaq.com/symbol/fast
+LBTYB	Liberty Global plc	24.8	18293567827.2	n/a	n/a	Consumer Services	Television Services	https://www.nasdaq.com/symbol/lbtyb
+KLAC	KLA-Tencor Corporation	113.07	18274403024.34	n/a	1980	Capital Goods	Electronic Components	https://www.nasdaq.com/symbol/klac
+LBRDA	Liberty Broadband Corporation	100.17	18173971217.43	n/a	n/a	Consumer Services	Television Services	https://www.nasdaq.com/symbol/lbrda
+BNDX	Vanguard Total International Bond ETF	57.3	18109029199.2	n/a	n/a	n/a	n/a	https://www.nasdaq.com/symbol/bndx
+DISCB	Discovery, Inc.	34.4	18057069498.4	n/a	n/a	Consumer Services	Television Services	https://www.nasdaq.com/symbol/discb
+IAC	IAC/InterActiveCorp	212.92	17906180653.04	n/a	n/a	Consumer Services	Other Specialty Stores	https://www.nasdaq.com/symbol/iac
+DISH	DISH Network Corporation	37.78	17750129003.82	n/a	1995	Consumer Services	Television Services	https://www.nasdaq.com/symbol/dish
+SPLK	Splunk Inc.	117.99	17718760062.9	n/a	2012	Technology	Computer Software: Prepackaged Software	https://www.nasdaq.com/symbol/splk
+SHY	iShares 1-3 Year Treasury Bond ETF	84.81	17682885000	n/a	n/a	n/a	n/a	https://www.nasdaq.com/symbol/shy
+CHKP	Check Point Software Technologies Ltd.	114.08	17367483072.64	n/a	1996	Technology	Computer Software: Prepackaged Software	https://www.nasdaq.com/symbol/chkp
+FANG	Diamondback Energy, Inc.	105.22	17326809410.1	n/a	2012	Energy	Oil & Gas Production	https://www.nasdaq.com/symbol/fang
+DVY	iShares Select Dividend ETF	98.41	17216829500	n/a	n/a	n/a	n/a	https://www.nasdaq.com/symbol/dvy
+CINF	Cincinnati Financial Corporation	105.04	17145661133.12	n/a	n/a	Finance	Property-Casualty Insurers	https://www.nasdaq.com/symbol/cinf
+CTRP	Ctrip.com International, Ltd.	35	17044161400	486976040	2003	Miscellaneous	Business Services	https://www.nasdaq.com/symbol/ctrp
+MBB	iShares MBS ETF	107.46	16892712000	n/a	n/a	n/a	n/a	https://www.nasdaq.com/symbol/mbb
+CPRT	Copart, Inc.	73.38	16812303427.92	n/a	1994	Consumer Durables	Automotive Aftermarket	https://www.nasdaq.com/symbol/cprt
+ANSS	ANSYS, Inc.	196.45	16487740662.85	n/a	1996	Technology	Computer Software: Prepackaged Software	https://www.nasdaq.com/symbol/anss
+IEF	iShares 7-10 Year Treasury Bond ETF	110.09	16348365000	n/a	n/a	n/a	n/a	https://www.nasdaq.com/symbol/ief
+NDAQ	Nasdaq, Inc.	98	16239041980	n/a	n/a	Finance	Investment Bankers/Brokers/Service	https://www.nasdaq.com/symbol/ndaq
+EMB	iShares J.P. Morgan USD Emerging Markets Bond ETF	112.47	15745800000	n/a	n/a	n/a	n/a	https://www.nasdaq.com/symbol/emb
+CDW	CDW Corporation	107.465	15722373767.945	n/a	2013	Consumer Services	Catalog/Specialty Distribution	https://www.nasdaq.com/symbol/cdw
+PFG	Principal Financial Group Inc	56.43	15718471258.05	n/a	2001	Finance	Accident &Health Insurance	https://www.nasdaq.com/symbol/pfg
+MXIM	Maxim Integrated Products, Inc.	57.67	15710753729.23	n/a	1988	Technology	Semiconductors	https://www.nasdaq.com/symbol/mxim
+DISCA	Discovery, Inc.	29.93	15710700293.23	n/a	n/a	Consumer Services	Television Services	https://www.nasdaq.com/symbol/disca
+LBRDK	Liberty Broadband Corporation	101.65	15515531634.85	n/a	n/a	Consumer Services	Television Services	https://www.nasdaq.com/symbol/lbrdk
+MRVL	Marvell Technology Group Ltd.	23.41	15474010000	n/a	2000	Technology	Semiconductors	https://www.nasdaq.com/symbol/mrvl
+PFF	iShares Preferred and Income Securities ETF	36.86	15453555000	n/a	n/a	n/a	n/a	https://www.nasdaq.com/symbol/pff
+GRMN	Garmin Ltd.	80.19	15223864449.42	n/a	2000	Capital Goods	Industrial Machinery/Components	https://www.nasdaq.com/symbol/grmn
+BMRN	BioMarin Pharmaceutical Inc.	83.82	15009760808.46	n/a	1999	Health Care	Major Pharmaceuticals	https://www.nasdaq.com/symbol/bmrn
+IXUS	iShares Core MSCI Total International Stock ETF	58.08	14880096000	n/a	n/a	n/a	n/a	https://www.nasdaq.com/symbol/ixus
+NTAP	NetApp, Inc.	60.96	14631752519.52	n/a	1995	Technology	Electronic Components	https://www.nasdaq.com/symbol/ntap
+ASML	ASML Holding N.V.	199.04	14566763498.24	73185106	1995	Technology	Industrial Machinery/Components	https://www.nasdaq.com/symbol/asml
+TLT	iShares 20+ Year Treasury Bond ETF	132.82	14543790000	n/a	n/a	n/a	n/a	https://www.nasdaq.com/symbol/tlt
+ACGL	Arch Capital Group Ltd.	35.91	14500580524.92	n/a	n/a	Finance	Property-Casualty Insurers	https://www.nasdaq.com/symbol/acgl
+DISCK	Discovery, Inc.	27.57	14471901339.27	n/a	n/a	Consumer Services	Television Services	https://www.nasdaq.com/symbol/disck
+SSNC	SS&C Technologies Holdings, Inc.	57.2	14471317031.6	n/a	2010	Technology	Computer Software: Prepackaged Software	https://www.nasdaq.com/symbol/ssnc
+EXAS	Exact Sciences Corporation	111.45	14392517031	n/a	2001	Health Care	Biotechnology: Commercial Physical & Biological Resarch	https://www.nasdaq.com/symbol/exas
+BPR	Brookfield Property REIT Inc.	19.16	14063119223.28	n/a	n/a	Consumer Services	Real Estate Investment Trusts	https://www.nasdaq.com/symbol/bpr
+VIA	Viacom Inc.	34.84	14043134114.88	n/a	n/a	Consumer Services	Television Services	https://www.nasdaq.com/symbol/via
+HBAN	Huntington Bancshares Incorporated	13.41	14032761955.56	n/a	n/a	Finance	Major Banks	https://www.nasdaq.com/symbol/hban
+IEP	Icahn Enterprises L.P.	71.39	14009303317.46	n/a	n/a	Capital Goods	Auto Parts:O.E.M.	https://www.nasdaq.com/symbol/iep
+AAL	American Airlines Group, Inc.	31.26	13905545694.9	n/a	n/a	Transportation	Air Freight/Delivery Services	https://www.nasdaq.com/symbol/aal
+OKTA	Okta, Inc.	121	13810827712	n/a	2017	Technology	Computer Software: Prepackaged Software	https://www.nasdaq.com/symbol/okta
+XRAY	DENTSPLY SIRONA Inc.	57.89	13544957243.44	n/a	1987	Health Care	Medical/Dental Instruments	https://www.nasdaq.com/symbol/xray
+ERIE	Erie Indemnity Company	256.63	13419148824.84	n/a	n/a	Finance	Specialty Insurers	https://www.nasdaq.com/symbol/erie
+HAS	Hasbro, Inc.	105.12	13229784673.92	n/a	n/a	Consumer Non-Durables	Recreational Products/Toys	https://www.nasdaq.com/symbol/has
+DXCM	DexCom, Inc.	143.52	13067554125.6	n/a	2005	Health Care	Medical/Dental Instruments	https://www.nasdaq.com/symbol/dxcm
+HOLX	Hologic, Inc.	48.33	12954863169.54	n/a	1990	Health Care	Medical Electronics	https://www.nasdaq.com/symbol/holx
+CTXS	Citrix Systems, Inc.	98.16	12922943829.12	n/a	1995	Technology	Computer Software: Prepackaged Software	https://www.nasdaq.com/symbol/ctxs
+TSCO	Tractor Supply Company	106.63	12864034280.96	n/a	1994	Consumer Services	RETAIL: Building Materials	https://www.nasdaq.com/symbol/tsco
+VXUS	Vanguard Total International Stock ETF	52.22	12859376203.66	n/a	n/a	n/a	n/a	https://www.nasdaq.com/symbol/vxus
+SYMC	Symantec Corporation	20.8	12858432600	n/a	1989	Technology	Computer Software: Prepackaged Software	https://www.nasdaq.com/symbol/symc
+SWKS	Skyworks Solutions, Inc.	74.32	12834587014.24	n/a	n/a	Technology	Semiconductors	https://www.nasdaq.com/symbol/swks
+WYNN	Wynn Resorts, Limited	118.96	12807440233.52	n/a	2002	Consumer Services	Hotels/Resorts	https://www.nasdaq.com/symbol/wynn
+STX	Seagate Technology PLC	46.21	12792906019.05	n/a	2002	Technology	Electronic Components	https://www.nasdaq.com/symbol/stx
+FTNT	Fortinet, Inc.	74.87	12784847020.44	n/a	2009	Technology	Computer peripheral equipment	https://www.nasdaq.com/symbol/ftnt
+AKAM	Akamai Technologies, Inc.	77.81	12750135211.44	n/a	1999	Miscellaneous	Business Services	https://www.nasdaq.com/symbol/akam
+EXPD	Expeditors International of Washington, Inc.	73.83	12698457444.66	n/a	n/a	Transportation	Oil Refining/Marketing	https://www.nasdaq.com/symbol/expd
+TTWO	Take-Two Interactive Software, Inc.	112.81	12695806727.81	n/a	1997	Technology	Computer Software: Prepackaged Software	https://www.nasdaq.com/symbol/ttwo
+IGSB	iShares Short-Term Corporate Bond ETF	53.4	12412830000	n/a	n/a	n/a	n/a	https://www.nasdaq.com/symbol/igsb
+YNDX	Yandex N.V.	37.59	12277586858.88	n/a	2011	Technology	Computer Software: Programming, Data Processing	https://www.nasdaq.com/symbol/yndx
+WDC	Western Digital Corporation	41.1	12042205634.4	n/a	n/a	Technology	Electronic Components	https://www.nasdaq.com/symbol/wdc
+MKTX	MarketAxess Holdings, Inc.	319.04	12027005614.4	n/a	2004	Finance	Investment Bankers/Brokers/Service	https://www.nasdaq.com/symbol/mktx
+CBOE	Cboe Global Markets, Inc.	107.5	12020515625	n/a	2010	n/a	n/a	https://www.nasdaq.com/symbol/cboe
+LSXMK	Liberty Media Corporation	37.28	11917558560	n/a	n/a	Consumer Services	Broadcasting	https://www.nasdaq.com/symbol/lsxmk
+VIAB	Viacom Inc.	29.52	11898774944.64	n/a	n/a	Consumer Services	Television Services	https://www.nasdaq.com/symbol/viab
+LSXMA	Liberty Media Corporation	37.13	11869607010	n/a	n/a	Consumer Services	Broadcasting	https://www.nasdaq.com/symbol/lsxma
+LNT	Alliant Energy Corporation	49.78	11817493680.02	n/a	n/a	Public Utilities	Power Generation	https://www.nasdaq.com/symbol/lnt
+LSXMB	Liberty Media Corporation	36.94	11808868380	n/a	n/a	Consumer Services	Broadcasting	https://www.nasdaq.com/symbol/lsxmb
+ABMD	ABIOMED, Inc.	257.06	11599762836.74	n/a	n/a	Health Care	Medical/Dental Instruments	https://www.nasdaq.com/symbol/abmd
+ODFL	Old Dominion Freight Line, Inc.	142.06	11499276837.2	n/a	1991	Transportation	Trucking Freight/Courier Services	https://www.nasdaq.com/symbol/odfl
+REG	Regency Centers Corporation	68.02	11394621361.82	n/a	1993	Consumer Services	Real Estate Investment Trusts	https://www.nasdaq.com/symbol/reg
+CHRW	C.H. Robinson Worldwide, Inc.	82.74	11299183732.2	n/a	1997	Transportation	Oil Refining/Marketing	https://www.nasdaq.com/symbol/chrw
+SIVB	SVB Financial Group	214.5	11159832255	n/a	n/a	Finance	Major Banks	https://www.nasdaq.com/symbol/sivb
+SGEN	Seattle Genetics, Inc.	69.03	11135548425.69	n/a	2001	Health Care	Biotechnology: Biological Products (No Diagnostic Substances)	https://www.nasdaq.com/symbol/sgen
+OTEX	Open Text Corporation	40.89	11029926902.13	n/a	1996	Technology	EDP Services	https://www.nasdaq.com/symbol/otex
+TRMB	Trimble Inc.	43.65	10983433738.05	n/a	1990	Capital Goods	Industrial Machinery/Components	https://www.nasdaq.com/symbol/trmb
+NCLH	Norwegian Cruise Line Holdings Ltd.	50.86	10955010349.16	n/a	n/a	Consumer Services	Marine Transportation	https://www.nasdaq.com/symbol/nclh
+ETFC	E*TRADE Financial Corporation	44.47	10880505495.36	n/a	n/a	Finance	Savings Institutions	https://www.nasdaq.com/symbol/etfc
+ACWI	iShares MSCI ACWI Index Fund	73.07	10668220000	n/a	n/a	n/a	n/a	https://www.nasdaq.com/symbol/acwi
+ZBRA	Zebra Technologies Corporation	197.53	10662039476.83	n/a	1991	Technology	Industrial Machinery/Components	https://www.nasdaq.com/symbol/zbra
+ROKU	Roku, Inc.	93.25	10564446828.75	n/a	2017	Consumer Services	Television Services	https://www.nasdaq.com/symbol/roku
+JKHY	Jack Henry & Associates, Inc.	135.65	10472675258.15	n/a	1985	Technology	EDP Services	https://www.nasdaq.com/symbol/jkhy
+HSIC	Henry Schein, Inc.	69.32	10333843300.2	n/a	1995	Health Care	Medical Specialities	https://www.nasdaq.com/symbol/hsic
+ARRY	Array BioPharma Inc.	46.21	10309239311.99	n/a	2000	Health Care	Major Pharmaceuticals	https://www.nasdaq.com/symbol/arry
+TTD	The Trade Desk, Inc.	226.88	10101594683.52	n/a	2016	Technology	Computer Software: Programming, Data Processing	https://www.nasdaq.com/symbol/ttd
+PTC	PTC Inc.	86.06	9900500750.4	n/a	n/a	Technology	Computer Software: Prepackaged Software	https://www.nasdaq.com/symbol/ptc
+DBX	Dropbox, Inc.	23.97	9855957034.5	n/a	2018	Technology	Computer Software: Prepackaged Software	https://www.nasdaq.com/symbol/dbx
+MYL	Mylan N.V.	18.65	9613479113.85	n/a	n/a	Health Care	Major Pharmaceuticals	https://www.nasdaq.com/symbol/myl
+JBHT	J.B. Hunt Transport Services, Inc.	87.81	9548362194.33	n/a	n/a	Transportation	Trucking Freight/Courier Services	https://www.nasdaq.com/symbol/jbht
+SNY	Sanofi	43.49	9440335072.02	217069098	n/a	Health Care	Major Pharmaceuticals	https://www.nasdaq.com/symbol/sny
+SCZ	iShares MSCI EAFE Small-Cap ETF	56.68	9397544000	n/a	n/a	n/a	n/a	https://www.nasdaq.com/symbol/scz
+ZS	Zscaler, Inc.	73.82	9276363524.96	n/a	2018	Technology	EDP Services	https://www.nasdaq.com/symbol/zs
+SRPT	Sarepta Therapeutics, Inc.	124.16	9206944250.88	n/a	n/a	Health Care	Major Pharmaceuticals	https://www.nasdaq.com/symbol/srpt
+QGEN	Qiagen N.V.	40.37	9162617420	n/a	n/a	Health Care	Biotechnology: Biological Products (No Diagnostic Substances)	https://www.nasdaq.com/symbol/qgen
+TW	Tradeweb Markets Inc.	41.09	9131110074.73	n/a	2019	Finance	Investment Bankers/Brokers/Service	https://www.nasdaq.com/symbol/tw
+SAGE	Sage Therapeutics, Inc.	178.2	9114519783.6	n/a	2014	Health Care	Major Pharmaceuticals	https://www.nasdaq.com/symbol/sage
+BYND	Beyond Meat, Inc.	150.6	9054493228.2	n/a	2019	Consumer Non-Durables	Packaged Foods	https://www.nasdaq.com/symbol/bynd
+VMBS	Vanguard Mortgage-Backed Securities ETF	52.8	9053106216	n/a	n/a	n/a	n/a	https://www.nasdaq.com/symbol/vmbs
+IONS	Ionis Pharmaceuticals, Inc.	64.46	9045220193.24	n/a	n/a	Health Care	Major Pharmaceuticals	https://www.nasdaq.com/symbol/ions
+AGNC	AGNC Investment Corp.	16.86	9043913131.44	n/a	2008	Consumer Services	Real Estate Investment Trusts	https://www.nasdaq.com/symbol/agnc
+UBNT	Ubiquiti Networks, Inc.	127.9	9027349549	n/a	2011	Technology	Radio And Television Broadcasting And Communications Equipment	https://www.nasdaq.com/symbol/ubnt
+AGNCB	AGNC Investment Corp.	25.86	9020023780.02	n/a	n/a	Consumer Services	Real Estate Investment Trusts	https://www.nasdaq.com/symbol/agncb
+CACC	Credit Acceptance Corporation	469.63	8827656243.35	n/a	1992	Finance	Finance: Consumer Services	https://www.nasdaq.com/symbol/cacc
+MDB	MongoDB, Inc.	158.59	8774572665.17	n/a	2017	Technology	Computer Software: Prepackaged Software	https://www.nasdaq.com/symbol/mdb
+DOCU	DocuSign, Inc.	49.83	8660454000	n/a	2018	Technology	Computer Software: Prepackaged Software	https://www.nasdaq.com/symbol/docu
+ZG	Zillow Group, Inc.	42.19	8656085257.18	n/a	2011	Miscellaneous	Business Services	https://www.nasdaq.com/symbol/zg
+DOX	Amdocs Limited	62.12	8518577720	n/a	n/a	Technology	EDP Services	https://www.nasdaq.com/symbol/dox
+FWONK	Liberty Media Corporation	36.49	8433875170.04	n/a	n/a	Consumer Services	Broadcasting	https://www.nasdaq.com/symbol/fwonk
+FFIV	F5 Networks, Inc.	141.02	8418222180.72	n/a	1999	Technology	Computer Communications Equipment	https://www.nasdaq.com/symbol/ffiv
+OLED	Universal Display Corporation	177.87	8388516397.8	n/a	n/a	Capital Goods	Electrical Products	https://www.nasdaq.com/symbol/oled
+GLPI	Gaming and Leisure Properties, Inc.	39.06	8384592726.72	n/a	n/a	Consumer Services	Real Estate Investment Trusts	https://www.nasdaq.com/symbol/glpi
+EEFT	Euronet Worldwide, Inc.	161.23	8374437111.28	n/a	1997	Finance	Investment Bankers/Brokers/Service	https://www.nasdaq.com/symbol/eeft
+STNE	StoneCo Ltd.	28.2	8365523175.6	n/a	2018	Technology	EDP Services	https://www.nasdaq.com/symbol/stne
+AZPN	Aspen Technology, Inc.	119.94	8271550915.62	n/a	1994	Technology	EDP Services	https://www.nasdaq.com/symbol/azpn
+LKQ	LKQ Corporation	26.27	8248626478.12	n/a	n/a	Consumer Services	Motor Vehicles	https://www.nasdaq.com/symbol/lkq
+SEIC	SEI Investments Company	54.02	8239140285.66	n/a	1981	Finance	Investment Bankers/Brokers/Service	https://www.nasdaq.com/symbol/seic
+FWONA	Liberty Media Corporation	35.19	8133408255.24	n/a	n/a	Consumer Services	Broadcasting	https://www.nasdaq.com/symbol/fwona
+CY	Cypress Semiconductor Corporation	22.17	8112753410.16	n/a	1986	Technology	Semiconductors	https://www.nasdaq.com/symbol/cy
+ZION	Zions Bancorporation N.A.	43.99	8031048822.71	n/a	n/a	Finance	Major Banks	https://www.nasdaq.com/symbol/zion
+NWS	News Corporation	13.66	7993312428.24	n/a	n/a	Consumer Services	Newspapers/Magazines	https://www.nasdaq.com/symbol/nws
+ICLR	ICON plc	147.96	7986343261.32	n/a	1998	Health Care	Biotechnology: Commercial Physical & Biological Resarch	https://www.nasdaq.com/symbol/iclr
+ON	ON Semiconductor Corporation	19.24	7934840530.76	n/a	n/a	Technology	Semiconductors	https://www.nasdaq.com/symbol/on
+BPY	Brookfield Property Partners L.P.	19.16	7929532672.84	n/a	n/a	Finance	Real Estate	https://www.nasdaq.com/symbol/bpy
+CGNX	Cognex Corporation	46.16	7918131533.2	n/a	1989	Capital Goods	Industrial Machinery/Components	https://www.nasdaq.com/symbol/cgnx
+IEI	iShares 3-7 Year Treasury Bond ETF	125.88	7791972000	n/a	n/a	n/a	n/a	https://www.nasdaq.com/symbol/iei
+TER	Teradyne, Inc.	45.45	7789921020.9	n/a	n/a	Capital Goods	Electrical Products	https://www.nasdaq.com/symbol/ter
+JAZZ	Jazz Pharmaceuticals plc	136.5	7785352848	n/a	2007	Health Care	Major Pharmaceuticals	https://www.nasdaq.com/symbol/jazz
+CZR	Caesars Entertainment Corporation	11.56	7776633466.48	n/a	2012	Consumer Services	Hotels/Resorts	https://www.nasdaq.com/symbol/czr
+NWSA	News Corporation	13.25	7753396023	n/a	n/a	Consumer Services	Newspapers/Magazines	https://www.nasdaq.com/symbol/nwsa
+NDSN	Nordson Corporation	134.54	7729357576.78	n/a	n/a	Capital Goods	Industrial Machinery/Components	https://www.nasdaq.com/symbol/ndsn
+TECH	Bio-Techne Corp	203.44	7704832870.32	n/a	n/a	Health Care	Biotechnology: Biological Products (No Diagnostic Substances)	https://www.nasdaq.com/symbol/tech
+MASI	Masimo Corporation	144.4	7704613331.2	n/a	2007	Health Care	Biotechnology: Electromedical & Electrotherapeutic Apparatus	https://www.nasdaq.com/symbol/masi
+IPGP	IPG Photonics Corporation	143.89	7646866130.37	n/a	2006	Technology	Semiconductors	https://www.nasdaq.com/symbol/ipgp
+ARCC	Ares Capital Corporation	17.8	7588107960	n/a	2004	n/a	n/a	https://www.nasdaq.com/symbol/arcc
+BRKR	Bruker Corporation	48.36	7583649663.72	n/a	n/a	Capital Goods	Biotechnology: Laboratory Analytical Instruments	https://www.nasdaq.com/symbol/brkr
+ALNY	Alnylam Pharmaceuticals, Inc.	71.14	7579026386.92	n/a	2004	Health Care	Major Pharmaceuticals	https://www.nasdaq.com/symbol/alny
+QRVO	Qorvo, Inc.	63.46	7561228856.5	n/a	n/a	Technology	Semiconductors	https://www.nasdaq.com/symbol/qrvo
+GH	Guardant Health, Inc.	86.63	7546570515.47	n/a	2018	Health Care	Medical Specialities	https://www.nasdaq.com/symbol/gh
+COUP	Coupa Software Incorporated	120.39	7436585046.93	n/a	2016	Technology	Computer Software: Prepackaged Software	https://www.nasdaq.com/symbol/coup
+ETSY	Etsy, Inc.	61.79	7426193210.94	n/a	2015	Miscellaneous	Business Services	https://www.nasdaq.com/symbol/etsy
+UHAL	Amerco	378.5	7421547758	n/a	n/a	Consumer Services	Rental/Leasing Companies	https://www.nasdaq.com/symbol/uhal
+IBB	iShares Nasdaq Biotechnology Index Fund	106.89	7412821500	n/a	n/a	n/a	n/a	https://www.nasdaq.com/symbol/ibb
+MIDD	The Middleby Corporation	133.08	7408797288.48	n/a	n/a	Technology	Industrial Machinery/Components	https://www.nasdaq.com/symbol/midd
+NBIX	Neurocrine Biosciences, Inc.	80.83	7378721986.09	n/a	1996	Health Care	Biotechnology: Biological Products (No Diagnostic Substances)	https://www.nasdaq.com/symbol/nbix
+CG	The Carlyle Group L.P.	21.69	7373105060.13	n/a	2012	Finance	Investment Managers	https://www.nasdaq.com/symbol/cg
+POOL	Pool Corporation	184.26	7328514385.32	n/a	1995	Consumer Durables	Industrial Specialties	https://www.nasdaq.com/symbol/pool
+FLIR	FLIR Systems, Inc.	53.39	7248283206.96	n/a	1993	Capital Goods	Industrial Machinery/Components	https://www.nasdaq.com/symbol/flir
+VOD	Vodafone Group Plc	15.69	7002816860.37	446323573	n/a	Public Utilities	Telecommunications Equipment	https://www.nasdaq.com/symbol/vod
+WIX	Wix.com Ltd.	139.76	6968802147.12	n/a	2013	Technology	Computer Software: Programming, Data Processing	https://www.nasdaq.com/symbol/wix
+LAMR	Lamar Advertising Company	80.98	6929287651.22	n/a	1996	Consumer Services	Real Estate Investment Trusts	https://www.nasdaq.com/symbol/lamr
+PODD	Insulet Corporation	116.06	6925908586.52	n/a	2007	Health Care	Medical/Dental Instruments	https://www.nasdaq.com/symbol/podd
+ANGI	ANGI Homeservices Inc.	13.65	6914044996.95	n/a	n/a	Consumer Services	Advertising	https://www.nasdaq.com/symbol/angi
+WWD	Woodward, Inc.	111.19	6906740084.02	n/a	n/a	Energy	Industrial Machinery/Components	https://www.nasdaq.com/symbol/wwd
+HDS	HD Supply Holdings, Inc.	39.56	6758439063.64	n/a	2013	Consumer Services	Office Equipment/Supplies/Services	https://www.nasdaq.com/symbol/hds
+COLM	Columbia Sportswear Company	98	6693521324	n/a	1998	Consumer Non-Durables	Apparel	https://www.nasdaq.com/symbol/colm
+ESLT	Elbit Systems Ltd.	151.23	6678634836.69	n/a	n/a	Capital Goods	Military/Government/Technical	https://www.nasdaq.com/symbol/eslt
+STLD	Steel Dynamics, Inc.	29.87	6638462391.54	n/a	1996	Basic Industries	Steel/Iron Ore	https://www.nasdaq.com/symbol/stld
+RGLD	Royal Gold, Inc.	101.26	6634521176.64	n/a	n/a	Basic Industries	Precious Metals	https://www.nasdaq.com/symbol/rgld
+FIVE	Five Below, Inc.	118.42	6626884567.52	n/a	2012	Consumer Services	Department/Specialty Retail Stores	https://www.nasdaq.com/symbol/five
+IUSG	iShares Core S&P U.S. Growth ETF	62.4	6623760000	n/a	n/a	n/a	n/a	https://www.nasdaq.com/symbol/iusg
+BLUE	bluebird bio, Inc.	119.92	6610380859.52	n/a	2013	Health Care	Biotechnology: Biological Products (No Diagnostic Substances)	https://www.nasdaq.com/symbol/blue
+DNKN	Dunkin&#39; Brands Group, Inc.	79.96	6608331621.28	n/a	2011	Consumer Services	Restaurants	https://www.nasdaq.com/symbol/dnkn
+IGIB	iShares Intermediate-Term Corporate Bond ETF	56.78	6555251000	n/a	n/a	n/a	n/a	https://www.nasdaq.com/symbol/igib
+CONE	CyrusOne Inc	57.75	6535739190.75	n/a	2013	Consumer Services	Real Estate Investment Trusts	https://www.nasdaq.com/symbol/cone
+PBCT	People&#39;s United Financial, Inc.	16.36	6517176831.12	n/a	n/a	Finance	Savings Institutions	https://www.nasdaq.com/symbol/pbct
+FSLR	First Solar, Inc.	61.76	6506612705.6	n/a	2006	Technology	Semiconductors	https://www.nasdaq.com/symbol/fslr
+EWBC	East West Bancorp, Inc.	44.66	6500062476.6	n/a	n/a	Finance	Major Banks	https://www.nasdaq.com/symbol/ewbc
+MSG	The Madison Square Garden Company	272.47	6473481219.7	n/a	2015	Consumer Services	Services-Misc. Amusement & Recreation	https://www.nasdaq.com/symbol/msg
+LPLA	LPL Financial Holdings Inc.	77.18	6439477565.66	n/a	2010	Finance	Investment Bankers/Brokers/Service	https://www.nasdaq.com/symbol/lpla
+SBNY	Signature Bank	116.64	6426376678.08	n/a	2004	Finance	Major Banks	https://www.nasdaq.com/symbol/sbny
+EXEL	Exelixis, Inc.	21.14	6379361905.84	n/a	2000	Health Care	Biotechnology: Commercial Physical & Biological Resarch	https://www.nasdaq.com/symbol/exel
+LOGI	Logitech International S.A.	38.21	6365730442.66	n/a	1997	Technology	Computer peripheral equipment	https://www.nasdaq.com/symbol/logi
+CBSH	Commerce Bancshares, Inc.	57.17	6317732698.27	n/a	n/a	Finance	Major Banks	https://www.nasdaq.com/symbol/cbsh
+PRAH	PRA Health Sciences, Inc.	95.96	6300974651.52	n/a	2014	Health Care	Biotechnology: Commercial Physical & Biological Resarch	https://www.nasdaq.com/symbol/prah
+NWL	Newell Brands Inc.	14.85	6283035000	n/a	n/a	Consumer Non-Durables	Plastic Products	https://www.nasdaq.com/symbol/nwl
+PPC	Pilgrim&#39;s Pride Corporation	25.18	6280390941.7	n/a	n/a	Consumer Non-Durables	Meat/Poultry/Fish	https://www.nasdaq.com/symbol/ppc
+RYAAY	Ryanair Holdings plc	62.23	6274388102.71	100825777	1997	Transportation	Air Freight/Delivery Services	https://www.nasdaq.com/symbol/ryaay
+GNTX	Gentex Corporation	24.34	6220857799.12	n/a	n/a	Capital Goods	Auto Parts:O.E.M.	https://www.nasdaq.com/symbol/gntx
+SABR	Sabre Corporation	22.61	6211224437.46	n/a	2014	Technology	Computer Software: Programming, Data Processing	https://www.nasdaq.com/symbol/sabr
+PFPT	Proofpoint, Inc.	111.22	6192156260.9	n/a	2012	Technology	EDP Services	https://www.nasdaq.com/symbol/pfpt
+TRIP	TripAdvisor, Inc.	44.51	6188181546.67	n/a	n/a	Technology	Computer Software: Programming, Data Processing	https://www.nasdaq.com/symbol/trip
+VTIP	Vanguard Short-Term Inflation-Protected Securities Index Fund	49.25	6187052969.25	n/a	n/a	n/a	n/a	https://www.nasdaq.com/symbol/vtip
+GLIBA	GCI Liberty, Inc.	60.36	6101119808.52	n/a	n/a	Public Utilities	Telecommunications Equipment	https://www.nasdaq.com/symbol/gliba
+MLNX	Mellanox Technologies, Ltd.	111	6082227018	n/a	2007	Technology	Semiconductors	https://www.nasdaq.com/symbol/mlnx
+Z	Zillow Group, Inc.	43.02	6050051578.26	n/a	n/a	Miscellaneous	Business Services	https://www.nasdaq.com/symbol/z
+NKTR	Nektar Therapeutics	34.62	6034508166.9	n/a	n/a	Health Care	Major Pharmaceuticals	https://www.nasdaq.com/symbol/nktr
+MORN	Morningstar, Inc.	141.19	6022560118.47	n/a	2005	Finance	Investment Managers	https://www.nasdaq.com/symbol/morn
+VNQI	Vanguard Global ex-U.S. Real Estate ETF	59	5956780715	n/a	n/a	n/a	n/a	https://www.nasdaq.com/symbol/vnqi
+AMRN	Amarin Corporation plc	18.17	5951941812.4	327569720	n/a	Health Care	Major Pharmaceuticals	https://www.nasdaq.com/symbol/amrn
+CDK	CDK Global, Inc.	48.05	5844492990.45	n/a	n/a	Miscellaneous	Business Services	https://www.nasdaq.com/symbol/cdk
+CREE	Cree, Inc.	55.15	5804440656.6	n/a	1993	Technology	Semiconductors	https://www.nasdaq.com/symbol/cree
+NICE	NICE Ltd	138.07	5793708665.77	41962111	n/a	Technology	Computer Manufacturing	https://www.nasdaq.com/symbol/nice
+LOPE	Grand Canyon Education, Inc.	118.16	5701008729.92	n/a	2008	Consumer Services	Other Consumer Services	https://www.nasdaq.com/symbol/lope
+CASY	Caseys General Stores, Inc.	154.66	5665298958.22	n/a	1983	Consumer Durables	Automotive Aftermarket	https://www.nasdaq.com/symbol/casy
+MDSO	Medidata Solutions, Inc.	90.7	5651302766.6	n/a	2009	Technology	Computer Software: Prepackaged Software	https://www.nasdaq.com/symbol/mdso
+TIGO	Millicom International Cellular S.A.	55.56	5616504840	n/a	n/a	Public Utilities	Telecommunications Equipment	https://www.nasdaq.com/symbol/tigo
+IUSV	iShares Core S&P U.S. Value ETF	55.91	5585409000	n/a	n/a	n/a	n/a	https://www.nasdaq.com/symbol/iusv
+PEGA	Pegasystems Inc.	70.51	5563809637.43	n/a	1996	Technology	EDP Services	https://www.nasdaq.com/symbol/pega
+NTRSP	Northern Trust Corporation	25.52	5555106551.28	n/a	n/a	Finance	Major Banks	https://www.nasdaq.com/symbol/ntrsp
+JBLU	JetBlue Airways Corporation	18.31	5510335999.55	n/a	2002	Transportation	Air Freight/Delivery Services	https://www.nasdaq.com/symbol/jblu
+NVCR	NovoCure Limited	57.43	5499868601.82	n/a	2015	Health Care	Medical/Dental Instruments	https://www.nasdaq.com/symbol/nvcr
+OLLI	Ollie&#39;s Bargain Outlet Holdings, Inc.	86.55	5494531371.9	n/a	2015	Consumer Services	Department/Specialty Retail Stores	https://www.nasdaq.com/symbol/olli
+ZNGA	Zynga Inc.	5.87	5490109930.34	n/a	2011	Technology	EDP Services	https://www.nasdaq.com/symbol/znga
+ASND	Ascendis Pharma A/S	120.65	5438216346.05	45074317	2015	Health Care	Major Pharmaceuticals	https://www.nasdaq.com/symbol/asnd
+RP	RealPage, Inc.	56.93	5385201521.91	n/a	2010	Technology	Computer Software: Prepackaged Software	https://www.nasdaq.com/symbol/rp
+IQ	iQIYI, Inc.	18.01	5362582534.32	297755832	2018	Consumer Services	Consumer Electronics/Video Chains	https://www.nasdaq.com/symbol/iq
+MPWR	Monolithic Power Systems, Inc.	124.25	5349832250	n/a	2004	Technology	Semiconductors	https://www.nasdaq.com/symbol/mpwr
+IJT	iShares S&P Small-Cap 600 Growth ETF	177.24	5334924000	n/a	n/a	n/a	n/a	https://www.nasdaq.com/symbol/ijt
+MOMO	Momo Inc.	33.31	5309342756.67	159391857	2014	Technology	Computer Software: Prepackaged Software	https://www.nasdaq.com/symbol/momo
+QRTEB	Qurate Retail, Inc.	12.2904	5280535737.9432	n/a	n/a	Consumer Services	Catalog/Specialty Distribution	https://www.nasdaq.com/symbol/qrteb
+BOKF	BOK Financial Corporation	73.81	5273723171.42	n/a	n/a	Finance	Major Banks	https://www.nasdaq.com/symbol/bokf
+QRTEA	Qurate Retail, Inc.	12.27	5271770935.41	n/a	n/a	Consumer Services	Catalog/Specialty Distribution	https://www.nasdaq.com/symbol/qrtea
+NATI	National Instruments Corporation	39.97	5270690934.81	n/a	1995	Technology	Computer Software: Prepackaged Software	https://www.nasdaq.com/symbol/nati
+CRON	Cronos Group Inc.	15.79	5258391752.83	n/a	n/a	Consumer Durables	Specialty Chemicals	https://www.nasdaq.com/symbol/cron
+TREE	LendingTree, Inc.	405.57	5223396459.93	n/a	n/a	Finance	Finance: Consumer Services	https://www.nasdaq.com/symbol/tree
+VGSH	Vanguard Short-Term Treasury ETF	60.94	5216955663.92	n/a	n/a	n/a	n/a	https://www.nasdaq.com/symbol/vgsh
+PDD	Pinduoduo Inc.	20.54	5211810069.44	253739536	2018	Miscellaneous	Business Services	https://www.nasdaq.com/symbol/pdd
+MLCO	Melco Resorts & Entertainment Limited	21.37	5165910158.98	241736554	n/a	Consumer Services	Hotels/Resorts	https://www.nasdaq.com/symbol/mlco
+ICUI	ICU Medical, Inc.	249.25	5138140944.75	n/a	1992	Health Care	Medical/Dental Instruments	https://www.nasdaq.com/symbol/icui
+SYNH	Syneos Health, Inc.	48.96	5079863943.36	n/a	2014	Health Care	Biotechnology: Commercial Physical & Biological Resarch	https://www.nasdaq.com/symbol/synh
+ENTG	Entegris, Inc.	37.41	5069565122.76	n/a	2000	Consumer Non-Durables	Plastic Products	https://www.nasdaq.com/symbol/entg
+LECO	Lincoln Electric Holdings, Inc.	80.16	5034026998.08	n/a	n/a	Technology	Industrial Machinery/Components	https://www.nasdaq.com/symbol/leco
+BPOP	Popular, Inc.	52.06	5031447349.22	n/a	n/a	Finance	Major Banks	https://www.nasdaq.com/symbol/bpop
+GWPH	GW Pharmaceuticals Plc	171.79	5025327002.07	29252733	2013	Health Care	Major Pharmaceuticals	https://www.nasdaq.com/symbol/gwph
+HTHT	Huazhu Group Limited	34.12	4974966025.68	145807914	2010	Consumer Services	Hotels/Resorts	https://www.nasdaq.com/symbol/htht
+VSAT	ViaSat, Inc.	81.87	4961135172.66	n/a	1996	Technology	Radio And Television Broadcasting And Communications Equipment	https://www.nasdaq.com/symbol/vsat
+TFSL	TFS Financial Corporation	17.65	4941828671.45	n/a	n/a	Finance	Savings Institutions	https://www.nasdaq.com/symbol/tfsl
+PCTY	Paylocity Holding Corporation	92.57	4898428565.8	n/a	2014	Technology	Computer Software: Prepackaged Software	https://www.nasdaq.com/symbol/pcty
+SBGI	Sinclair Broadcast Group, Inc.	53.45	4882871834.5	n/a	1995	Consumer Services	Broadcasting	https://www.nasdaq.com/symbol/sbgi
+FCNCA	First Citizens BancShares, Inc.	428.01	4870028323.05	n/a	n/a	Finance	Major Banks	https://www.nasdaq.com/symbol/fcnca
+FLEX	Flex Ltd.	9.31	4784651925.83	n/a	1994	Technology	Electrical Products	https://www.nasdaq.com/symbol/flex
+BGNE	BeiGene, Ltd.	121.02	4767837647.1	39397105	2016	Health Care	Major Pharmaceuticals	https://www.nasdaq.com/symbol/bgne
+CYBR	CyberArk Software Ltd.	124.83	4694719985.64	n/a	2014	Technology	Computer Software: Prepackaged Software	https://www.nasdaq.com/symbol/cybr
+TSG	The Stars Group Inc.	16.14	4643723892.9	n/a	n/a	Technology	Computer Software: Programming, Data Processing	https://www.nasdaq.com/symbol/tsg
+IART	Integra LifeSciences Holdings Corporation	54.04	4619166326.04	n/a	n/a	Health Care	Medical/Dental Instruments	https://www.nasdaq.com/symbol/iart
+NTNX	Nutanix, Inc.	24.72	4596895232.4	n/a	2016	Technology	Computer Software: Prepackaged Software	https://www.nasdaq.com/symbol/ntnx
+AVT	Avnet, Inc.	43.12	4583494386.24	n/a	n/a	Technology	Electronic Components	https://www.nasdaq.com/symbol/avt
+NUAN	Nuance Communications, Inc.	15.76	4572813785.84	n/a	n/a	Technology	Computer Software: Prepackaged Software	https://www.nasdaq.com/symbol/nuan
+FTSM	First Trust Enhanced Short Maturity ETF	60.16	4563119395.84	n/a	n/a	n/a	n/a	https://www.nasdaq.com/symbol/ftsm
+PACW	PacWest Bancorp	37.83	4542183637.68	n/a	n/a	Finance	Major Banks	https://www.nasdaq.com/symbol/pacw
+NXST	Nexstar Media Group, Inc.	98.52	4540965613.8	n/a	2003	Consumer Services	Broadcasting	https://www.nasdaq.com/symbol/nxst
+MRNA	Moderna, Inc.	13.77	4530375027.9	n/a	2018	Health Care	Biotechnology: Biological Products (No Diagnostic Substances)	https://www.nasdaq.com/symbol/mrna
+WEN	Wendy&#39;s Company (The)	19.47	4492197409.26	n/a	n/a	Consumer Services	Restaurants	https://www.nasdaq.com/symbol/wen
+BPMC	Blueprint Medicines Corporation	91.69	4479417116.77	n/a	2015	Health Care	Major Pharmaceuticals	https://www.nasdaq.com/symbol/bpmc
+SIGI	Selective Insurance Group, Inc.	75.39	4465449139.41	n/a	n/a	Finance	Property-Casualty Insurers	https://www.nasdaq.com/symbol/sigi
+HZNP	Horizon Therapeutics Public Limited Company	23.88	4415027078.28	n/a	2011	Health Care	Major Pharmaceuticals	https://www.nasdaq.com/symbol/hznp
+CHDN	Churchill Downs, Incorporated	109.41	4398230249.07	n/a	n/a	Consumer Services	Services-Misc. Amusement & Recreation	https://www.nasdaq.com/symbol/chdn
+FCFS	FirstCash, Inc.	100.2	4321423596	n/a	1991	Consumer Services	Other Specialty Stores	https://www.nasdaq.com/symbol/fcfs
+MANH	Manhattan Associates, Inc.	66.88	4320080561.28	n/a	1998	Technology	Computer Software: Prepackaged Software	https://www.nasdaq.com/symbol/manh
+LFUS	Littelfuse, Inc.	173.18	4282168520.56	n/a	n/a	Consumer Durables	Electrical Products	https://www.nasdaq.com/symbol/lfus
+SRCL	Stericycle, Inc.	46.89	4268908504.35	n/a	1996	Basic Industries	Environmental Services	https://www.nasdaq.com/symbol/srcl
+PNFP	Pinnacle Financial Partners, Inc.	55.3	4255790395.5	n/a	n/a	Finance	Major Banks	https://www.nasdaq.com/symbol/pnfp
+MCHI	iShares MSCI China ETF	58.05	4226040000	n/a	n/a	n/a	n/a	https://www.nasdaq.com/symbol/mchi
+JCOM	j2 Global, Inc.	85.63	4190581405.57	n/a	1999	Technology	Telecommunications Equipment	https://www.nasdaq.com/symbol/jcom
+VIRT	Virtu Financial, Inc.	21	4187051127	n/a	2015	Finance	Investment Bankers/Brokers/Service	https://www.nasdaq.com/symbol/virt
+SLAB	Silicon Laboratories, Inc.	95.45	4136858456.45	n/a	2000	Technology	Semiconductors	https://www.nasdaq.com/symbol/slab
+LSTR	Landstar System, Inc.	102.48	4115838652.8	n/a	1993	Transportation	Trucking Freight/Courier Services	https://www.nasdaq.com/symbol/lstr
+CBRL	Cracker Barrel Old Country Store, Inc.	170.94	4110150077.88	n/a	1981	Consumer Services	Restaurants	https://www.nasdaq.com/symbol/cbrl
+TTEK	Tetra Tech, Inc.	74.77	4102365513.28	n/a	1991	Consumer Services	Military/Government/Technical	https://www.nasdaq.com/symbol/ttek
+CARG	CarGurus, Inc.	36.74	4086947496.5	n/a	2017	Technology	EDP Services	https://www.nasdaq.com/symbol/carg
+VEON	VEON Ltd.	2.75	4084922784.25	1485426467	n/a	Public Utilities	Telecommunications Equipment	https://www.nasdaq.com/symbol/veon
+AAXN	Axon Enterprise, Inc.	68.83	4069741626.37	n/a	n/a	Capital Goods	Ordnance And Accessories	https://www.nasdaq.com/symbol/aaxn
+HQY	HealthEquity, Inc.	64.69	4057666018.2	n/a	2014	Miscellaneous	Business Services	https://www.nasdaq.com/symbol/hqy
+ROLL	RBC Bearings Incorporated	163.56	4057106617.8	n/a	2005	Capital Goods	Metal Fabrications	https://www.nasdaq.com/symbol/roll
+LANC	Lancaster Colony Corporation	147.21	4049011050	n/a	n/a	Consumer Non-Durables	Packaged Foods	https://www.nasdaq.com/symbol/lanc
+AAXJ	iShares MSCI All Country Asia ex Japan Index Fund	68.65	4036620000	n/a	n/a	n/a	n/a	https://www.nasdaq.com/symbol/aaxj
+WTFC	Wintrust Financial Corporation	71.2	4034412435.2	n/a	n/a	Finance	Major Banks	https://www.nasdaq.com/symbol/wtfc
+FFIN	First Financial Bankshares, Inc.	29.7	4030353379.8	n/a	n/a	Finance	Major Banks	https://www.nasdaq.com/symbol/ffin
+HPT	Hospitality Properties Trust	24.36	4005760032.12	n/a	n/a	Consumer Services	Real Estate Investment Trusts	https://www.nasdaq.com/symbol/hpt
+IBKC	IBERIABANK Corporation	73.56	4002907605.36	n/a	n/a	Finance	Major Banks	https://www.nasdaq.com/symbol/ibkc
+VCLT	Vanguard Long-Term Corporate Bond ETF	96.2	4002395420.4	n/a	n/a	n/a	n/a	https://www.nasdaq.com/symbol/vclt
+MKSI	MKS Instruments, Inc.	73.55	3997976473	n/a	1999	Capital Goods	Industrial Machinery/Components	https://www.nasdaq.com/symbol/mksi
+VGIT	Vanguard Intermediate-Term Treasury ETF	66.03	3965120450.61	n/a	n/a	n/a	n/a	https://www.nasdaq.com/symbol/vgit
+SLM	SLM Corporation	9.14	3950939738.52	n/a	n/a	Finance	Finance: Consumer Services	https://www.nasdaq.com/symbol/slm
+BHF	Brighthouse Financial, Inc.	33.66	3898154401.02	n/a	n/a	Finance	Life Insurance	https://www.nasdaq.com/symbol/bhf
+AMED	Amedisys Inc	121.51	3893769480.48	n/a	n/a	Health Care	Medical/Nursing Services	https://www.nasdaq.com/symbol/amed
+ONCE	Spark Therapeutics, Inc.	100.79	3871672777.77	n/a	2015	Health Care	Biotechnology: Biological Products (No Diagnostic Substances)	https://www.nasdaq.com/symbol/once
+RGEN	Repligen Corporation	80.47	3862929357.3	n/a	1986	Health Care	Biotechnology: Biological Products (No Diagnostic Substances)	https://www.nasdaq.com/symbol/rgen
+BLKB	Blackbaud, Inc.	78.26	3849332359.6	n/a	2004	Technology	Computer Software: Prepackaged Software	https://www.nasdaq.com/symbol/blkb
+STRA	Strategic Education, Inc.	174.76	3832748240.96	n/a	1996	Consumer Services	Other Consumer Services	https://www.nasdaq.com/symbol/stra
+TQQQ	ProShares UltraPro QQQ	60.09	3830737500	n/a	n/a	n/a	n/a	https://www.nasdaq.com/symbol/tqqq
+TXRH	Texas Roadhouse, Inc.	53.1	3814275323.7	n/a	2004	Consumer Services	Restaurants	https://www.nasdaq.com/symbol/txrh
+TLRY	Tilray, Inc.	46.81	3771218955.47	n/a	2018	Consumer Durables	Specialty Chemicals	https://www.nasdaq.com/symbol/tlry
+IUSB	iShares Core Total USD Bond Market ETF	51.64	3754228000	n/a	n/a	n/a	n/a	https://www.nasdaq.com/symbol/iusb
+WMGI	Wright Medical Group N.V.	29.45	3714295167.65	n/a	2011	Health Care	Industrial Specialties	https://www.nasdaq.com/symbol/wmgi
+ACAD	ACADIA Pharmaceuticals Inc.	25.78	3709287782.18	n/a	1985	Health Care	Major Pharmaceuticals	https://www.nasdaq.com/symbol/acad
+UBSI	United Bankshares, Inc.	36.22	3697904841.42	n/a	n/a	Finance	Major Banks	https://www.nasdaq.com/symbol/ubsi
+MRCY	Mercury Systems Inc	66.77	3695632765.77	n/a	1998	Capital Goods	Electrical Products	https://www.nasdaq.com/symbol/mrcy
+LITE	Lumentum Holdings Inc.	48.3	3690120000	n/a	n/a	Capital Goods	Telecommunications Equipment	https://www.nasdaq.com/symbol/lite
+MRTX	Mirati Therapeutics, Inc.	102.14	3681853551.78	n/a	n/a	Health Care	Major Pharmaceuticals	https://www.nasdaq.com/symbol/mrtx
+ACWX	iShares MSCI ACWI ex US Index Fund	46.33	3669336000	n/a	n/a	n/a	n/a	https://www.nasdaq.com/symbol/acwx
+CBPO	China Biologic Products Holdings, Inc.	94.13	3667644515.17	n/a	n/a	Health Care	Biotechnology: Biological Products (No Diagnostic Substances)	https://www.nasdaq.com/symbol/cbpo
+LHCG	LHC Group	116.08	3655719628.4	n/a	2005	Health Care	Medical/Nursing Services	https://www.nasdaq.com/symbol/lhcg
+OZK	Bank OZK	28.3	3648912006	n/a	n/a	Finance	Major Banks	https://www.nasdaq.com/symbol/ozk
+ESGR	Enstar Group Limited	169.74	3646246216.14	n/a	n/a	Finance	Property-Casualty Insurers	https://www.nasdaq.com/symbol/esgr
+FGEN	FibroGen, Inc	42.27	3644603010.06	n/a	2014	Health Care	Major Pharmaceuticals	https://www.nasdaq.com/symbol/fgen
+FSV	FirstService Corporation	95.69	3613432670.47	n/a	n/a	Finance	Real Estate	https://www.nasdaq.com/symbol/fsv
+MAT	Mattel, Inc.	10.43	3602783177.63	n/a	n/a	Consumer Non-Durables	Recreational Products/Toys	https://www.nasdaq.com/symbol/mat
+TNDM	Tandem Diabetes Care, Inc.	61.95	3597265579.95	n/a	2013	Health Care	Medical/Dental Instruments	https://www.nasdaq.com/symbol/tndm
+UMPQ	Umpqua Holdings Corporation	16.3	3593884310	n/a	n/a	Finance	Savings Institutions	https://www.nasdaq.com/symbol/umpq
+VRNT	Verint Systems Inc.	54.51	3585304109.28	n/a	2002	Technology	EDP Services	https://www.nasdaq.com/symbol/vrnt
+ACIW	ACI Worldwide, Inc.	32.35	3576719164.15	n/a	n/a	Technology	Computer Software: Prepackaged Software	https://www.nasdaq.com/symbol/aciw
+TECD	Tech Data Corporation	97.89	3571571859.96	n/a	1986	Technology	Retail: Computer Software & Peripheral Equipment	https://www.nasdaq.com/symbol/tecd
+OMCL	Omnicell, Inc.	86.39	3560875113.17	n/a	2001	Technology	Computer Manufacturing	https://www.nasdaq.com/symbol/omcl
+GBT	Global Blood Therapeutics, Inc.	62.43	3521460354.63	n/a	2015	Health Care	Major Pharmaceuticals	https://www.nasdaq.com/symbol/gbt
+LIVN	LivaNova PLC	72.76	3515828247.44	n/a	n/a	Health Care	Biotechnology: Electromedical & Electrotherapeutic Apparatus	https://www.nasdaq.com/symbol/livn
+LOGM	LogMein, Inc.	70.11	3491478000	n/a	2009	Technology	Computer Software: Prepackaged Software	https://www.nasdaq.com/symbol/logm
+SBRA	Sabra Health Care REIT, Inc.	19.26	3457190088.18	n/a	n/a	Consumer Services	Real Estate Investment Trusts	https://www.nasdaq.com/symbol/sbra
+YY	YY Inc.	68.7	3456465521.1	50312453	2012	Technology	EDP Services	https://www.nasdaq.com/symbol/yy
+GT	The Goodyear Tire & Rubber Company	14.86	3454514795.18	n/a	n/a	Consumer Durables	Automotive Aftermarket	https://www.nasdaq.com/symbol/gt
+FTDR	frontdoor, inc.	40.72	3446276771.52	n/a	n/a	Finance	Diversified Commercial Services	https://www.nasdaq.com/symbol/ftdr
+MEOH	Methanex Corporation	44.63	3423838650.4	n/a	n/a	Basic Industries	Major Chemicals	https://www.nasdaq.com/symbol/meoh
+RARE	Ultragenyx Pharmaceutical Inc.	59.52	3420761652.48	n/a	2014	Health Care	Major Pharmaceuticals	https://www.nasdaq.com/symbol/rare
+ALKS	Alkermes plc	21.78	3417379770.42	n/a	1991	Health Care	Major Pharmaceuticals	https://www.nasdaq.com/symbol/alks
+FHB	First Hawaiian, Inc.	25.29	3414453859.35	n/a	2016	Finance	Major Banks	https://www.nasdaq.com/symbol/fhb
+APPF	AppFolio, Inc.	100.19	3407040500.86	n/a	2015	Technology	Computer Software: Prepackaged Software	https://www.nasdaq.com/symbol/appf
+GBCI	Glacier Bancorp, Inc.	39.22	3397860311.76	n/a	n/a	Finance	Major Banks	https://www.nasdaq.com/symbol/gbci
+ERI	Eldorado Resorts, Inc.	43.81	3394054803.88	n/a	n/a	Consumer Services	Hotels/Resorts	https://www.nasdaq.com/symbol/eri
+UTHR	United Therapeutics Corporation	77.26	3384831292.9	n/a	1999	Health Care	Major Pharmaceuticals	https://www.nasdaq.com/symbol/uthr
+VLY	Valley National Bancorp	10.18	3377194731.62	n/a	n/a	Finance	Major Banks	https://www.nasdaq.com/symbol/vly
+USIG	iShares Broad USD Investment Grade Corporate Bond ETF	56.81	3371673500	n/a	n/a	n/a	n/a	https://www.nasdaq.com/symbol/usig
+QLYS	Qualys, Inc.	85.88	3362897284.48	n/a	2012	Technology	Computer Software: Prepackaged Software	https://www.nasdaq.com/symbol/qlys
+LAUR	Laureate Education, Inc.	14.89	3344892816.24	n/a	2017	Consumer Services	Other Consumer Services	https://www.nasdaq.com/symbol/laur
+HELE	Helen of Troy Limited	132.85	3323058487.05	n/a	n/a	Consumer Durables	Home Furnishings	https://www.nasdaq.com/symbol/hele
+HWC	Hancock Whitney Corporation	38.61	3309658389.18	n/a	n/a	Finance	Major Banks	https://www.nasdaq.com/symbol/hwc
+SLGN	Silgan Holdings Inc.	29.72	3303155486.36	n/a	1997	Consumer Durables	Containers/Packaging	https://www.nasdaq.com/symbol/slgn
+CSOD	Cornerstone OnDemand, Inc.	54.92	3276135675.32	n/a	2011	Technology	Computer Software: Prepackaged Software	https://www.nasdaq.com/symbol/csod
+MMSI	Merit Medical Systems, Inc.	58.85	3237039247.75	n/a	n/a	Health Care	Medical/Dental Instruments	https://www.nasdaq.com/symbol/mmsi
+SAVE	Spirit Airlines, Inc.	46.96	3213885343.6	n/a	n/a	Transportation	Air Freight/Delivery Services	https://www.nasdaq.com/symbol/save
+ALLO	Allogene Therapeutics, Inc.	26.17	3180684004.4	n/a	2018	Health Care	Biotechnology: Biological Products (No Diagnostic Substances)	https://www.nasdaq.com/symbol/allo
+NOVT	Novanta Inc.	90.49	3166650133.24	n/a	n/a	Miscellaneous	Industrial Machinery/Components	https://www.nasdaq.com/symbol/novt
+HOMB	Home BancShares, Inc.	18.73	3146624154.42	n/a	2006	Finance	Major Banks	https://www.nasdaq.com/symbol/homb
+BCPC	Balchem Corporation	97.17	3141850664.82	n/a	n/a	Basic Industries	Major Chemicals	https://www.nasdaq.com/symbol/bcpc
+STAY	Extended Stay America, Inc.	16.54	3116340699.04	n/a	n/a	Consumer Services	Hotels/Resorts	https://www.nasdaq.com/symbol/stay
+NEOG	Neogen Corporation	59.61	3106873200	n/a	1989	Health Care	Biotechnology: In Vitro & In Vivo Diagnostic Substances	https://www.nasdaq.com/symbol/neog
+NAVI	Navient Corporation	12.97	3106627317.6	n/a	n/a	Finance	Investment Bankers/Brokers/Service	https://www.nasdaq.com/symbol/navi
+ERIC	Ericsson	9.72	3105578316.24	319503942	n/a	Technology	Radio And Television Broadcasting And Communications Equipment	https://www.nasdaq.com/symbol/eric
+SFIX	Stitch Fix, Inc.	30.75	3102146438.25	n/a	2017	Consumer Services	Catalog/Specialty Distribution	https://www.nasdaq.com/symbol/sfix
+WB	Weibo Corporation	41.57	3100595266.53	74587329	2014	Technology	Computer Software: Programming, Data Processing	https://www.nasdaq.com/symbol/wb
+COHR	Coherent, Inc.	128.06	3097870134.26	n/a	n/a	Capital Goods	Biotechnology: Laboratory Analytical Instruments	https://www.nasdaq.com/symbol/cohr
+CCMP	Cabot Microelectronics Corporation	106.49	3094794276.7	n/a	2000	Technology	Semiconductors	https://www.nasdaq.com/symbol/ccmp
+IGF	iShares Global Infrastructure ETF	46.3	3083580000	n/a	n/a	n/a	n/a	https://www.nasdaq.com/symbol/igf
+UMBF	UMB Financial Corporation	62.83	3082885013.38	n/a	n/a	Finance	Major Banks	https://www.nasdaq.com/symbol/umbf
+AMCX	AMC Networks Inc.	54.18	3078013044.96	n/a	n/a	Consumer Services	Television Services	https://www.nasdaq.com/symbol/amcx
+FOLD	Amicus Therapeutics, Inc.	12.06	3067259453.28	n/a	2007	Health Care	Major Pharmaceuticals	https://www.nasdaq.com/symbol/fold
+DSGX	The Descartes Systems Group Inc.	36.35	3057869450.6	n/a	n/a	Technology	Computer Software: Prepackaged Software	https://www.nasdaq.com/symbol/dsgx
+JJSF	J & J Snack Foods Corp.	162.42	3056330391.42	n/a	1986	Consumer Non-Durables	Specialty Foods	https://www.nasdaq.com/symbol/jjsf
+ANAT	American National Insurance Company	113.65	3055730280	n/a	n/a	Finance	Life Insurance	https://www.nasdaq.com/symbol/anat
+ACHC	Acadia Healthcare Company, Inc.	34.45	3046976688.6	n/a	n/a	Health Care	Medical Specialities	https://www.nasdaq.com/symbol/achc
+ISBC	Investors Bancorp, Inc.	10.87	3029637887.19	n/a	n/a	Finance	Major Banks	https://www.nasdaq.com/symbol/isbc
+SMTC	Semtech Corporation	45.41	3027807428.87	n/a	n/a	Technology	Semiconductors	https://www.nasdaq.com/symbol/smtc
+FEYE	FireEye, Inc.	14.73	3020675134.35	n/a	2013	Technology	Computer peripheral equipment	https://www.nasdaq.com/symbol/feye
+COMM	CommScope Holding Company, Inc.	15.59	3018577768.28	n/a	2013	Technology	Radio And Television Broadcasting And Communications Equipment	https://www.nasdaq.com/symbol/comm
+VIAV	Viavi Solutions Inc.	13.23	3016392610.14	n/a	n/a	Technology	Semiconductors	https://www.nasdaq.com/symbol/viav
+TERP	TerraForm Power, Inc.	14.35	3001183682	n/a	2014	Public Utilities	Electric Utilities: Central	https://www.nasdaq.com/symbol/terp
+ENSG	The Ensign Group, Inc.	56.57	2998863213.79	n/a	2007	Health Care	Hospital/Nursing Management	https://www.nasdaq.com/symbol/ensg
+FOXF	Fox Factory Holding Corp.	78.42	2993352881.28	n/a	2013	Consumer Non-Durables	Motor Vehicles	https://www.nasdaq.com/symbol/foxf
+FIVN	Five9, Inc.	50.15	2992794027.5	n/a	2014	Technology	EDP Services	https://www.nasdaq.com/symbol/fivn
+NUVA	NuVasive, Inc.	57.5	2983438100	n/a	2004	Health Care	Medical/Dental Instruments	https://www.nasdaq.com/symbol/nuva
+TCBI	Texas Capital Bancshares, Inc.	59.28	2980236021.36	n/a	2003	Finance	Major Banks	https://www.nasdaq.com/symbol/tcbi
+LMBS	First Trust Low Duration Opportunities ETF	51.61	2975316603.22	n/a	n/a	n/a	n/a	https://www.nasdaq.com/symbol/lmbs
+EXPO	Exponent, Inc.	57.29	2973410123.28	n/a	n/a	Consumer Services	Professional Services	https://www.nasdaq.com/symbol/expo
+ARGX	argenx SE	139.26	2940961195.92	21118492	2017	Health Care	Biotechnology: Biological Products (No Diagnostic Substances)	https://www.nasdaq.com/symbol/argx
+CVBF	CVB Financial Corporation	20.91	2927651714.58	n/a	n/a	Finance	Major Banks	https://www.nasdaq.com/symbol/cvbf
+RTLR	Rattler Midstream LP	19.29	2922727282.08	n/a	2019	Public Utilities	Natural Gas Distribution	https://www.nasdaq.com/symbol/rtlr
+AGIO	Agios Pharmaceuticals, Inc.	49.59	2911495003.47	n/a	2013	Health Care	Major Pharmaceuticals	https://www.nasdaq.com/symbol/agio
+SAFM	Sanderson Farms, Inc.	131.03	2902870722.35	n/a	1987	Consumer Non-Durables	Meat/Poultry/Fish	https://www.nasdaq.com/symbol/safm
+BL	BlackLine, Inc.	52.68	2899852306.68	n/a	2016	Technology	Computer Software: Prepackaged Software	https://www.nasdaq.com/symbol/bl
+CSFL	CenterState Bank Corporation	22.18	2896763427.82	n/a	n/a	Finance	Major Banks	https://www.nasdaq.com/symbol/csfl
+EVBG	Everbridge, Inc.	87.52	2881662515.2	n/a	2016	Technology	Computer Software: Prepackaged Software	https://www.nasdaq.com/symbol/evbg
+SKYW	SkyWest, Inc.	56.07	2857630538.7	n/a	1986	Transportation	Air Freight/Delivery Services	https://www.nasdaq.com/symbol/skyw
+CMPR	Cimpress N.V	93.03	2856505314.18	n/a	n/a	Miscellaneous	Publishing	https://www.nasdaq.com/symbol/cmpr
+SINA	Sina Corporation	40.93	2839237970.2	n/a	n/a	Technology	Computer Software: Prepackaged Software	https://www.nasdaq.com/symbol/sina
+QURE	uniQure N.V.	75	2832288150	n/a	2014	Health Care	Major Pharmaceuticals	https://www.nasdaq.com/symbol/qure
+CHFC	Chemical Financial Corporation	39.54	2829151726.98	n/a	n/a	Finance	Major Banks	https://www.nasdaq.com/symbol/chfc
+ONB	Old National Bancorp	16.24	2825418960	n/a	n/a	Finance	Major Banks	https://www.nasdaq.com/symbol/onb
+HLNE	Hamilton Lane Incorporated	55.45	2821130149.05	n/a	2017	Finance	Investment Managers	https://www.nasdaq.com/symbol/hlne
+SEDG	SolarEdge Technologies, Inc.	59.22	2815774083.36	n/a	2015	Technology	Semiconductors	https://www.nasdaq.com/symbol/sedg
+COKE	Coca-Cola Consolidated, Inc.	300.11	2813137805.79	n/a	1972	Consumer Non-Durables	Beverages (Production/Distribution)	https://www.nasdaq.com/symbol/coke
+AUB	Atlantic Union Bankshares Corporation	34.15	2802148095.55	n/a	n/a	Finance	Major Banks	https://www.nasdaq.com/symbol/aub
+PS	Pluralsight, Inc.	29.37	2798356066.11	n/a	2018	Technology	Computer Software: Programming, Data Processing	https://www.nasdaq.com/symbol/ps
+DORM	Dorman Products, Inc.	84.755	2791548398.155	n/a	n/a	Capital Goods	Auto Parts:O.E.M.	https://www.nasdaq.com/symbol/dorm
+ARNA	Arena Pharmaceuticals, Inc.	56.01	2776419396.66	n/a	2000	Health Care	Major Pharmaceuticals	https://www.nasdaq.com/symbol/arna
+MNRO	Monro, Inc. 	83.51	2770707640.54	n/a	1991	Consumer Services	Automotive Aftermarket	https://www.nasdaq.com/symbol/mnro
+ALTR	Altair Engineering Inc.	38.78	2761668371.84	n/a	2017	Technology	Computer Software: Prepackaged Software	https://www.nasdaq.com/symbol/altr
+CATY	Cathay General Bancorp	34.35	2761246871.4	n/a	n/a	Finance	Major Banks	https://www.nasdaq.com/symbol/caty
+MIME	Mimecast Limited	45.01	2761145876.65	n/a	2015	Technology	Computer Software: Prepackaged Software	https://www.nasdaq.com/symbol/mime
+HMSY	HMS Holdings Corp	31.47	2740908602.4	n/a	1992	Miscellaneous	Business Services	https://www.nasdaq.com/symbol/hmsy
+VONG	Vanguard Russell 1000 Growth ETF	160.62	2734830320.82	n/a	n/a	n/a	n/a	https://www.nasdaq.com/symbol/vong
+ISTB	iShares Core 1-5 Year USD Bond ETF	50.44	2723760000	n/a	n/a	n/a	n/a	https://www.nasdaq.com/symbol/istb
+CCOI	Cogent Communications Holdings, Inc.	58.67	2719995997.78	n/a	n/a	Consumer Services	Telecommunications Equipment	https://www.nasdaq.com/symbol/ccoi
+SHOO	Steven Madden, Ltd.	31.66	2716922560.86	n/a	1993	Consumer Non-Durables	Shoe Manufacturing	https://www.nasdaq.com/symbol/shoo
+CIGI	Colliers International Group Inc. 	70.75	2699616027.75	n/a	n/a	Finance	Real Estate	https://www.nasdaq.com/symbol/cigi
+GRFS	Grifols, S.A.	20.12	2690236447.8	133709565	n/a	Health Care	Major Pharmaceuticals	https://www.nasdaq.com/symbol/grfs
+IOVA	Iovance Biotherapeutics, Inc.	21.75	2686434524.25	n/a	n/a	Health Care	Biotechnology: Biological Products (No Diagnostic Substances)	https://www.nasdaq.com/symbol/iova
+FNSR	Finisar Corporation	22.36	2679531640.76	n/a	1999	Technology	Semiconductors	https://www.nasdaq.com/symbol/fnsr
+CAR	Avis Budget Group, Inc.	35.28	2678176700.64	n/a	n/a	Consumer Services	Rental/Leasing Companies	https://www.nasdaq.com/symbol/car
+DGRW	WisdomTree U.S. Quality Dividend Growth Fund	43.27	2674086000	n/a	n/a	n/a	n/a	https://www.nasdaq.com/symbol/dgrw
+LEXEA	Liberty Expedia Holdings, Inc.	46.57	2669718622.85	n/a	n/a	Consumer Services	Other Consumer Services	https://www.nasdaq.com/symbol/lexea
+WING	Wingstop Inc.	90.66	2665338362.16	n/a	2015	Consumer Services	Restaurants	https://www.nasdaq.com/symbol/wing
+WAFD	Washington Federal, Inc.	33.07	2660230201.07	n/a	n/a	Finance	Major Banks	https://www.nasdaq.com/symbol/wafd
+TENB	Tenable Holdings, Inc.	27.55	2657840792.5	n/a	2018	Technology	Computer Software: Prepackaged Software	https://www.nasdaq.com/symbol/tenb
+FULT	Fulton Financial Corporation	15.71	2652005100	n/a	n/a	Finance	Major Banks	https://www.nasdaq.com/symbol/fult
+NGHC	National General Holdings Corp	23.41	2649263488.66	n/a	n/a	Finance	Property-Casualty Insurers	https://www.nasdaq.com/symbol/nghc
+BRKS	Brooks Automation, Inc.	36.64	2643108840	n/a	1995	Technology	Industrial Machinery/Components	https://www.nasdaq.com/symbol/brks
+GO	Grocery Outlet Holding Corp.	30.69	2630244680.91	n/a	2019	Consumer Services	Food Chains	https://www.nasdaq.com/symbol/go
+CVET	Covetrus, Inc.	23.49	2623816345.59	n/a	n/a	Health Care	Medical/Nursing Services	https://www.nasdaq.com/symbol/cvet
+ARWR	Arrowhead Pharmaceuticals, Inc.	27.52	2609283646.72	n/a	n/a	Health Care	Major Pharmaceuticals	https://www.nasdaq.com/symbol/arwr
+MGEE	MGE Energy Inc.	75.26	2609141526.2	n/a	n/a	Energy	Electric Utilities: Central	https://www.nasdaq.com/symbol/mgee
+RPD	Rapid7, Inc.	54.06	2605823527.98	n/a	2015	Technology	Computer Software: Prepackaged Software	https://www.nasdaq.com/symbol/rpd
+COLB	Columbia Banking System, Inc.	35.01	2575186842.51	n/a	1992	Finance	Major Banks	https://www.nasdaq.com/symbol/colb
+SSB	South State Corporation	72.49	2563864232.27	n/a	n/a	Finance	Major Banks	https://www.nasdaq.com/symbol/ssb
+PCH	PotlatchDeltic Corporation	37.85	2558204361.7	n/a	n/a	Consumer Services	Real Estate Investment Trusts	https://www.nasdaq.com/symbol/pch
+RETA	Reata Pharmaceuticals, Inc.	84.91	2552053007.07	n/a	2016	Health Care	Major Pharmaceuticals	https://www.nasdaq.com/symbol/reta
+ICPT	Intercept Pharmaceuticals, Inc.	78.36	2550280503.48	n/a	2012	Health Care	Major Pharmaceuticals	https://www.nasdaq.com/symbol/icpt
+GTLS	Chart Industries, Inc.	71.13	2545211714.55	n/a	2006	Capital Goods	Metal Fabrications	https://www.nasdaq.com/symbol/gtls
+INDB	Independent Bank Corp.	74.12	2543093296.44	n/a	n/a	Finance	Major Banks	https://www.nasdaq.com/symbol/indb
+IRBT	iRobot Corporation	90.58	2541221718.84	n/a	2005	Consumer Durables	Consumer Electronics/Appliances	https://www.nasdaq.com/symbol/irbt
+ALRM	Alarm.com Holdings, Inc.	52.5	2537473522.5	n/a	2015	Technology	Computer Software: Prepackaged Software	https://www.nasdaq.com/symbol/alrm
+EVOP	EVO Payments, Inc.	30.59	2506181282.57	n/a	2018	Miscellaneous	Business Services	https://www.nasdaq.com/symbol/evop
+JOBS	51job, Inc.	70.11	2503282387.59	35705069	2004	Technology	Diversified Commercial Services	https://www.nasdaq.com/symbol/jobs
+IRDM	Iridium Communications Inc	22.04	2495846318.64	n/a	n/a	Capital Goods	Telecommunications Equipment	https://www.nasdaq.com/symbol/irdm
+MDCO	The Medicines Company	33.76	2494855526.24	n/a	2000	Health Care	Major Pharmaceuticals	https://www.nasdaq.com/symbol/mdco
+FIBK	First Interstate BancSystem, Inc.	38.21	2490305073.91	n/a	2010	Finance	Major Banks	https://www.nasdaq.com/symbol/fibk
+IMMU	Immunomedics, Inc.	13	2489985017	n/a	n/a	Health Care	Biotechnology: In Vitro & In Vivo Diagnostic Substances	https://www.nasdaq.com/symbol/immu
+AAON	AAON, Inc.	47.74	2487982560.14	n/a	n/a	Capital Goods	Industrial Machinery/Components	https://www.nasdaq.com/symbol/aaon
+PTEN	Patterson-UTI Energy, Inc.	11.82	2464978189.08	n/a	1993	Energy	Oil & Gas Production	https://www.nasdaq.com/symbol/pten
+PTCT	PTC Therapeutics, Inc.	42.02	2455276040.58	n/a	2013	Health Care	Major Pharmaceuticals	https://www.nasdaq.com/symbol/ptct
+LEXEB	Liberty Expedia Holdings, Inc.	42.56	2439837332.8	n/a	n/a	Consumer Services	Other Consumer Services	https://www.nasdaq.com/symbol/lexeb
+PINC	Premier, Inc.	39.44	2438702512.32	n/a	2013	Consumer Services	Other Consumer Services	https://www.nasdaq.com/symbol/pinc
+FTCS	First Trust Capital Strength ETF	56.3	2437790112.6	n/a	n/a	n/a	n/a	https://www.nasdaq.com/symbol/ftcs
+FV	First Trust Dorsey Wright Focus 5 ETF	29.81	2425043559.62	n/a	n/a	n/a	n/a	https://www.nasdaq.com/symbol/fv
+EYE	National Vision Holdings, Inc.	30.85	2413019500.2	n/a	2017	Health Care	Ophthalmic Goods	https://www.nasdaq.com/symbol/eye
+GDS	GDS Holdings Limited	32.9	2411852972.9	73308601	2016	Technology	Computer Software: Programming, Data Processing	https://www.nasdaq.com/symbol/gds
+CRSP	CRISPR Therapeutics AG	43.98	2410934122.5	n/a	2016	Health Care	Biotechnology: Biological Products (No Diagnostic Substances)	https://www.nasdaq.com/symbol/crsp
+ITRI	Itron, Inc.	60.4	2407228651.6	n/a	1993	Capital Goods	Electrical Products	https://www.nasdaq.com/symbol/itri
+CNMD	CONMED Corporation	85.08	2401916451.6	n/a	1987	Health Care	Biotechnology: Electromedical & Electrotherapeutic Apparatus	https://www.nasdaq.com/symbol/cnmd
+CBSHP	Commerce Bancshares, Inc.	26.2	2400978584.8	n/a	n/a	Finance	Major Banks	https://www.nasdaq.com/symbol/cbshp
+XT	iShares Exponential Technologies ETF	37.98	2400336000	n/a	n/a	n/a	n/a	https://www.nasdaq.com/symbol/xt
+BECN	Beacon Roofing Supply, Inc.	34.98	2395324130.76	n/a	2004	Consumer Services	RETAIL: Building Materials	https://www.nasdaq.com/symbol/becn
+RRR	Red Rock Resorts, Inc.	20.4	2390029891.2	n/a	2016	Consumer Services	Hotels/Resorts	https://www.nasdaq.com/symbol/rrr
+IBOC	International Bancshares Corporation	36.36	2386943209.08	n/a	n/a	Finance	Major Banks	https://www.nasdaq.com/symbol/iboc
+PSEC	Prospect Capital Corporation	6.5	2385289861.5	n/a	2004	n/a	n/a	https://www.nasdaq.com/symbol/psec
+LILAK	Liberty Latin America Ltd.	18.15	2374942655.25	n/a	n/a	Consumer Services	Television Services	https://www.nasdaq.com/symbol/lilak
+CRUS	Cirrus Logic, Inc.	40.78	2370009588.02	n/a	1989	Technology	Semiconductors	https://www.nasdaq.com/symbol/crus
+HALO	Halozyme Therapeutics, Inc.	16.28	2368889287.6	n/a	n/a	Health Care	Biotechnology: Biological Products (No Diagnostic Substances)	https://www.nasdaq.com/symbol/halo
+QTEC	First Trust NASDAQ-100- Technology Index Fund	82.67	2351961665.34	n/a	n/a	n/a	n/a	https://www.nasdaq.com/symbol/qtec
+QDEL	Quidel Corporation	58.79	2340881348.41	n/a	n/a	Health Care	Biotechnology: In Vitro & In Vivo Diagnostic Substances	https://www.nasdaq.com/symbol/qdel
+AY	Atlantica Yield plc	23.3	2335062158	n/a	2014	Public Utilities	Electric Utilities: Central	https://www.nasdaq.com/symbol/ay
+IBTX	Independent Bank Group, Inc	53.18	2322213612.64	n/a	2013	Finance	Major Banks	https://www.nasdaq.com/symbol/ibtx
+CTRE	CareTrust REIT, Inc.	24.28	2320742007.4	n/a	n/a	Consumer Services	Real Estate Investment Trusts	https://www.nasdaq.com/symbol/ctre
+KTOS	Kratos Defense & Security Solutions, Inc.	21.85	2314205430.2	n/a	n/a	Capital Goods	Military/Government/Technical	https://www.nasdaq.com/symbol/ktos
+FFBC	First Financial Bancorp.	23.39	2306574770.46	n/a	n/a	Finance	Major Banks	https://www.nasdaq.com/symbol/ffbc
+PDCO	Patterson Companies, Inc.	24.2	2303089800	n/a	1992	Health Care	Medical Specialities	https://www.nasdaq.com/symbol/pdco
+PEGI	Pattern Energy Group Inc.	23.21	2286164412.73	n/a	2013	Public Utilities	Electric Utilities: Central	https://www.nasdaq.com/symbol/pegi
+APPN	Appian Corporation	35.17	2275509726.85	n/a	2017	Technology	Computer Software: Prepackaged Software	https://www.nasdaq.com/symbol/appn
+PDCE	PDC Energy, Inc.	34.16	2264215324	n/a	n/a	Energy	Oil & Gas Production	https://www.nasdaq.com/symbol/pdce
+URBN	Urban Outfitters, Inc.	23.11	2263971427.32	n/a	1993	Consumer Services	Clothing/Shoe/Accessory Stores	https://www.nasdaq.com/symbol/urbn
+AIMC	Altra Industrial Motion Corp.	35.1	2263761583.2	n/a	2006	Capital Goods	Industrial Machinery/Components	https://www.nasdaq.com/symbol/aimc
+TWOU	2U, Inc.	35.87	2262637201.66	n/a	2014	Technology	Computer Software: Prepackaged Software	https://www.nasdaq.com/symbol/twou
+EGHT	8x8 Inc	23.31	2244458501.46	n/a	n/a	Technology	EDP Services	https://www.nasdaq.com/symbol/eght
+FMBI	First Midwest Bancorp, Inc.	20.06	2239344780.52	n/a	n/a	Finance	Major Banks	https://www.nasdaq.com/symbol/fmbi
+INSM	Insmed, Inc.	25.59	2235088382.22	n/a	n/a	Health Care	Major Pharmaceuticals	https://www.nasdaq.com/symbol/insm
+EXLS	ExlService Holdings, Inc.	65.05	2233945278.6	n/a	2006	Miscellaneous	Business Services	https://www.nasdaq.com/symbol/exls
+UFPI	Universal Forest Products, Inc.	36.3	2227091103.6	n/a	1993	Basic Industries	Forest Products	https://www.nasdaq.com/symbol/ufpi
+MEDP	Medpace Holdings, Inc.	62.1	2218770216.9	n/a	2016	Health Care	Biotechnology: Commercial Physical & Biological Resarch	https://www.nasdaq.com/symbol/medp
+GGAL	Grupo Financiero Galicia S.A.	34.76	2208795488.24	63544174	n/a	Finance	Commercial Banks	https://www.nasdaq.com/symbol/ggal
+GSKY	GreenSky, Inc.	12.12	2203604975.04	n/a	2018	Miscellaneous	Business Services	https://www.nasdaq.com/symbol/gsky
+IIVI	II-VI Incorporated	34.66	2201679486.66	n/a	1987	Capital Goods	Electronic Components	https://www.nasdaq.com/symbol/iivi
+HCSG	Healthcare Services Group, Inc.	29.7	2199997800	n/a	1983	Health Care	Hospital/Nursing Management	https://www.nasdaq.com/symbol/hcsg
+ALGT	Allegiant Travel Company	134.51	2190759393.13	n/a	2006	Transportation	Air Freight/Delivery Services	https://www.nasdaq.com/symbol/algt
+UCBI	United Community Banks, Inc.	27.63	2183858345.7	n/a	n/a	Finance	Major Banks	https://www.nasdaq.com/symbol/ucbi
+MLHR	Herman Miller, Inc.	37.11	2182534250.04	n/a	n/a	Consumer Durables	Office Equipment/Supplies/Services	https://www.nasdaq.com/symbol/mlhr
+WDFC	WD-40 Company	158.15	2182042046.1	n/a	1973	Basic Industries	Major Chemicals	https://www.nasdaq.com/symbol/wdfc
+SFM	Sprouts Farmers Market, Inc.	18.47	2178647153.77	n/a	2013	Consumer Services	Food Chains	https://www.nasdaq.com/symbol/sfm
+XNCR	Xencor, Inc.	38.56	2172982746.72	n/a	2013	Health Care	Major Pharmaceuticals	https://www.nasdaq.com/symbol/xncr
+ARLP	Alliance Resource Partners, L.P.	16.88	2167243304.08	n/a	1999	Energy	Coal Mining	https://www.nasdaq.com/symbol/arlp
+HAIN	The Hain Celestial Group, Inc.	20.79	2165258998.98	n/a	n/a	Consumer Non-Durables	Packaged Foods	https://www.nasdaq.com/symbol/hain
+SKYY	First Trust Cloud Computing ETF	56.92	2160114113.84	n/a	n/a	n/a	n/a	https://www.nasdaq.com/symbol/skyy
+SFNC	Simmons First National Corporation	22.52	2159138892.6	n/a	n/a	Finance	Major Banks	https://www.nasdaq.com/symbol/sfnc
+CVLT	Commvault Systems, Inc.	47.24	2157884652.16	n/a	2006	Technology	Computer Software: Prepackaged Software	https://www.nasdaq.com/symbol/cvlt
+NEO	NeoGenomics, Inc.	22.58	2155707632.4	n/a	n/a	Health Care	Precision Instruments	https://www.nasdaq.com/symbol/neo
+WSFS	WSFS Financial Corporation	40.33	2153904914.95	n/a	n/a	Finance	Major Banks	https://www.nasdaq.com/symbol/wsfs
+AKCA	Akcea Therapeutics, Inc.	23.2	2152273210.4	n/a	2017	Health Care	Major Pharmaceuticals	https://www.nasdaq.com/symbol/akca
+LGND	Ligand Pharmaceuticals Incorporated	109.55	2147005267.75	n/a	n/a	Health Care	Major Pharmaceuticals	https://www.nasdaq.com/symbol/lgnd
+POWI	Power Integrations, Inc.	72.64	2126221396.16	n/a	1997	Technology	Semiconductors	https://www.nasdaq.com/symbol/powi
+FELE	Franklin Electric Co., Inc.	45.67	2119342747.26	n/a	n/a	Consumer Durables	Metal Fabrications	https://www.nasdaq.com/symbol/fele
+MYOK	MyoKardia, Inc.	45.79	2109568378.16	n/a	2015	Health Care	Major Pharmaceuticals	https://www.nasdaq.com/symbol/myok
+SVMK	SVMK Inc.	16.21	2108952658.13	n/a	2018	Technology	Computer Software: Programming, Data Processing	https://www.nasdaq.com/symbol/svmk
+RUN	Sunrun Inc.	18.3	2106886301.7	n/a	2015	Capital Goods	Industrial Specialties	https://www.nasdaq.com/symbol/run
+PENN	Penn National Gaming, Inc.	17.92	2099129518.08	n/a	1994	Consumer Services	Hotels/Resorts	https://www.nasdaq.com/symbol/penn
+TRMK	Trustmark Corporation	32.38	2096245938.18	n/a	n/a	Finance	Major Banks	https://www.nasdaq.com/symbol/trmk
+XLRN	Acceleron Pharma Inc.	39.6	2086355304	n/a	2013	Health Care	Biotechnology: Biological Products (No Diagnostic Substances)	https://www.nasdaq.com/symbol/xlrn
+OTTR	Otter Tail Corporation	52.36	2081553578.72	n/a	n/a	Public Utilities	Electric Utilities: Central	https://www.nasdaq.com/symbol/ottr
+TTEC	TTEC Holdings, Inc.	44.82	2075023293.12	n/a	1996	Technology	Professional Services	https://www.nasdaq.com/symbol/ttec
+JACK	Jack In The Box Inc.	80.34	2073845422.74	n/a	n/a	Consumer Services	Restaurants	https://www.nasdaq.com/symbol/jack
+IPAR	Inter Parfums, Inc.	65.82	2069534687.16	n/a	n/a	Consumer Non-Durables	Package Goods/Cosmetics	https://www.nasdaq.com/symbol/ipar
+IOSP	Innospec Inc.	84.36	2065116771.6	n/a	n/a	Basic Industries	Major Chemicals	https://www.nasdaq.com/symbol/iosp
+AEIS	Advanced Energy Industries, Inc.	53.94	2062438081.08	n/a	1995	Capital Goods	Industrial Machinery/Components	https://www.nasdaq.com/symbol/aeis
+WERN	Werner Enterprises, Inc.	29.49	2061000127.98	n/a	1986	Transportation	Trucking Freight/Courier Services	https://www.nasdaq.com/symbol/wern
+PDBC	Invesco Optimum Yield Diversified Commodity Strategy No K-1 ET	16.46	2041105840	n/a	n/a	n/a	n/a	https://www.nasdaq.com/symbol/pdbc
+RNST	Renasant Corporation	34.81	2040852515.4	n/a	n/a	Finance	Major Banks	https://www.nasdaq.com/symbol/rnst
+IDCC	InterDigital, Inc.	64.18	2038426948.74	n/a	n/a	Miscellaneous	Multi-Sector Companies	https://www.nasdaq.com/symbol/idcc
+TELL	Tellurian Inc.	7.63	2037210000	n/a	n/a	Energy	Oil & Gas Production	https://www.nasdaq.com/symbol/tell
+ONEQ	Fidelity Nasdaq Composite Index Tracking Stock	310.09	2037086020.42	n/a	n/a	n/a	n/a	https://www.nasdaq.com/symbol/oneq
+BZUN	Baozun Inc.	46.89	2031517549.53	43325177	2015	Consumer Services	Catalog/Specialty Distribution	https://www.nasdaq.com/symbol/bzun
+OSIS	OSI Systems, Inc.	112.05	2028637685.7	n/a	1997	Technology	Semiconductors	https://www.nasdaq.com/symbol/osis
+SATS	EchoStar Corporation	42.11	2022599011.53	n/a	n/a	Technology	Radio And Television Broadcasting And Communications Equipment	https://www.nasdaq.com/symbol/sats
+SANM	Sanmina Corporation	29.26	2019074713.04	n/a	1993	Technology	Electrical Products	https://www.nasdaq.com/symbol/sanm
+PAAS	Pan American Silver Corp.	13.14	2016311397.84	n/a	n/a	Basic Industries	Precious Metals	https://www.nasdaq.com/symbol/paas
+ZBIO	ProShares UltraPro Short NASDAQ Biotechnology	14.25	2014569966.75	n/a	n/a	n/a	n/a	https://www.nasdaq.com/symbol/zbio
+FIZZ	National Beverage Corp.	43.16	2013092026.4	n/a	n/a	Consumer Non-Durables	Beverages (Production/Distribution)	https://www.nasdaq.com/symbol/fizz
+WSBC	WesBanco, Inc.	36.86	2012732227.66	n/a	n/a	Finance	Major Banks	https://www.nasdaq.com/symbol/wsbc
+GHDX	Genomic Health, Inc.	54.06	2004133781.82	n/a	2005	Health Care	Medical Specialities	https://www.nasdaq.com/symbol/ghdx
+NSIT	Insight Enterprises, Inc.	55.89	1998753158.52	n/a	1995	Consumer Services	Catalog/Specialty Distribution	https://www.nasdaq.com/symbol/nsit
+VRRM	Verra Mobility Corporation	12.59	1996228122.78	n/a	2017	Consumer Services	Transportation Services	https://www.nasdaq.com/symbol/vrrm
+CDEV	Centennial Resource Development, Inc.	7.21	1993067084.61	n/a	2016	Energy	Oil & Gas Production	https://www.nasdaq.com/symbol/cdev
+TOWN	Towne Bank	27.26	1975378617.16	n/a	n/a	n/a	n/a	https://www.nasdaq.com/symbol/town
+CALM	Cal-Maine Foods, Inc.	40.51	1972613303.78	n/a	1996	Consumer Non-Durables	Farming/Seeds/Milling	https://www.nasdaq.com/symbol/calm
+PRFZ	Invesco FTSE RAFI US 1500 Small-Mid ETF	123.67	1972536500	n/a	n/a	n/a	n/a	https://www.nasdaq.com/symbol/prfz
+ENPH	Enphase Energy, Inc.	16.29	1971542992.32	n/a	2012	Technology	Semiconductors	https://www.nasdaq.com/symbol/enph
+CAKE	The Cheesecake Factory Incorporated	43.58	1970228964.08	n/a	1992	Consumer Services	Restaurants	https://www.nasdaq.com/symbol/cake
+ROIC	Retail Opportunity Investments Corp.	17.15	1960447164.2	n/a	n/a	Consumer Services	Real Estate Investment Trusts	https://www.nasdaq.com/symbol/roic
+SMPL	The Simply Good Foods Company	23.9	1957778609.7	n/a	n/a	Consumer Non-Durables	Packaged Foods	https://www.nasdaq.com/symbol/smpl
+ISCA	International Speedway Corporation	44.75	1945793097.5	n/a	1996	Consumer Services	Services-Misc. Amusement & Recreation	https://www.nasdaq.com/symbol/isca
+CSQ	Calamos Strategic Total Return Fund	12.58	1945186173.36	n/a	2004	n/a	n/a	https://www.nasdaq.com/symbol/csq
+GRPN	Groupon, Inc.	3.41	1937555913.15	n/a	2011	Technology	Advertising	https://www.nasdaq.com/symbol/grpn
+SNH	Senior Housing Properties Trust	8.15	1937469923.65	n/a	n/a	Consumer Services	Real Estate Investment Trusts	https://www.nasdaq.com/symbol/snh
+DNLI	Denali Therapeutics Inc.	20.2	1928663498.2	n/a	2017	Health Care	Biotechnology: Biological Products (No Diagnostic Substances)	https://www.nasdaq.com/symbol/dnli
+LTXB	LegacyTexas Financial Group, Inc.	39.49	1928189603.12	n/a	n/a	Finance	Savings Institutions	https://www.nasdaq.com/symbol/ltxb
+SHEN	Shenandoah Telecommunications Co	38.43	1915566292.71	n/a	n/a	Public Utilities	Telecommunications Equipment	https://www.nasdaq.com/symbol/shen
+EPAY	Bottomline Technologies, Inc.	43.99	1915368546.01	n/a	1999	Technology	Computer Software: Prepackaged Software	https://www.nasdaq.com/symbol/epay
+IRTC	iRhythm Technologies, Inc.	77.42	1911258094.76	n/a	2016	Health Care	Medical/Dental Instruments	https://www.nasdaq.com/symbol/irtc
+VONV	Vanguard Russell 1000 Value ETF	110.5	1900600000	n/a	n/a	n/a	n/a	https://www.nasdaq.com/symbol/vonv
+BILI	Bilibili Inc.	15.64	1898506239.88	121387867	2018	Technology	EDP Services	https://www.nasdaq.com/symbol/bili
+NTCT	NetScout Systems, Inc.	24.45	1893961279.05	n/a	1999	Technology	EDP Services	https://www.nasdaq.com/symbol/ntct
+CFFN	Capitol Federal Financial, Inc.	13.39	1892964907.21	n/a	n/a	Finance	Savings Institutions	https://www.nasdaq.com/symbol/cffn
+TWNK	Hostess Brands, Inc.	14.45	1882858495.7	n/a	2015	Consumer Non-Durables	Packaged Foods	https://www.nasdaq.com/symbol/twnk
+CWST	Casella Waste Systems, Inc.	39.78	1879215553.8	n/a	1997	Public Utilities	Environmental Services	https://www.nasdaq.com/symbol/cwst
+NMIH	NMI Holdings Inc	27.73	1872716655.34	n/a	2013	Finance	Property-Casualty Insurers	https://www.nasdaq.com/symbol/nmih
+FOCS	Focus Financial Partners Inc.	26.95	1866601817.85	n/a	2018	Finance	Investment Managers	https://www.nasdaq.com/symbol/focs
+PPBI	Pacific Premier Bancorp Inc	29.72	1863146086.72	n/a	n/a	Finance	Major Banks	https://www.nasdaq.com/symbol/ppbi
+MDRX	Allscripts Healthcare Solutions, Inc.	11.19	1862442618.75	n/a	n/a	Technology	EDP Services	https://www.nasdaq.com/symbol/mdrx
+KNSL	Kinsale Capital Group, Inc.	87.36	1859584796.16	n/a	2016	Finance	Property-Casualty Insurers	https://www.nasdaq.com/symbol/knsl
+BANR	Banner Corporation	52.81	1856858852.82	n/a	n/a	Finance	Major Banks	https://www.nasdaq.com/symbol/banr
+SLQD	iShares 0-5 Year Investment Grade Corporate Bond ETF	50.91	1855669500	n/a	n/a	n/a	n/a	https://www.nasdaq.com/symbol/slqd
+VNOM	Viper Energy Partners LP	29.42	1842526262.94	n/a	2014	Energy	Oil & Gas Production	https://www.nasdaq.com/symbol/vnom
+RGNX	REGENXBIO Inc.	50.28	1842099561	n/a	2015	Health Care	Biotechnology: Biological Products (No Diagnostic Substances)	https://www.nasdaq.com/symbol/rgnx
+SPSC	SPS Commerce, Inc.	102.46	1835477456.48	n/a	2010	Technology	Computer Software: Prepackaged Software	https://www.nasdaq.com/symbol/spsc
+ACIA	Acacia Communications, Inc.	44.95	1824917902.95	n/a	2016	Technology	Semiconductors	https://www.nasdaq.com/symbol/acia
+NFE	New Fortress Energy LLC	10.86	1823351602.56	n/a	2019	Public Utilities	Oil/Gas Transmission	https://www.nasdaq.com/symbol/nfe
+EGBN	Eagle Bancorp, Inc.	52.66	1818893198.54	n/a	n/a	Finance	Major Banks	https://www.nasdaq.com/symbol/egbn
+VRNS	Varonis Systems, Inc.	60.06	1817229714.3	n/a	2014	Technology	Computer Software: Prepackaged Software	https://www.nasdaq.com/symbol/vrns
+NTRA	Natera, Inc.	26.08	1815204485.92	n/a	2015	Health Care	Medical Specialities	https://www.nasdaq.com/symbol/ntra
+NWBI	Northwest Bancshares, Inc.	17.07	1813718464.98	n/a	2009	Finance	Major Banks	https://www.nasdaq.com/symbol/nwbi
+FRME	First Merchants Corporation	36.47	1811462638.86	n/a	n/a	Finance	Major Banks	https://www.nasdaq.com/symbol/frme
+LSCC	Lattice Semiconductor Corporation	13.65	1802043870.9	n/a	n/a	Technology	Semiconductors	https://www.nasdaq.com/symbol/lscc
+BANF	BancFirst Corporation	55.23	1801966455.24	n/a	1993	Finance	Major Banks	https://www.nasdaq.com/symbol/banf
+ABCB	Ameris Bancorp	37.86	1801579798.74	n/a	1994	Finance	Major Banks	https://www.nasdaq.com/symbol/abcb
+PCRX	Pacira BioSciences, Inc.	43.56	1798894575.72	n/a	2011	Health Care	Major Pharmaceuticals	https://www.nasdaq.com/symbol/pcrx
+BLDR	Builders FirstSource, Inc.	15.42	1782665537.46	n/a	2005	Consumer Services	RETAIL: Building Materials	https://www.nasdaq.com/symbol/bldr
+EHTH	eHealth, Inc.	78.55	1779084212.85	n/a	2006	Finance	Specialty Insurers	https://www.nasdaq.com/symbol/ehth
+LPSN	LivePerson, Inc.	27.18	1762511181.48	n/a	2000	Technology	Computer Software: Prepackaged Software	https://www.nasdaq.com/symbol/lpsn
+PRGS	Progress Software Corporation	39.47	1756206835.22	n/a	1991	Technology	Computer Software: Prepackaged Software	https://www.nasdaq.com/symbol/prgs
+PTLA	Portola Pharmaceuticals, Inc.	25.76	1754505459.84	n/a	2013	Health Care	Major Pharmaceuticals	https://www.nasdaq.com/symbol/ptla
+SFBS	ServisFirst Bancshares, Inc.	32.72	1750885875.04	n/a	2014	Finance	Major Banks	https://www.nasdaq.com/symbol/sfbs
+ALLK	Allakos Inc.	40.41	1742631666.93	n/a	2018	Health Care	Major Pharmaceuticals	https://www.nasdaq.com/symbol/allk
+CORE	Core-Mark Holding Company, Inc.	37.75	1731676380.5	n/a	n/a	Consumer Non-Durables	Food Distributors	https://www.nasdaq.com/symbol/core
+MANT	ManTech International Corporation	64.85	1731044941	n/a	2002	Consumer Services	Other Consumer Services	https://www.nasdaq.com/symbol/mant
+SFLY	Shutterfly, Inc.	50.4	1728711885.6	n/a	2006	Miscellaneous	Other Consumer Services	https://www.nasdaq.com/symbol/sfly
+UNIT	Uniti Group Inc.	9.38	1727392810.08	n/a	n/a	Consumer Services	Real Estate Investment Trusts	https://www.nasdaq.com/symbol/unit
+TCDA	Tricida, Inc.	35.15	1727280033.55	n/a	2018	Health Care	Major Pharmaceuticals	https://www.nasdaq.com/symbol/tcda
+CLBK	Columbia Financial, Inc.	14.9	1726748707.5	n/a	2018	Finance	Savings Institutions	https://www.nasdaq.com/symbol/clbk
+BLMN	Bloomin&#39; Brands, Inc.	18.82	1725901650.4	n/a	2012	Consumer Services	Restaurants	https://www.nasdaq.com/symbol/blmn
+SCPL	SciPlay Corporation	13.49	1713054913.29	n/a	2019	Technology	EDP Services	https://www.nasdaq.com/symbol/scpl
+BGCP	BGC Partners, Inc.	5.02	1711268015.86	n/a	n/a	Finance	Investment Bankers/Brokers/Service	https://www.nasdaq.com/symbol/bgcp
+GLNG	Golar LNG Limited	16.87	1708931000	n/a	n/a	Consumer Services	Marine Transportation	https://www.nasdaq.com/symbol/glng
+DIOD	Diodes Incorporated	33.62	1701641234.34	n/a	n/a	Technology	Semiconductors	https://www.nasdaq.com/symbol/diod
+SGMS	Scientific Games Corp	18.25	1695854824	n/a	n/a	Technology	EDP Services	https://www.nasdaq.com/symbol/sgms
+SSRM	SSR Mining Inc.	13.84	1678095322.08	n/a	n/a	Basic Industries	Precious Metals	https://www.nasdaq.com/symbol/ssrm
+ZGNX	Zogenix, Inc.	39.51	1677050152.2	n/a	2010	Health Care	Major Pharmaceuticals	https://www.nasdaq.com/symbol/zgnx
+CVGW	Calavo Growers, Inc.	94.87	1669686764.58	n/a	n/a	Consumer Non-Durables	Farming/Seeds/Milling	https://www.nasdaq.com/symbol/cvgw
+PLXS	Plexus Corp.	55.46	1669629955.2	n/a	n/a	Technology	Electrical Products	https://www.nasdaq.com/symbol/plxs
+HOPE	Hope Bancorp, Inc.	13.14	1664357141.7	n/a	n/a	Finance	Major Banks	https://www.nasdaq.com/symbol/hope
+MYGN	Myriad Genetics, Inc.	22.67	1663375952.81	n/a	1995	Health Care	Biotechnology: In Vitro & In Vivo Diagnostic Substances	https://www.nasdaq.com/symbol/mygn
+BOLD	Audentes Therapeutics, Inc.	37.4	1656463129.2	n/a	2016	Health Care	Biotechnology: Biological Products (No Diagnostic Substances)	https://www.nasdaq.com/symbol/bold
+AMKR	Amkor Technology, Inc.	6.91	1655823323.19	n/a	1998	Technology	Semiconductors	https://www.nasdaq.com/symbol/amkr
+BAND	Bandwidth Inc.	71.73	1649822780.61	n/a	2017	Technology	Computer Software: Prepackaged Software	https://www.nasdaq.com/symbol/band
+FRPT	Freshpet, Inc.	45.81	1643491699.65	n/a	2014	Consumer Non-Durables	Packaged Foods	https://www.nasdaq.com/symbol/frpt
+BEAT	BioTelemetry, Inc.	48.5	1639481196	n/a	2008	Health Care	Medical Specialities	https://www.nasdaq.com/symbol/beat
+FTSL	First Trust Senior Loan Fund ETF	47.39	1634955094.78	n/a	n/a	n/a	n/a	https://www.nasdaq.com/symbol/ftsl
+FWRD	Forward Air Corporation	56.93	1633662426.05	n/a	n/a	Transportation	Oil Refining/Marketing	https://www.nasdaq.com/symbol/fwrd
+SUPN	Supernus Pharmaceuticals, Inc.	31.18	1633340852.64	n/a	2012	Health Care	Major Pharmaceuticals	https://www.nasdaq.com/symbol/supn
+WABC	Westamerica Bancorporation	60.05	1617141395.75	n/a	n/a	Finance	Major Banks	https://www.nasdaq.com/symbol/wabc
+IRWD	Ironwood Pharmaceuticals, Inc.	10.39	1616905358.95	n/a	2010	Health Care	Major Pharmaceuticals	https://www.nasdaq.com/symbol/irwd
+UPWK	Upwork Inc.	15.08	1615978213.72	n/a	2018	Technology	EDP Services	https://www.nasdaq.com/symbol/upwk
+USMC	Principal U.S. Mega-Cap Multi-Factor Index ETF	29.01	1615857029.01	n/a	n/a	n/a	n/a	https://www.nasdaq.com/symbol/usmc
+ATRI	Atrion Corporation	872	1615603232	n/a	n/a	Health Care	Medical/Dental Instruments	https://www.nasdaq.com/symbol/atri
+ENTA	Enanta Pharmaceuticals, Inc.	82.09	1614687807.34	n/a	2013	Health Care	Major Pharmaceuticals	https://www.nasdaq.com/symbol/enta
+GSHD	Goosehead Insurance, Inc.	44	1596556588	n/a	2018	Finance	Specialty Insurers	https://www.nasdaq.com/symbol/gshd
+CSGS	CSG Systems International, Inc.	48.06	1596434107.32	n/a	1996	Technology	EDP Services	https://www.nasdaq.com/symbol/csgs
+EFII	Electronics for Imaging, Inc.	36.87	1590744941.52	n/a	1992	Technology	Computer Communications Equipment	https://www.nasdaq.com/symbol/efii
+HTLF	Heartland Financial USA, Inc.	43.15	1582088579.55	n/a	n/a	Finance	Major Banks	https://www.nasdaq.com/symbol/htlf
+LGIH	LGI Homes, Inc.	68.97	1581187598.1	n/a	2013	Capital Goods	Homebuilding	https://www.nasdaq.com/symbol/lgih
+MGLN	Magellan Health, Inc.	65.76	1581124102.08	n/a	n/a	Health Care	Hospital/Nursing Management	https://www.nasdaq.com/symbol/mgln
+RDFN	Redfin Corporation	17.34	1577746815.06	n/a	2017	Finance	Real Estate	https://www.nasdaq.com/symbol/rdfn
+NBTB	NBT Bancorp Inc.	36.04	1577025597.88	n/a	n/a	Finance	Major Banks	https://www.nasdaq.com/symbol/nbtb
+CENT	Central Garden & Pet Company	26.89	1566983046.69	n/a	1993	Consumer Durables	Consumer Specialties	https://www.nasdaq.com/symbol/cent
+NMRK	Newmark Group, Inc.	8.74	1560897986.78	n/a	2017	Finance	Real Estate	https://www.nasdaq.com/symbol/nmrk
+PSMT	PriceSmart, Inc.	50.83	1552572970.26	n/a	n/a	Consumer Services	Department/Specialty Retail Stores	https://www.nasdaq.com/symbol/psmt
+TSEM	Tower Semiconductor Ltd.	14.6	1551849169.4	n/a	1994	Technology	Semiconductors	https://www.nasdaq.com/symbol/tsem
+VC	Visteon Corporation	54.79	1549088025.31	n/a	n/a	Capital Goods	Auto Parts:O.E.M.	https://www.nasdaq.com/symbol/vc
+KALU	Kaiser Aluminum Corporation	95.85	1546496329.95	n/a	n/a	Capital Goods	Metal Fabrications	https://www.nasdaq.com/symbol/kalu
+CRVL	CorVel Corp.	83.54	1545415148.16	n/a	n/a	Finance	Specialty Insurers	https://www.nasdaq.com/symbol/crvl
+WSC	WillScot Corporation	14.19	1542356635.71	n/a	2015	n/a	n/a	https://www.nasdaq.com/symbol/wsc
+BOTZ	Global X Robotics & Artificial Intelligence ETF	20.35	1541742556.75	n/a	n/a	n/a	n/a	https://www.nasdaq.com/symbol/botz
+SAIA	Saia, Inc.	59.2	1530029979.2	n/a	n/a	Transportation	Trucking Freight/Courier Services	https://www.nasdaq.com/symbol/saia
+SWAV	ShockWave Medical, Inc.	54.56	1528355834.72	n/a	2019	Health Care	Medical/Dental Instruments	https://www.nasdaq.com/symbol/swav
+MDGL	Madrigal Pharmaceuticals, Inc.	98.61	1520404874.04	n/a	n/a	Health Care	Major Pharmaceuticals	https://www.nasdaq.com/symbol/mdgl
+PDP	Invesco DWA Momentum ETF	59.55	1518525000	n/a	n/a	n/a	n/a	https://www.nasdaq.com/symbol/pdp
+BBBY	Bed Bath & Beyond Inc.	11.44	1512745520	n/a	1992	Consumer Services	Home Furnishings	https://www.nasdaq.com/symbol/bbby
+APLS	Apellis Pharmaceuticals, Inc.	23.82	1506197578.32	n/a	2017	Health Care	Major Pharmaceuticals	https://www.nasdaq.com/symbol/apls
+CDNA	CareDx, Inc.	35.61	1499890101.93	n/a	2014	Health Care	Medical Specialities	https://www.nasdaq.com/symbol/cdna
+VTWO	Vanguard Russell 2000 ETF	121.57	1498350250	n/a	n/a	n/a	n/a	https://www.nasdaq.com/symbol/vtwo
+DOOO	BRP Inc.	35.31	1494092474.49	n/a	n/a	Capital Goods	Industrial Specialties	https://www.nasdaq.com/symbol/dooo
+FSCT	ForeScout Technologies, Inc.	33	1492600395	n/a	2017	Technology	Computer peripheral equipment	https://www.nasdaq.com/symbol/fsct
+INGN	Inogen, Inc	67.96	1490305509.72	n/a	2014	Health Care	Industrial Specialties	https://www.nasdaq.com/symbol/ingn
+STFC	State Auto Financial Corporation	34.25	1486561997.5	n/a	1991	Finance	Property-Casualty Insurers	https://www.nasdaq.com/symbol/stfc
+ANAB	AnaptysBio, Inc.	54.9	1483602502.5	n/a	2017	Health Care	Major Pharmaceuticals	https://www.nasdaq.com/symbol/anab
+MMYT	MakeMyTrip Limited	24.94	1480014420	n/a	2010	Consumer Services	Transportation Services	https://www.nasdaq.com/symbol/mmyt
+SIMO	Silicon Motion Technology Corporation	40.41	1472716991.7	36444370	2005	Technology	Semiconductors	https://www.nasdaq.com/symbol/simo
+AVAV	AeroVironment, Inc.	61.31	1467294279.11	n/a	2007	Capital Goods	Aerospace	https://www.nasdaq.com/symbol/avav
+CHRS	Coherus BioSciences, Inc.	21.14	1466491460.98	n/a	2014	Health Care	Biotechnology: Biological Products (No Diagnostic Substances)	https://www.nasdaq.com/symbol/chrs
+MGRC	McGrath RentCorp	60.5	1466298872.5	n/a	1984	Technology	Diversified Commercial Services	https://www.nasdaq.com/symbol/mgrc
+SAFT	Safety Insurance Group, Inc.	94.87	1459460536.78	n/a	2002	Finance	Property-Casualty Insurers	https://www.nasdaq.com/symbol/saft
+GOSS	Gossamer Bio, Inc.	22.12	1457559265.12	n/a	2019	Health Care	Major Pharmaceuticals	https://www.nasdaq.com/symbol/goss
+PLCE	Children&#39;s Place, Inc. (The)	91.68	1452877713.6	n/a	1997	Consumer Services	Clothing/Shoe/Accessory Stores	https://www.nasdaq.com/symbol/plce
+WRLD	World Acceptance Corporation	156.02	1452370209.44	n/a	1991	Finance	Finance: Consumer Services	https://www.nasdaq.com/symbol/wrld
+CSII	Cardiovascular Systems, Inc.	41.64	1450162218.48	n/a	1981	Health Care	Medical/Dental Instruments	https://www.nasdaq.com/symbol/csii
+HTLD	Heartland Express, Inc.	17.59	1442015974.95	n/a	1986	Transportation	Trucking Freight/Courier Services	https://www.nasdaq.com/symbol/htld
+AMBA	Ambarella, Inc.	44	1440540640	n/a	2012	Technology	Semiconductors	https://www.nasdaq.com/symbol/amba
+EBIX	Ebix, Inc.	47.15	1439401188.05	n/a	n/a	Technology	EDP Services	https://www.nasdaq.com/symbol/ebix
+HRTX	Heron Therapeutics, Inc.  	18.13	1435791335.51	n/a	n/a	Health Care	Major Pharmaceuticals	https://www.nasdaq.com/symbol/hrtx
+MSTR	MicroStrategy Incorporated	140.16	1435179392.64	n/a	1998	Technology	Computer Software: Prepackaged Software	https://www.nasdaq.com/symbol/mstr
+BUSE	First Busey Corporation	25.66	1427327928.82	n/a	n/a	Finance	Major Banks	https://www.nasdaq.com/symbol/buse
+CRAY	Cray Inc	34.61	1425299052.32	n/a	n/a	Technology	Computer Manufacturing	https://www.nasdaq.com/symbol/cray
+SPWR	SunPower Corporation	10	1424035220	n/a	2005	Technology	Semiconductors	https://www.nasdaq.com/symbol/spwr
+PLAY	Dave & Buster&#39;s Entertainment, Inc.	39.13	1423053779.42	n/a	2014	Consumer Services	Restaurants	https://www.nasdaq.com/symbol/play
+KLIC	Kulicke and Soffa Industries, Inc.	21.81	1418075927.49	n/a	n/a	Technology	Semiconductors	https://www.nasdaq.com/symbol/klic
+INVA	Innoviva, Inc.	13.99	1416659772.86	n/a	n/a	Health Care	Major Pharmaceuticals	https://www.nasdaq.com/symbol/inva
+CENTA	Central Garden & Pet Company	24.3	1416053850.3	n/a	n/a	Consumer Durables	Consumer Specialties	https://www.nasdaq.com/symbol/centa
+FEX	First Trust Large Cap Core AlphaDEX Fund	60.24	1412628120.48	n/a	n/a	n/a	n/a	https://www.nasdaq.com/symbol/fex
+BCOR	Blucora, Inc.	29.18	1412033126.74	n/a	n/a	Finance	Finance: Consumer Services	https://www.nasdaq.com/symbol/bcor
+SG	Sirius International Insurance Group, Ltd.	12.19	1405047473.57	n/a	n/a	Finance	Property-Casualty Insurers	https://www.nasdaq.com/symbol/sg
+HLIO	Helios Technologies, Inc.	43.84	1403378680	n/a	n/a	Capital Goods	Metal Fabrications	https://www.nasdaq.com/symbol/hlio
+SILK	Silk Road Medical, Inc.	45.7	1401716112.5	n/a	2019	Health Care	Medical/Dental Instruments	https://www.nasdaq.com/symbol/silk
+SOXX	iShares PHLX SOX Semiconductor Sector Index Fund	189.21	1400154000	n/a	n/a	n/a	n/a	https://www.nasdaq.com/symbol/soxx
+JRVR	James River Group Holdings, Ltd.	46.32	1397160998.88	n/a	2014	Finance	Property-Casualty Insurers	https://www.nasdaq.com/symbol/jrvr
+ATNX	Athenex, Inc.	18	1387182564	n/a	2017	Health Care	Major Pharmaceuticals	https://www.nasdaq.com/symbol/atnx
+VBTX	Veritex Holdings, Inc.	25.48	1382673015.36	n/a	2014	Finance	Major Banks	https://www.nasdaq.com/symbol/vbtx
+BMCH	BMC Stock Holdings, Inc.	20.74	1379356134.04	n/a	2013	Consumer Services	RETAIL: Building Materials	https://www.nasdaq.com/symbol/bmch
+BATRK	Liberty Media Corporation	26.96	1375209568.72	n/a	n/a	Consumer Services	Broadcasting	https://www.nasdaq.com/symbol/batrk
+BATRA	Liberty Media Corporation	26.93	1373679291.01	n/a	n/a	Consumer Services	Broadcasting	https://www.nasdaq.com/symbol/batra
+TRS	TriMas Corporation	29.97	1369218920.49	n/a	2007	Capital Goods	Industrial Specialties	https://www.nasdaq.com/symbol/trs
+RCII	Rent-A-Center Inc.	25.32	1368545341.68	n/a	1995	Technology	Diversified Commercial Services	https://www.nasdaq.com/symbol/rcii
+HUBG	Hub Group, Inc.	39.33	1367376002.19	n/a	1996	Transportation	Oil Refining/Marketing	https://www.nasdaq.com/symbol/hubg
+CROX	Crocs, Inc.	19.01	1365984746.15	n/a	2006	Consumer Non-Durables	Shoe Manufacturing	https://www.nasdaq.com/symbol/crox
+MIK	The Michaels Companies, Inc.	8.63	1365010258.58	n/a	2014	Consumer Services	Recreational Products/Toys	https://www.nasdaq.com/symbol/mik
+PZZA	Papa John&#39;s International, Inc.	42.8	1360126134.4	n/a	1993	Consumer Services	Restaurants	https://www.nasdaq.com/symbol/pzza
+RCM	R1 RCM Inc.	12.29	1359293799.19	n/a	n/a	Consumer Services	Other Consumer Services	https://www.nasdaq.com/symbol/rcm
+ICFI	ICF International, Inc.	72.12	1358023782.96	n/a	2006	Consumer Services	Professional Services	https://www.nasdaq.com/symbol/icfi
+THRM	Gentherm Inc	40.32	1357776846.72	n/a	n/a	Capital Goods	Auto Parts:O.E.M.	https://www.nasdaq.com/symbol/thrm
+AERI	Aerie Pharmaceuticals, Inc.	29.53	1355953638.02	n/a	2013	Health Care	Biotechnology: Biological Products (No Diagnostic Substances)	https://www.nasdaq.com/symbol/aeri
+ATSG	Air Transport Services Group, Inc	22.83	1354891165.29	n/a	n/a	Transportation	Air Freight/Delivery Services	https://www.nasdaq.com/symbol/atsg
+NRC	National Research Corporation	54.44	1353617446.04	n/a	n/a	Health Care	Biotechnology: Commercial Physical & Biological Resarch	https://www.nasdaq.com/symbol/nrc
+VWOB	Vanguard Emerging Markets Government Bond ETF	79.98	1353170102.88	n/a	n/a	n/a	n/a	https://www.nasdaq.com/symbol/vwob
+RMR	The RMR Group Inc.	43.28	1352054778.64	n/a	n/a	Consumer Services	Professional Services	https://www.nasdaq.com/symbol/rmr
+ATRO	Astronics Corporation	40.98	1338073263.78	n/a	n/a	Capital Goods	Military/Government/Technical	https://www.nasdaq.com/symbol/atro
+ILPT	Industrial Logistics Properties Trust	20.53	1335957497.37	n/a	2018	Consumer Services	Real Estate Investment Trusts	https://www.nasdaq.com/symbol/ilpt
+CVCO	Cavco Industries, Inc.	146.73	1334996493.6	n/a	n/a	Basic Industries	Homebuilding	https://www.nasdaq.com/symbol/cvco
+MINI	Mobile Mini, Inc.	29.6	1331192808	n/a	1994	Capital Goods	Metal Fabrications	https://www.nasdaq.com/symbol/mini
+TPTX	Turning Point Therapeutics, Inc.	42.4	1322883519.2	n/a	2019	Health Care	Major Pharmaceuticals	https://www.nasdaq.com/symbol/tptx
+RUSHB	Rush Enterprises, Inc.	36.03	1320894749.1	n/a	n/a	Consumer Durables	Automotive Aftermarket	https://www.nasdaq.com/symbol/rushb
+ESPR	Esperion Therapeutics, Inc.	49.01	1319224518.56	n/a	2013	Health Care	Major Pharmaceuticals	https://www.nasdaq.com/symbol/espr
+GIII	G-III Apparel Group, LTD.	26.94	1318421778.6	n/a	1989	Consumer Non-Durables	Apparel	https://www.nasdaq.com/symbol/giii
+SSYS	Stratasys, Ltd.	24.41	1317564509.84	n/a	1994	Technology	Computer peripheral equipment	https://www.nasdaq.com/symbol/ssys
+AMWD	American Woodmark Corporation	77.83	1312935517.59	n/a	1986	Basic Industries	Forest Products	https://www.nasdaq.com/symbol/amwd
+CECO	Career Education Corporation	18.71	1311625427.39	n/a	1998	Consumer Services	Other Consumer Services	https://www.nasdaq.com/symbol/ceco
+RUSHA	Rush Enterprises, Inc.	35.62	1305863751.4	n/a	n/a	Consumer Durables	Automotive Aftermarket	https://www.nasdaq.com/symbol/rusha
+STAA	STAAR Surgical Company	29.26	1301275473.96	n/a	n/a	Health Care	Ophthalmic Goods	https://www.nasdaq.com/symbol/staa
+VRTU	Virtusa Corporation	42.91	1293779796.19	n/a	2007	Technology	EDP Services	https://www.nasdaq.com/symbol/vrtu
+NYMT	New York Mortgage Trust, Inc.	6.13	1292152845.15	n/a	n/a	Consumer Services	Real Estate Investment Trusts	https://www.nasdaq.com/symbol/nymt
+FATE	Fate Therapeutics, Inc.	19.72	1285464646.48	n/a	2013	Health Care	Biotechnology: Biological Products (No Diagnostic Substances)	https://www.nasdaq.com/symbol/fate
+ECOL	US Ecology, Inc.	57.81	1275694310.58	n/a	n/a	Public Utilities	Environmental Services	https://www.nasdaq.com/symbol/ecol
+RMBS	Rambus, Inc.	11.5	1269554126.5	n/a	1997	Technology	Semiconductors	https://www.nasdaq.com/symbol/rmbs
+STBA	S&T Bancorp, Inc.	36.82	1264346110.58	n/a	n/a	Finance	Major Banks	https://www.nasdaq.com/symbol/stba
+CSIQ	Canadian Solar Inc.	21.27	1264223309.67	n/a	2006	Technology	Semiconductors	https://www.nasdaq.com/symbol/csiq
+WW	Weight Watchers International Inc	18.76	1256889796.4	n/a	n/a	Consumer Services	Other Consumer Services	https://www.nasdaq.com/symbol/ww
+ROCK	Gibraltar Industries, Inc.	38.97	1254946428.45	n/a	1993	Capital Goods	Steel/Iron Ore	https://www.nasdaq.com/symbol/rock
+UFCS	United Fire Group, Inc	49.36	1244006900.88	n/a	n/a	Finance	Property-Casualty Insurers	https://www.nasdaq.com/symbol/ufcs
+PAHC	Phibro Animal Health Corporation	30.75	1243948446	n/a	2014	Health Care	Major Pharmaceuticals	https://www.nasdaq.com/symbol/pahc
+HYLS	First Trust High Yield Long/Short ETF	48.02	1241317096.04	n/a	n/a	n/a	n/a	https://www.nasdaq.com/symbol/hyls
+CATM	Cardtronics plc	26.8	1241280002.4	n/a	2007	Miscellaneous	Business Services	https://www.nasdaq.com/symbol/catm
+SBCF	Seacoast Banking Corporation of Florida	24.13	1240619820	n/a	n/a	Finance	Major Banks	https://www.nasdaq.com/symbol/sbcf
+OCFC	OceanFirst Financial Corp.	24.17	1238502559.38	n/a	n/a	Finance	Savings Institutions	https://www.nasdaq.com/symbol/ocfc
+HA	Hawaiian Holdings, Inc.	25.71	1235234996.04	n/a	n/a	Transportation	Air Freight/Delivery Services	https://www.nasdaq.com/symbol/ha
+RAVN	Raven Industries, Inc.	34.18	1231379002.36	n/a	n/a	Capital Goods	Specialty Chemicals	https://www.nasdaq.com/symbol/ravn
+OPK	Opko Health, Inc.	2	1231202090	n/a	n/a	Health Care	Major Pharmaceuticals	https://www.nasdaq.com/symbol/opk
+CHCO	City Holding Company	74.6	1229498489.8	n/a	n/a	Finance	Major Banks	https://www.nasdaq.com/symbol/chco
+ALEC	Alector, Inc.	17.82	1227295333.44	n/a	2019	Health Care	Biotechnology: Biological Products (No Diagnostic Substances)	https://www.nasdaq.com/symbol/alec
+OPI	Office Properties Income Trust	25.52	1227259556.16	n/a	n/a	Finance	Real Estate	https://www.nasdaq.com/symbol/opi
+PRAA	PRA Group, Inc.	26.95	1223094245.45	n/a	2002	Finance	Finance: Consumer Services	https://www.nasdaq.com/symbol/praa
+FLWS	1-800 FLOWERS.COM, Inc.	19.01	1222682461.57	n/a	1999	Consumer Services	Other Specialty Stores	https://www.nasdaq.com/symbol/flws
+AIMT	Aimmune Therapeutics, Inc.	19.56	1222352028.6	n/a	2015	Health Care	Major Pharmaceuticals	https://www.nasdaq.com/symbol/aimt
+DENN	Denny&#39;s Corporation	20.13	1213815367.38	n/a	n/a	Consumer Services	Restaurants	https://www.nasdaq.com/symbol/denn
+NXGN	NextGen Healthcare, Inc.	18.71	1213118980	n/a	n/a	Technology	EDP Services	https://www.nasdaq.com/symbol/nxgn
+EPZM	Epizyme, Inc.	13.29	1207172443.89	n/a	2013	Health Care	Major Pharmaceuticals	https://www.nasdaq.com/symbol/epzm
+AMSF	AMERISAFE, Inc.	62.43	1203337001.4	n/a	2005	Finance	Property-Casualty Insurers	https://www.nasdaq.com/symbol/amsf
+SASR	Sandy Spring Bancorp, Inc.	33.61	1196612393.48	n/a	n/a	Finance	Major Banks	https://www.nasdaq.com/symbol/sasr
+ALTM	Altus Midstream Company	3.67	1192490549.35	n/a	2017	Public Utilities	Natural Gas Distribution	https://www.nasdaq.com/symbol/altm
+MNTA	Momenta Pharmaceuticals, Inc.	12.09	1192213313.07	n/a	2004	Health Care	Biotechnology: Biological Products (No Diagnostic Substances)	https://www.nasdaq.com/symbol/mnta
+CORT	Corcept Therapeutics Incorporated	10.33	1186490453.64	n/a	2004	Health Care	Major Pharmaceuticals	https://www.nasdaq.com/symbol/cort
+LKCO	Luokung Technology Corp	5.94	1183946294.52	n/a	n/a	Technology	EDP Services	https://www.nasdaq.com/symbol/lkco
+ARQL	ArQule, Inc.	10.82	1182732869.14	n/a	1996	Health Care	Major Pharmaceuticals	https://www.nasdaq.com/symbol/arql
+XON	Intrexon Corporation	7.35	1181618031.3	n/a	n/a	Health Care	Biotechnology: Commercial Physical & Biological Resarch	https://www.nasdaq.com/symbol/xon
+BRKL	Brookline Bancorp, Inc.	14.7	1172682004.2	n/a	n/a	Finance	Savings Institutions	https://www.nasdaq.com/symbol/brkl
+VGLT	Vanguard Long-Treasury ETF	81.64	1171225482.44	n/a	n/a	n/a	n/a	https://www.nasdaq.com/symbol/vglt
+ATRC	AtriCure, Inc.	30.32	1171063004	n/a	2005	Health Care	Medical/Dental Instruments	https://www.nasdaq.com/symbol/atrc
+HURN	Huron Consulting Group Inc.	51.04	1167949698.08	n/a	2004	Consumer Services	Professional Services	https://www.nasdaq.com/symbol/hurn
+RUBY	Rubius Therapeutics, Inc.	14.6	1167011594.6	n/a	2018	Health Care	Biotechnology: Biological Products (No Diagnostic Substances)	https://www.nasdaq.com/symbol/ruby
+SUSL	iShares ESG MSCI USA Leaders ETF	50.11	1162552000	n/a	n/a	n/a	n/a	https://www.nasdaq.com/symbol/susl
+SSP	E.W. Scripps Company (The)	14.39	1162513115.81	n/a	n/a	Consumer Services	Broadcasting	https://www.nasdaq.com/symbol/ssp
+LKFN	Lakeland Financial Corporation	45.38	1162393497.7	n/a	n/a	Finance	Major Banks	https://www.nasdaq.com/symbol/lkfn
+SCHL	Scholastic Corporation	32.98	1161325300.66	n/a	1992	Consumer Services	Books	https://www.nasdaq.com/symbol/schl
+KRNY	Kearny Financial	12.81	1159842725.37	n/a	n/a	Finance	Savings Institutions	https://www.nasdaq.com/symbol/krny
+VIGI	Vanguard International Dividend Appreciation ETF	67.41	1158750868.59	n/a	n/a	n/a	n/a	https://www.nasdaq.com/symbol/vigi
+VONE	Vanguard Russell 1000 ETF	133.5	1158112500	n/a	n/a	n/a	n/a	https://www.nasdaq.com/symbol/vone
+SNBR	Sleep Number Corporation	38.21	1154438730	n/a	n/a	Consumer Durables	Home Furnishings	https://www.nasdaq.com/symbol/snbr
+TRUP	Trupanion, Inc.	33.45	1153680297.75	n/a	n/a	Health Care	Medical Specialities	https://www.nasdaq.com/symbol/trup
+RARX	Ra Pharmaceuticals, Inc.	27.26	1153183541.88	n/a	2016	Health Care	Major Pharmaceuticals	https://www.nasdaq.com/symbol/rarx
+RDWR	Radware Ltd.	24.54	1152373271.04	n/a	1999	Miscellaneous	Business Services	https://www.nasdaq.com/symbol/rdwr
+FNKO	Funko, Inc.	23.55	1149967271.1	n/a	2017	Consumer Non-Durables	Recreational Products/Toys	https://www.nasdaq.com/symbol/fnko
+CBLK	Carbon Black, Inc.	16.01	1145826190.06	n/a	2018	Technology	Computer Software: Prepackaged Software	https://www.nasdaq.com/symbol/cblk
+SRCE	1st Source Corporation	44.42	1140170472.26	n/a	n/a	Finance	Major Banks	https://www.nasdaq.com/symbol/srce
+FTA	First Trust Large Cap Value AlphaDEX Fund	50.97	1139179601.94	n/a	n/a	n/a	n/a	https://www.nasdaq.com/symbol/fta
+TCBK	TriCo Bancshares	37.41	1139173032.3	n/a	n/a	Finance	Major Banks	https://www.nasdaq.com/symbol/tcbk
+TLND	Talend S.A.	37.57	1137374568.46	30273478	2016	Technology	Computer Software: Prepackaged Software	https://www.nasdaq.com/symbol/tlnd
+CRTO	Criteo S.A.	17.96	1135425309.12	63219672	2013	Technology	Advertising	https://www.nasdaq.com/symbol/crto
+VREX	Varex Imaging Corporation	29.62	1134446000	n/a	n/a	Capital Goods	Industrial Machinery/Components	https://www.nasdaq.com/symbol/vrex
+VCTR	Victory Capital Holdings, Inc.	16.78	1134064956.72	n/a	2018	Finance	Investment Managers	https://www.nasdaq.com/symbol/vctr
+PKW	Invesco BuyBack Achievers ETF	61.3	1134050000	n/a	n/a	n/a	n/a	https://www.nasdaq.com/symbol/pkw
+VICR	Vicor Corporation	28.07	1130175139.87	n/a	n/a	Capital Goods	Industrial Machinery/Components	https://www.nasdaq.com/symbol/vicr
+AFIN	American Finance Trust, Inc.	10.64	1130085369.84	n/a	n/a	Consumer Services	Real Estate Investment Trusts	https://www.nasdaq.com/symbol/afin
+SYKE	Sykes Enterprises, Incorporated	26.48	1127117307.44	n/a	1996	Technology	EDP Services	https://www.nasdaq.com/symbol/syke
+EDIT	Editas Medicine, Inc.	22.83	1123760770.38	n/a	2016	Health Care	Biotechnology: Biological Products (No Diagnostic Substances)	https://www.nasdaq.com/symbol/edit
+SGMO	Sangamo Therapeutics, Inc.	9.73	1122470956.18	n/a	2000	Health Care	Biotechnology: Biological Products (No Diagnostic Substances)	https://www.nasdaq.com/symbol/sgmo
+VYMI	Vanguard International High Dividend Yield ETF	60.72	1118216241.12	n/a	n/a	n/a	n/a	https://www.nasdaq.com/symbol/vymi
+WIRE	Encore Wire Corporation	53.5	1117836918	n/a	1992	Capital Goods	Metal Fabrications	https://www.nasdaq.com/symbol/wire
+HOLI	Hollysys Automation Technologies, Ltd.	18.43	1112104884.57	n/a	n/a	Energy	Industrial Machinery/Components	https://www.nasdaq.com/symbol/holi
+KRNT	Kornit Digital Ltd.	27.47	1108086233.5	n/a	2015	Capital Goods	Industrial Machinery/Components	https://www.nasdaq.com/symbol/krnt
+PRFT	Perficient, Inc.	33.59	1106628562.61	n/a	1999	Technology	EDP Services	https://www.nasdaq.com/symbol/prft
+VCYT	Veracyte, Inc.	26.57	1106443961.71	n/a	2013	Health Care	Medical Specialities	https://www.nasdaq.com/symbol/vcyt
+PSDO	Presidio, Inc.	13.34	1104009462.2	n/a	2017	Technology	Retail: Computer Software & Peripheral Equipment	https://www.nasdaq.com/symbol/psdo
+SONO	Sonos, Inc.	10.89	1098181457.01	n/a	2018	Consumer Non-Durables	Consumer Electronics/Appliances	https://www.nasdaq.com/symbol/sono
+GLPG	Galapagos NV	126.28	1095391361.68	8674306	2015	Health Care	Major Pharmaceuticals	https://www.nasdaq.com/symbol/glpg
+TRHC	Tabula Rasa HealthCare, Inc.	49.31	1084245489.19	n/a	2016	Miscellaneous	Business Services	https://www.nasdaq.com/symbol/trhc
+CASH	Meta Financial Group, Inc.	27.47	1083688258.54	n/a	1993	Finance	Savings Institutions	https://www.nasdaq.com/symbol/cash
+EFSC	Enterprise Financial Services Corporation	40.31	1083549246.48	n/a	n/a	Finance	Major Banks	https://www.nasdaq.com/symbol/efsc
+DRNA	Dicerna Pharmaceuticals, Inc.	15.8	1079518868.2	n/a	2014	Health Care	Major Pharmaceuticals	https://www.nasdaq.com/symbol/drna
+AXDX	Accelerate Diagnostics, Inc.	19.82	1079394999.98	n/a	n/a	Capital Goods	Biotechnology: Laboratory Analytical Instruments	https://www.nasdaq.com/symbol/axdx
+LNTH	Lantheus Holdings, Inc.	27.76	1077646003.76	n/a	2015	Health Care	Biotechnology: In Vitro & In Vivo Diagnostic Substances	https://www.nasdaq.com/symbol/lnth
+HFWA	Heritage Financial Corporation	29.19	1077085838.22	n/a	n/a	Finance	Banks	https://www.nasdaq.com/symbol/hfwa
+AIA	iShares Asia 50 ETF	60.05	1074895000	n/a	n/a	n/a	n/a	https://www.nasdaq.com/symbol/aia
+PATK	Patrick Industries, Inc.	44.97	1072518490.68	n/a	n/a	Basic Industries	Forest Products	https://www.nasdaq.com/symbol/patk
+FORM	FormFactor, Inc.	14.38	1072479654.82	n/a	2003	Technology	Semiconductors	https://www.nasdaq.com/symbol/form
+MATW	Matthews International Corporation	33.77	1071475294.78	n/a	1994	Capital Goods	Metal Fabrications	https://www.nasdaq.com/symbol/matw
+RDUS	Radius Health, Inc.	23.17	1068308064.11	n/a	2014	Health Care	Major Pharmaceuticals	https://www.nasdaq.com/symbol/rdus
+GBDC	Golub Capital BDC, Inc.	17.63	1068155914.89	n/a	2010	n/a	n/a	https://www.nasdaq.com/symbol/gbdc
+AINV	Apollo Investment Corporation	15.67	1066632235.42	n/a	2004	n/a	n/a	https://www.nasdaq.com/symbol/ainv
+SBSI	Southside Bancshares, Inc.	31.51	1062456669.29	n/a	n/a	Finance	Major Banks	https://www.nasdaq.com/symbol/sbsi
+CDXS	Codexis, Inc.	18.43	1061378336.87	n/a	2010	Basic Industries	Major Chemicals	https://www.nasdaq.com/symbol/cdxs
+FBNC	First Bancorp	35.65	1060461120.75	n/a	1987	Finance	Major Banks	https://www.nasdaq.com/symbol/fbnc
+CETV	Central European Media Enterprises Ltd.	4.18	1058710295.5	n/a	1994	Consumer Services	Broadcasting	https://www.nasdaq.com/symbol/cetv
+EGOV	NIC Inc.	15.8	1057227248.6	n/a	1999	Miscellaneous	Business Services	https://www.nasdaq.com/symbol/egov
+AXNX	Axonics Modulation Technologies, Inc.	37.21	1051769897.06	n/a	2018	Health Care	Medical/Dental Instruments	https://www.nasdaq.com/symbol/axnx
+SCWX	SecureWorks Corp.	12.87	1049170520.97	n/a	2016	Technology	Computer Software: Prepackaged Software	https://www.nasdaq.com/symbol/scwx
+LORL	Loral Space and Communications, Inc.	33.83	1046454966.33	n/a	n/a	Technology	Radio And Television Broadcasting And Communications Equipment	https://www.nasdaq.com/symbol/lorl
+SQQQ	ProShares UltraPro Short QQQ	36.11	1046151151.41	n/a	n/a	n/a	n/a	https://www.nasdaq.com/symbol/sqqq
+HCM	Hutchison China MediTech Limited	29.23	1045036630.62	35752194	2016	Health Care	Major Pharmaceuticals	https://www.nasdaq.com/symbol/hcm
+AAWW	Atlas Air Worldwide Holdings	40.41	1044667601.1	n/a	n/a	Transportation	Transportation Services	https://www.nasdaq.com/symbol/aaww
+MGPI	MGP Ingredients, Inc.	61.07	1039098843.74	n/a	n/a	Consumer Non-Durables	Beverages (Production/Distribution)	https://www.nasdaq.com/symbol/mgpi
+INOV	Inovalon Holdings, Inc.	14.2	1038058922.2	n/a	2015	Technology	EDP Services	https://www.nasdaq.com/symbol/inov
+GTHX	G1 Therapeutics, Inc.	27.61	1034468094.33	n/a	2017	Health Care	Major Pharmaceuticals	https://www.nasdaq.com/symbol/gthx
+GLUU	Glu Mobile Inc.	7.1	1031295320.2	n/a	2007	Technology	EDP Services	https://www.nasdaq.com/symbol/gluu
+ECPG	Encore Capital Group Inc	33.17	1027163747.33	n/a	n/a	Finance	Finance Companies	https://www.nasdaq.com/symbol/ecpg
+LABL	Multi-Color Corporation	49.97	1026551349.41	n/a	1987	Miscellaneous	Publishing	https://www.nasdaq.com/symbol/labl
+MTSC	MTS Systems Corporation	57.03	1023943823.31	n/a	n/a	Capital Goods	Industrial Machinery/Components	https://www.nasdaq.com/symbol/mtsc
+CRTX	Cortexyme, Inc.	38.05	1021305719.45	n/a	2019	Health Care	Biotechnology: Biological Products (No Diagnostic Substances)	https://www.nasdaq.com/symbol/crtx
+FANH	Fanhua Inc.	30.44	1020136146.16	33513014	n/a	Finance	Specialty Insurers	https://www.nasdaq.com/symbol/fanh
+TCMD	Tactile Systems Technology, Inc.	53.95	1015645867.6	n/a	2016	Health Care	Medical/Dental Instruments	https://www.nasdaq.com/symbol/tcmd
+TTMI	TTM Technologies, Inc.	9.63	1015592261.22	n/a	2000	Technology	Electrical Products	https://www.nasdaq.com/symbol/ttmi
+APOG	Apogee Enterprises, Inc.	38.08	1012907284.48	n/a	n/a	Capital Goods	Auto Parts:O.E.M.	https://www.nasdaq.com/symbol/apog
+FTC	First Trust Large Cap Growth AlphaDEX Fund	69.53	1004708639.06	n/a	n/a	n/a	n/a	https://www.nasdaq.com/symbol/ftc
+OFIX	Orthofix Medical Inc. 	52.57	1002351348.88	n/a	1992	Health Care	Medical/Dental Instruments	https://www.nasdaq.com/symbol/ofix
+NVEE	NV5 Global, Inc.	79.74	1001942270.1	n/a	2013	Consumer Services	Other Consumer Services	https://www.nasdaq.com/symbol/nvee
+EUFN	iShares MSCI Europe Financials Sector Index Fund	17.88	1000386000	n/a	n/a	n/a	n/a	https://www.nasdaq.com/symbol/eufn
+IGOV	iShares International Treasury Bond ETF	50.77	1000169000	n/a	n/a	n/a	n/a	https://www.nasdaq.com/symbol/igov
+
