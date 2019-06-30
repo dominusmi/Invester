@@ -1,4 +1,5 @@
-import Pkg
+module HelloWorld
+
 using HTTP
 using JSON
 using Dates
@@ -15,3 +16,5 @@ include("API.jl")
 include("Asset.jl")
 include("Investement.jl")
 include("Utilities.jl")
+
+end # module
