@@ -2,3 +2,15 @@ name = "Invester"
 uuid = "a11fa4da-9b89-11e9-194d-6783914d63d8"
 authors = ["edoardo <barp.edoardo@gmail.com>"]
 version = "0.1.0"
+
+[deps]
+CSV = "336ed68f-0bac-5ca0-87d4-7b16caf5d00b"
+DataFrames = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
+Dates = "ade2ca70-3891-5945-98fb-dc099432e06a"
+Glob = "c27321d9-0574-5035-807b-f59d2c89b15c"
+HTTP = "cd3eb016-35fb-5094-929b-558a96fad6f3"
+JSON = "682c06a0-de6a-54ab-a142-c8b1cf79cde6"
+JuliaDB = "a93385a2-3734-596a-9a66-3cfbb77141e6"
+Parameters = "d96e819e-fc66-5662-9728-84c9c7592b0a"
+Query = "1a8c2f83-1ff3-5112-b086-8aa67b057ba1"
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"

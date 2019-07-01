@@ -1,13 +1,14 @@
 function LoadTop100History()
-   assetHistories = Dict()
-    for path in glob("*.csv", "resources/Top100Companies/")
+   assetHistories = Dict{Symbol, AssetHistory}()
+    for path in glob("*.csv", "src/resources/Top100Companies/")
         symbol = split( split(path, '/')[end], '.')[1]
         asset = Asset(String(symbol))
 
         @show "Loading $(symbol)"
 
         hist = loadtable(path, indexcols=["timestamp"])
-        assetHistories[symbol] = hist
+        assetHistory = AssetHistory(asset,hist)
+        assetHistories[asset.symbol] = assetHistory
     end
     return assetHistories
 end

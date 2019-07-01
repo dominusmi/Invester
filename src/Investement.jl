@@ -1,21 +1,37 @@
+function InvestementReturn(inv::Investment{T}, closeValue::AbstractFloat) where T <: InvestmentType
+    _return = Return(inv, closeValue)
+    percentage = (inv.value + _return) / inv.value
+    InvestementReturn(_return, percentage)
+end
+
+function ClosedInvestment(inv::Investment{T}, closeValue::AbstractFloat, dateClosed::Date = Date.now()) where T <: InvestmentType
+    ClosedInvestment{T}(
+        inv.asset, inv.value, closeValue, inv.dateOpen,
+        datedClosed, InvestmentReturn(inv, closeValue)
+    )
+end
+
 Add!(portfolio::AbstractPortfolio, inv::AbstractInvestment) = push!(portfolio.Investments, inv)
 
 function Long!(portfolio::AbstractPortfolio, asset::Asset, value::AbstractFloat;
-        dateOpen::Date = Dates.today(), dateClose::Union{Date,Nothing} = nothing)
+        dateOpen::Date = Dates.today())
 
-    inv = Investment{LongInvestment}(asset, value, dateOpen, dateClose)
+    inv = Investment{LongInvestment}(asset, value, dateOpen)
     add!(portfolio, inv)
 end
 
 function Short!(portfolio::AbstractPortfolio, asset::Asset, value::AbstractFloat;
-        dateOpen::Date = Dates.today(), dateClose::Union{Date,Nothing} = nothing)
+        dateOpen::Date = Dates.today())
 
-    inv = Investment{ShortInvestment}(asset, value, dateOpen, dateClose)
+    inv = Investment{ShortInvestment}(asset, value, dateOpen)
     add!(portfolio, inv)
 end
 
-function Close!(pf::AbstractPortfolio, inv::Investment)
-    findfirst(pf.Investments, x => x == inv)
+Close(inv::Investment, value::AbstractFloat, dateClosed::DateTime) = ClosedInvestment(inv, value, dateClosed)
+
+function Close!(pf::AbstractPortfolio, inv::Investment, value::AbstractFloat, dateClosed::DateTime = Date.Today())
+    idx = findfirst(pf.Investments, x => x == inv)
+    pf.Investments[idx] = Close(inv, value, dateClosed)
 end
 
 Return(inv::Investment{LongInvestment}, value::AbstractFloat) = value - inv.value

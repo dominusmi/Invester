@@ -1,4 +1,4 @@
-module HelloWorld
+module Invester
 
 using HTTP
 using JSON
@@ -9,7 +9,13 @@ using Parameters
 using Glob
 using JuliaDB
 using Query
+using DataFrames: DataFrame
 
+export Asset, AssetHistory, AssetHistoryBuffer, Investment, InvestmentType, InvestmentReturn,
+	LongInvestment, ShortInvestment, AbstractInvestment, AbstractPortfolio, Portfolio, API,
+	IEXTradingAPI, AlphadvantageAPI, ClosedInvestment
+
+export LoadTop100History, PotentialProfit, Close, Close!, ClosedProfit
 
 include("Types.jl")
 include("API.jl")
