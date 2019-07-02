@@ -10,17 +10,21 @@ using Glob
 using JuliaDB
 using Query
 using DataFrames: DataFrame
+using Statistics
 
 export Asset, AssetHistory, AssetHistoryBuffer, Investment, InvestmentType, InvestmentReturn,
 	LongInvestment, ShortInvestment, AbstractInvestment, AbstractPortfolio, Portfolio, API,
 	IEXTradingAPI, AlphadvantageAPI, ClosedInvestment
 
-export LoadTop100History, PotentialProfit, Close, Close!, ClosedProfit
+export LoadTop100History, PotentialProfit, ClosedPercentage, ClosedProfit, Close,
+	Close!, ClosedProfit, Return, Add!, Long!, Short!
 
 include("Types.jl")
 include("API.jl")
 include("Asset.jl")
 include("Investement.jl")
 include("Utilities.jl")
+
+history = Dict{Symbol, AssetHistory}()
 
 end # module

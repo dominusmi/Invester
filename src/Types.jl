@@ -22,15 +22,15 @@ end
 
 @with_kw mutable struct AssetHistoryBuffer
     asset::Asset
-    dates::Array{Date}                   = Array{Date,1}()
-    open::Array{<:AbstractFloat}         = zeros()
-    high::Array{<:AbstractFloat}         = zeros()
-    close::Array{<:AbstractFloat}        = zeros()
-    close_adjusted::Array{<:AbstractFloat} = zeros()
-    low::Array{<:AbstractFloat}          = zeros()
-    volume::Array{<:AbstractFloat}       = zeros()
-    dividend::Array{<:AbstractFloat}     = zeros()
-    split_coef::Array{<:AbstractFloat}   = zeros()
+    dates::Array{Date}            = Array{Date,1}()
+    open::Array{<:Number}         = zeros()
+    high::Array{<:Number}         = zeros()
+    close::Array{<:Number}        = zeros()
+    close_adjusted::Array{<:Number} = zeros()
+    low::Array{<:Number}          = zeros()
+    volume::Array{<:Number}       = zeros()
+    dividend::Array{<:Number}     = zeros()
+    split_coef::Array{<:Number}   = zeros()
 end
 
 struct AssetHistory
@@ -60,33 +60,41 @@ abstract type InvestmentType end
 abstract type LongInvestment <: InvestmentType end
 abstract type ShortInvestment <: InvestmentType end
 
-struct InvestmentReturn
-    value::AbstractFloat
-    percentage::AbstractFloat
-end
-
 abstract type AbstractInvestment end
 
 struct Investment{T} <: AbstractInvestment where T <: InvestmentType
     asset::Asset
-    value::AbstractFloat
-    dateOpen::Date
+    value::Number
+    dateOpen::DateTime
 end
+
+struct InvestmentReturn
+    value::Number
+    percentage::Number
+end
+InvestmentReturn(inv::Investment, closeValue::Number) = Return(inv, closeValue)
+
 
 struct ClosedInvestment{T} <: AbstractInvestment where T <: InvestmentType
     asset::Asset
-    valueOpen::AbstractFloat
-    valueClose::AbstractFloat
+    valueOpen::Number
+    valueClose::Number
     dateOpen::DateTime
     dateClosed::DateTime
-    closed::InvestmentReturn
+    closedReturn::InvestmentReturn
 end
-
+function ClosedInvestment(inv::Investment{T}, closeValue::Number, dateClosed::DateTime = Date.now()) where T <: InvestmentType
+    ClosedInvestment{T}(
+        inv.asset, inv.value, closeValue, inv.dateOpen,
+        dateClosed, InvestmentReturn(inv, closeValue)
+    )
+end
 
 abstract type AbstractPortfolio end
 
 struct Portfolio <: AbstractPortfolio
     Investments::Array{<:AbstractInvestment}
 end
+Portfolio() = Portfolio(Array{Investment,1}())
 
 #endregion

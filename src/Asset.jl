@@ -1,4 +1,3 @@
-
 function AddFromDate(asset::AssetHistoryBuffer, date::String, dict::Dict)
     date = int.(split(date,"-"))
     date = Date(date...)
