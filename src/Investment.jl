@@ -1,4 +1,4 @@
-Add!(portfolio::AbstractPortfolio, inv::AbstractInvestment) = push!(portfolio.Investments, inv)
+Add!(portfolio::AbstractPortfolio, inv::AbstractInvestment) = push!(portfolio.investments, inv)
 
 function Long!(portfolio::AbstractPortfolio, asset::Asset, value::Number;
         dateOpen::DateTime = Dates.now())
@@ -23,12 +23,17 @@ function Short!(portfolio::AbstractPortfolio, asset::Asset, dateOpen::DateTime)
     Short!(portfolio, asset, value, dateOpen = dateOpen)
 end
 
-Close(inv::Investment, value::Number; dateClosed::DateTime = Dates.now()) = ClosedInvestment(inv, value, dateClosed)
+Close(inv::Investment, value::Number, dateClosed::DateTime = Dates.now()) = ClosedInvestment(inv, value, dateClosed)
 
-function Close!(pf::AbstractPortfolio, inv::Investment, value::Number, dateClosed::DateTime = Date.Today())
-    idx = findfirst(pf.Investments, x => x == inv)
-    pf.Investments[idx] = Close(inv, value, dateClosed)
+
+function Close!(pf::AbstractPortfolio, uuid::UUID, value::Number, dateClosed::DateTime = Date.Today())
+    idx = findfirst(x -> x.uuid == uuid, pf.investments)
+    pf.investments[idx] = Close(pf.investments[idx], value, dateClosed)
 end
+function Close!(pf::AbstractPortfolio, inv::Investment, value::Number, dateClosed::DateTime = Date.Today())
+    Close!(pf, inv.uuid, value, dateClosed)
+end
+
 
 function Return(inv::Investment{LongInvestment}, value::Number)
     _return = Float64(value) - inv.value
@@ -42,6 +47,7 @@ function Return(inv::Investment{ShortInvestment}, value::Number)
 end
 
 PotentialProfit(inv::AbstractInvestment) = 0.
+PotentialProfit(inv::AbstractInvestment, args...) = 0.
 ClosedProfit(inv::AbstractInvestment) = 0.
 ClosedPercentage(inv::AbstractInvestment) = 0.
 
@@ -57,14 +63,16 @@ end
 
 function PotentialProfit(pf::AbstractPortfolio, dateTime::DateTime = DateTime.now())
     total = 0.
-    for inv in pf.investestements
+    for inv in pf.investments
         total += PotentialProfit(inv, dateTime)
     end
+    total
 end
 
 function ClosedProfit(pf::AbstractPortfolio)
     total = 0.
-    for inv in pf.investestements
+    for inv in pf.investments
         total += ClosedProfit(inv)
     end
+    total
 end

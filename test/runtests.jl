@@ -2,15 +2,21 @@ using Test, Invester
 using Dates
 
 history = nothing
-const DefaultDate = Date(2019,6,18)
-const CloseDate = Date(2019,6,25)
+const DefaultDate = DateTime(Date(2019,6,18))
+const CloseDate = DateTime(Date(2019,6,25))
 
-function runtests()
 @testset "LoadTop100" begin
+    global history
     history = LoadTop100History()
+    @test history != nothing
 end
 
 @testset "investment Basic Operations" begin
+
+    global history
+
+    @assert history != nothing
+
     asset = Asset("FB")
     investment = Investment{LongInvestment}(asset, 188.75, DefaultDate)
 
@@ -54,11 +60,15 @@ end
     Add!(pf, Investment{LongInvestment}(Asset("FB"), 188.75, DefaultDate))
     Add!(pf, Investment{ShortInvestment}(Asset("MSFT"), 120., DefaultDate))
 
-    @test size(pf.Investments,1) == 2
+    @test size(pf.investments,1) == 2
 
     pot = PotentialProfit(pf, CloseDate)
     @test ClosedProfit(pf) ≈ 0.
     @test pot ≈ (190.86 - 188.75) + (120-135.34)
-end
 
-end #runtests
+
+    Close!(pf, pf.investments[1], 190, CloseDate)
+
+    @test ClosedProfit(pf) ≈ 1.25
+    @test PotentialProfit(pf, CloseDate) == (120-135.34)
+end

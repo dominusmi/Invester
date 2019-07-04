@@ -11,6 +11,9 @@ using JuliaDB
 using Query
 using DataFrames: DataFrame
 using Statistics
+using UUIDs
+
+import Base.==
 
 export Asset, AssetHistory, AssetHistoryBuffer, Investment, InvestmentType, InvestmentReturn,
 	LongInvestment, ShortInvestment, AbstractInvestment, AbstractPortfolio, Portfolio, API,
@@ -22,7 +25,7 @@ export LoadTop100History, PotentialProfit, ClosedPercentage, ClosedProfit, Close
 include("Types.jl")
 include("API.jl")
 include("Asset.jl")
-include("Investement.jl")
+include("Investment.jl")
 include("Utilities.jl")
 
 history = Dict{Symbol, AssetHistory}()

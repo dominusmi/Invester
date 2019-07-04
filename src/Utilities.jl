@@ -1,15 +1,16 @@
 function LoadTop100History()::Dict{Symbol, AssetHistory}
-   assetHistories = Dict{Symbol, AssetHistory}()
-    for path in glob("*.csv", "src/resources/Top100Companies/")
+    assetHistories = Dict{Symbol, AssetHistory}()
+    count = 0
+    for path in glob("*.csv", dirname(pathof(Invester))*"/resources/Top100Companies/")
         symbol = split( split(path, '/')[end], '.')[1]
         asset = Asset(String(symbol))
-
-        @show "Loading $(symbol)"
 
         hist = loadtable(path, indexcols=["timestamp"])
         assetHistory = AssetHistory(asset,hist)
         assetHistories[asset.symbol] = assetHistory
+        count += 1
     end
+    println("Loaded $count stocks")
     return assetHistories
 end
 
@@ -52,5 +53,5 @@ function FetchAverageAssetValue(asset::Asset, date::Union{DateTime,Date})
             @collect
     end
 
-    value
+    value[1]
 end

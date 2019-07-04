@@ -62,11 +62,17 @@ abstract type ShortInvestment <: InvestmentType end
 
 abstract type AbstractInvestment end
 
+==(inv1::AbstractInvestment, inv2::AbstractInvestment) = (inv1.uuid == inv2.uuid)
+
 struct Investment{T} <: AbstractInvestment where T <: InvestmentType
     asset::Asset
     value::Number
     dateOpen::DateTime
+    uuid::UUID
 end
+Investment{T}(asset::Asset, v::Number, dateOpen::DateTime) where T <: InvestmentType =
+    Investment{T}(asset,v,dateOpen,uuid1())
+
 
 struct InvestmentReturn
     value::Number
@@ -82,19 +88,20 @@ struct ClosedInvestment{T} <: AbstractInvestment where T <: InvestmentType
     dateOpen::DateTime
     dateClosed::DateTime
     closedReturn::InvestmentReturn
+    uuid::UUID
 end
 function ClosedInvestment(inv::Investment{T}, closeValue::Number, dateClosed::DateTime = Date.now()) where T <: InvestmentType
     ClosedInvestment{T}(
         inv.asset, inv.value, closeValue, inv.dateOpen,
-        dateClosed, InvestmentReturn(inv, closeValue)
+        dateClosed, InvestmentReturn(inv, closeValue), uuid1()
     )
 end
 
 abstract type AbstractPortfolio end
 
 struct Portfolio <: AbstractPortfolio
-    Investments::Array{<:AbstractInvestment}
+    investments::Array{<:AbstractInvestment}
 end
-Portfolio() = Portfolio(Array{Investment,1}())
+Portfolio() = Portfolio(Array{AbstractInvestment,1}())
 
 #endregion
