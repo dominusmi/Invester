@@ -20,13 +20,18 @@ export Asset, AssetHistory, AssetHistoryBuffer, Investment, InvestmentType, Inve
 	IEXTradingAPI, AlphadvantageAPI, ClosedInvestment
 
 export LoadTop100History, PotentialProfit, ClosedPercentage, ClosedProfit, Close,
-	Close!, ClosedProfit, Return, Add!, Long!, Short!
+	Close!, ClosedProfit, Return, Add!, Long!, Short!, FetchAverageAssetValue, MovingAverage
+
+GenericDate = Union{Date,DateTime}
 
 include("Types.jl")
 include("API.jl")
 include("Asset.jl")
 include("Investment.jl")
 include("Utilities.jl")
+include("DataAccess.jl")
+include("Analysis.jl")
+
 
 history = Dict{Symbol, AssetHistory}()
 

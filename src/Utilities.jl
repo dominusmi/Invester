@@ -38,20 +38,3 @@ function SaveStocksHistory()
         sleep(10)
     end
 end
-
-""" Fetches the average between open and close for a given date """
-function FetchAverageAssetValue(asset::Asset, date::Union{DateTime,Date})
-    global history
-    date = Date(date)
-    if isempty(history)
-        history = LoadTop100History()
-    end
-
-    value = @from h in history[asset.symbol].history begin
-            @where h[:timestamp] == date
-            @select mean([h[:open], h[:adjusted_close]])
-            @collect
-    end
-
-    value[1]
-end

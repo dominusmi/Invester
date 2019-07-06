@@ -72,3 +72,21 @@ end
     @test ClosedProfit(pf) ≈ 1.25
     @test PotentialProfit(pf, CloseDate) == (120-135.34)
 end
+
+
+@testset "DataAccess API" begin
+    @assert history != nothing
+    asset = Asset("FB")
+
+    @test FetchAverageAssetValue(asset, DefaultDate) ≈ 191.235
+
+    intervalHist = FetchAverageAssetValue(asset, DefaultDate, CloseDate)
+    @test typeof(intervalHist) <: Array{<:AbstractFloat,1}
+    @test size(intervalHist,1) == 6
+end
+
+
+@testset "Analysis" begin
+    @test MovingAverage( collect(1.0:7.0) , 7) ≈ 5.0
+    @test MovingAverage( collect(1.0:7.0) , 4) ≈ 6.0
+end
