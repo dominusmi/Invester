@@ -52,15 +52,3 @@ function DateIntervalMA(asset::Asset, interval::Dates.Day, today::GenericDate = 
 	array = FetchAverageAssetValue(asset, yesterday - interval, yesterday)
 	MovingAverage(array, size(array,1))
 end
-
-
-using Dates
-_today = Date(2019,6,15)
-_asset = Asset("FB")
-
-OneWeekMA(_asset, _today)
-ThreeWeeksMA(_asset, _today)
-OneMonthMA(_asset,_today)
-ThreeMonthsMA(_asset,_today)
-SixMonthsMA(_asset,_today)
-DateIntervalMA(_asset,_today, )
