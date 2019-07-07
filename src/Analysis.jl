@@ -1,4 +1,66 @@
-function MovingAverage(array::Array{<:AbstractFloat,1}, window::Integer)
+const OneWeek = Dates.Day(7)
+const ThreeWeeks = Dates.Day(21)
+const OneMonth = Dates.Day(30)
+const ThreeMonths = Dates.Day(90)
+const SixMonths = Dates.Day(180)
+const OneYear = Dates.Day(365)
+const TwoYears = Dates.Day(730)
+
+function MovingAverage(array::Array{<:AbstractFloat,1}, window::Integer; offset::Integer = 0)
 	_range = collect(1.:window)
-	return sum(array[end-window+1:end] .* _range) / sum(_range)
+	start = size(array,1) - window + 1 - offset
+	finish = size(array,1) - offset
+	return sum(array[start:finish] .* _range) / sum(_range)
 end
+
+# Expects x, y to be exactly 3 in length
+∂(x,y) = (y[3] - y[1]) / (x[3] - x[1])
+
+
+function SixMonthsMA(asset::Asset, today::GenericDate = Dates.Today)
+	yesterday = Date(today) - Dates.Day(1)
+	array = FetchAverageAssetValue(asset, yesterday - SixMonths, yesterday)
+	MovingAverage(array, size(array,1))
+end
+
+function ThreeMonthsMA(asset::Asset, today::GenericDate = Dates.Today)
+	yesterday = Date(today) - Dates.Day(1)
+	array = FetchAverageAssetValue(asset, yesterday - ThreeMonths, yesterday)
+	MovingAverage(array, size(array,1))
+end
+
+function OneMonthMA(asset::Asset, today::GenericDate = Dates.Today)
+	yesterday = Date(today) - Dates.Day(1)
+	array = FetchAverageAssetValue(asset, yesterday - OneMonth, yesterday)
+	MovingAverage(array, size(array,1))
+end
+
+function ThreeWeeksMA(asset::Asset, today::GenericDate = Dates.Today)
+	yesterday = Date(today) - Dates.Day(1)
+	array = FetchAverageAssetValue(asset, yesterday - ThreeWeeks, yesterday)
+	MovingAverage(array, size(array,1))
+end
+
+function OneWeekMA(asset::Asset, today::GenericDate = Dates.Today)
+	yesterday = Date(today) - Dates.Day(1)
+	array = FetchAverageAssetValue(asset, yesterday - OneWeek, yesterday)
+	MovingAverage(array, size(array,1))
+end
+
+function DateIntervalMA(asset::Asset, interval::Dates.Day, today::GenericDate = Dates.Today)
+	yesterday = Date(today) - Dates.Day(1)
+	array = FetchAverageAssetValue(asset, yesterday - interval, yesterday)
+	MovingAverage(array, size(array,1))
+end
+
+
+using Dates
+_today = Date(2019,6,15)
+_asset = Asset("FB")
+
+OneWeekMA(_asset, _today)
+ThreeWeeksMA(_asset, _today)
+OneMonthMA(_asset,_today)
+ThreeMonthsMA(_asset,_today)
+SixMonthsMA(_asset,_today)
+DateIntervalMA(_asset,_today, )

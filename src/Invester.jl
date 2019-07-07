@@ -20,7 +20,8 @@ export Asset, AssetHistory, AssetHistoryBuffer, Investment, InvestmentType, Inve
 	IEXTradingAPI, AlphadvantageAPI, ClosedInvestment
 
 export LoadTop100History, PotentialProfit, ClosedPercentage, ClosedProfit, Close,
-	Close!, ClosedProfit, Return, Add!, Long!, Short!, FetchAverageAssetValue, MovingAverage
+	Close!, ClosedProfit, Return, Add!, Long!, Short!, FetchAverageAssetValue,
+	MovingAverage, OneWeekMA, OneMonthMA, ThreeMonthsMA, SixMonthsMA
 
 GenericDate = Union{Date,DateTime}
 
