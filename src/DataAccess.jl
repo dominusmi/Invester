@@ -24,10 +24,22 @@ function FetchAverageAssetValue(asset::Asset, startDate::GenericDate, endDate::G
     history = CheckLoadHistory()
 
     value = @from h in history[asset.symbol].history begin
-            @where h[:timestamp] >= startDate && h[:timestamp] <= endDate
+            @where h[:timestamp] >= Date(startDate) && h[:timestamp] <= Date(endDate)
             @select mean([h[:open], h[:adjusted_close]])
             @collect
     end
 
     value
+end
+
+function FetchOpenAssetValue(asset::Asset, date::GenericDate)
+    history = CheckLoadHistory()
+
+    value = @from h in history[asset.symbol].history begin
+            @where h[:timestamp] == Date(date)
+            @select h[:open]
+            @collect
+    end
+
+    value[1]
 end

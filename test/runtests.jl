@@ -66,11 +66,15 @@ end
     @test ClosedProfit(pf) ≈ 0.
     @test pot ≈ (190.86 - 188.75) + (120-135.34)
 
+    @test size(OpenInvestments(pf, Asset("FB")),1) == 1
 
     Close!(pf, pf.investments[1], 190, CloseDate)
 
     @test ClosedProfit(pf) ≈ 1.25
     @test PotentialProfit(pf, CloseDate) == (120-135.34)
+
+    @test size(OpenInvestments(pf, Asset("FB")),1) == 0
+
 end
 
 

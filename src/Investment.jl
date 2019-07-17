@@ -1,3 +1,6 @@
+isopen(i::AbstractInvestment) = typeof(i) <: Investment
+isclosed(i::AbstractInvestment) = typeof(i) <: ClosedInvestment
+
 Add!(portfolio::AbstractPortfolio, inv::AbstractInvestment) = push!(portfolio.investments, inv)
 
 function Long!(portfolio::AbstractPortfolio, asset::Asset, value::Number;
@@ -75,4 +78,9 @@ function ClosedProfit(pf::AbstractPortfolio)
         total += ClosedProfit(inv)
     end
     total
+end
+
+function OpenInvestments(pf::AbstractPortfolio, a::Asset)
+    idxs = findall(x-> isopen(x) && x.asset == a, pf.investments)
+    pf.investments[idxs]
 end

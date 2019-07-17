@@ -38,3 +38,27 @@ function SaveStocksHistory()
         sleep(10)
     end
 end
+
+mutable struct DayOfWeekIterator
+    startDate::Date
+    length::Integer
+end
+DayOfWeekIterator(s::Date, e::Date) = DayOfWeekIterator(s, (e-s).value)
+
+function Base.iterate(iter::DayOfWeekIterator, state=(iter.startDate, 0))
+    element, count = state
+
+    if count >= iter.length
+       return nothing
+    end
+
+    if dayofweek(element) == 6
+        return (element+Day(2), (element + Day(3), count+1))
+    end
+
+    if dayofweek(element) == 7
+        return (element+Day(1), (element + Day(2), count+1))
+    end
+
+    return (element, (element + Day(1), count + 1))
+end

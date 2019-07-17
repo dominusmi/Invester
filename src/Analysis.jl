@@ -6,12 +6,26 @@ const SixMonths = Dates.Day(180)
 const OneYear = Dates.Day(365)
 const TwoYears = Dates.Day(730)
 
+""" Calculates the instantaneous moving average """
 function MovingAverage(array::Array{<:AbstractFloat,1}, window::Integer; offset::Integer = 0)
 	_range = collect(1.:window)
 	start = size(array,1) - window + 1 - offset
 	finish = size(array,1) - offset
 	return sum(array[start:finish] .* _range) / sum(_range)
 end
+
+""" Calculates the trend of the moving average """
+function MovingAverageTrend(array::Array{<:AbstractFloat,1}, window::Integer; offset=0)
+	interval = size(array,1) - offset
+	interval <= window ? throw("Window must be smaller than array size") : nothing
+
+	trend = zeros(0)
+
+	for i in 1:interval-window
+		push!(trend, MovingAverage(array[i:i+window], window))
+	end
+end
+
 
 # Expects x, y to be exactly 3 in length
 ∂(x,y) = (y[3] - y[1]) / (x[3] - x[1])
@@ -47,7 +61,7 @@ function OneWeekMA(asset::Asset, today::GenericDate = Dates.Today)
 	MovingAverage(array, size(array,1))
 end
 
-function DateIntervalMA(asset::Asset, interval::Dates.Day, today::GenericDate = Dates.Today)
+function DaysIntervalMA(asset::Asset, interval::Dates.Day, today::GenericDate = Dates.Today)
 	yesterday = Date(today) - Dates.Day(1)
 	array = FetchAverageAssetValue(asset, yesterday - interval, yesterday)
 	MovingAverage(array, size(array,1))

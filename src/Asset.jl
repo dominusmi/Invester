@@ -28,3 +28,5 @@ function SaveStockHistory(asset::Asset; outputsize="full", API::API = Alphadvant
        write(io, r)
     end
 end
+
+Base.isequal(a1::Asset, a2::Asset) = a1.symbol == a2.symbol

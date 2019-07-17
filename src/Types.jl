@@ -104,4 +104,11 @@ struct Portfolio <: AbstractPortfolio
 end
 Portfolio() = Portfolio(Array{AbstractInvestment,1}())
 
+abstract type DataAccessor end
+struct LoadedDataAccessor <: DataAccessor
+    history::Dict
+end
+Base.get(d::LoadedDataAccessor, s::Symbol, a::Any) = get(d.history, symbol, a)
+
+
 #endregion

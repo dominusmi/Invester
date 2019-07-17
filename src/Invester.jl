@@ -21,7 +21,7 @@ export Asset, AssetHistory, AssetHistoryBuffer, Investment, InvestmentType, Inve
 
 export LoadTop100History, PotentialProfit, ClosedPercentage, ClosedProfit, Close,
 	Close!, ClosedProfit, Return, Add!, Long!, Short!, FetchAverageAssetValue,
-	MovingAverage, OneWeekMA, OneMonthMA, ThreeMonthsMA, SixMonthsMA
+	MovingAverage, OneWeekMA, OneMonthMA, ThreeMonthsMA, SixMonthsMA, OpenInvestments
 
 GenericDate = Union{Date,DateTime}
 
