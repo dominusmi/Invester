@@ -70,8 +70,8 @@ struct Investment{T} <: AbstractInvestment where T <: InvestmentType
     dateOpen::DateTime
     uuid::UUID
 end
-Investment{T}(asset::Asset, v::Number, dateOpen::DateTime) where T <: InvestmentType =
-    Investment{T}(asset,v,dateOpen,uuid1())
+Investment{T}(asset::Asset, v::Number, dateOpen::GenericDate) where T <: InvestmentType =
+    Investment{T}(asset,v,DateTime(dateOpen),uuid1())
 
 
 struct InvestmentReturn

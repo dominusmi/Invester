@@ -17,13 +17,14 @@ end
 """ Calculates the trend of the moving average """
 function MovingAverageTrend(array::Array{<:AbstractFloat,1}, window::Integer; offset=0)
 	interval = size(array,1) - offset
-	interval <= window ? throw("Window must be smaller than array size") : nothing
+	interval <= window ? throw("Window must be smaller than array size: interval $interval, window $window") : nothing
 
 	trend = zeros(0)
 
 	for i in 1:interval-window
 		push!(trend, MovingAverage(array[i:i+window], window))
 	end
+	trend
 end
 
 

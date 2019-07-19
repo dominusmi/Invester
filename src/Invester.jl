@@ -21,7 +21,8 @@ export Asset, AssetHistory, AssetHistoryBuffer, Investment, InvestmentType, Inve
 
 export LoadTop100History, PotentialProfit, ClosedPercentage, ClosedProfit, Close,
 	Close!, ClosedProfit, Return, Add!, Long!, Short!, FetchAverageAssetValue,
-	MovingAverage, OneWeekMA, OneMonthMA, ThreeMonthsMA, SixMonthsMA, OpenInvestments
+	MovingAverage, OneWeekMA, OneMonthMA, ThreeMonthsMA, SixMonthsMA, OpenInvestments,
+	CheckLoadHistory
 
 GenericDate = Union{Date,DateTime}
 
@@ -32,6 +33,8 @@ include("Investment.jl")
 include("Utilities.jl")
 include("DataAccess.jl")
 include("Analysis.jl")
+include("Portfolio.jl")
+include("Brain.jl")
 
 
 history = Dict{Symbol, AssetHistory}()

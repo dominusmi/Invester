@@ -4,13 +4,13 @@ isclosed(i::AbstractInvestment) = typeof(i) <: ClosedInvestment
 Add!(portfolio::AbstractPortfolio, inv::AbstractInvestment) = push!(portfolio.investments, inv)
 
 function Long!(portfolio::AbstractPortfolio, asset::Asset, value::Number;
-        dateOpen::DateTime = Dates.now())
+        dateOpen::GenericDate = Dates.now())
 
     inv = Investment{LongInvestment}(asset, value, dateOpen)
-    add!(portfolio, inv)
+    Add!(portfolio, inv)
 end
 
-function Long!(portfolio::AbstractPortfolio, asset::Asset, dateOpen::Union{DateTime,Date})
+function Long!(portfolio::AbstractPortfolio, asset::Asset, dateOpen::GenericDate)
     value = FetchAverageAssetValue(asset, dateOpen)
     Long!(portfolio, asset, value, dateOpen = dateOpen)
 end
@@ -58,6 +58,7 @@ ClosedProfit(inv::ClosedInvestment) = inv.closedReturn.value
 ClosedPercentage(inv::ClosedInvestment) = inv.closedReturn.percentage
 
 PotentialProfit(inv::Investment, currentValue::Number) = Return(inv, currentValue).value
+PotentialProfitPercentage(inv::Investment, currentValue::Number) = Return(inv, currentValue).percentage
 
 function PotentialProfit(inv::Investment, dateTime::DateTime)
     currentValue = FetchAverageAssetValue(inv.asset, dateTime)
@@ -78,9 +79,4 @@ function ClosedProfit(pf::AbstractPortfolio)
         total += ClosedProfit(inv)
     end
     total
-end
-
-function OpenInvestments(pf::AbstractPortfolio, a::Asset)
-    idxs = findall(x-> isopen(x) && x.asset == a, pf.investments)
-    pf.investments[idxs]
 end

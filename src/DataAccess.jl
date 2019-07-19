@@ -43,3 +43,15 @@ function FetchOpenAssetValue(asset::Asset, date::GenericDate)
 
     value[1]
 end
+
+function FetchCloseAssetValue(asset::Asset, date::GenericDate)
+    history = CheckLoadHistory()
+
+    value = @from h in history[asset.symbol].history begin
+            @where h[:timestamp] == Date(date)
+            @select h[:close_adjusted]
+            @collect
+    end
+
+    value[1]
+end
