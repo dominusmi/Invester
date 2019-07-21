@@ -3,16 +3,16 @@ isclosed(i::AbstractInvestment) = typeof(i) <: ClosedInvestment
 
 Add!(portfolio::AbstractPortfolio, inv::AbstractInvestment) = push!(portfolio.investments, inv)
 
-function Long!(portfolio::AbstractPortfolio, asset::Asset, value::Number;
+function Long!(portfolio::AbstractPortfolio, asset::Asset, value::Number, investedAmount::Number;
         dateOpen::GenericDate = Dates.now())
 
-    inv = Investment{LongInvestment}(asset, value, dateOpen)
+    inv = Investment{LongInvestment}(asset, value, investedAmount, dateOpen)
     Add!(portfolio, inv)
 end
 
-function Long!(portfolio::AbstractPortfolio, asset::Asset, dateOpen::GenericDate)
+function Long!(portfolio::AbstractPortfolio, asset::Asset, investedAmount::Number, dateOpen::GenericDate)
     value = FetchAverageAssetValue(asset, dateOpen)
-    Long!(portfolio, asset, value, dateOpen = dateOpen)
+    Long!(portfolio, asset, value, investedAmount, dateOpen = dateOpen)
 end
 
 function Short!(portfolio::AbstractPortfolio, asset::Asset, value::Number;
@@ -39,44 +39,36 @@ end
 
 
 function Return(inv::Investment{LongInvestment}, value::Number)
-    _return = Float64(value) - inv.value
-    perc = (_return) / inv.value * 100
-    InvestmentReturn(_return, perc)
+    _valueDiff = Float64(value) - inv.value
+    perc = (_valueDiff) / inv.value
+    InvestmentReturn(perc * inv.invested, perc * 100)
 end
 function Return(inv::Investment{ShortInvestment}, value::Number)
     _return = Float64(inv.value) - value
-    perc = (_return) / inv.value * 100
-    InvestmentReturn(_return, perc)
+    perc = (_return) / inv.value
+    InvestmentReturn(perc * inv.invested, perc * 100)
 end
+Return(inv::ClosedInvestment) = inv.closedReturn
 
 PotentialProfit(inv::AbstractInvestment) = 0.
 PotentialProfit(inv::AbstractInvestment, args...) = 0.
 ClosedProfit(inv::AbstractInvestment) = 0.
-ClosedPercentage(inv::AbstractInvestment) = 0.
+ClosedProfitPercentage(inv::AbstractInvestment) = 0.
 
 ClosedProfit(inv::ClosedInvestment) = inv.closedReturn.value
-ClosedPercentage(inv::ClosedInvestment) = inv.closedReturn.percentage
+ClosedProfitPercentage(inv::ClosedInvestment) = inv.closedReturn.percentage
 
 PotentialProfit(inv::Investment, currentValue::Number) = Return(inv, currentValue).value
 PotentialProfitPercentage(inv::Investment, currentValue::Number) = Return(inv, currentValue).percentage
 
-function PotentialProfit(inv::Investment, dateTime::DateTime)
-    currentValue = FetchAverageAssetValue(inv.asset, dateTime)
+function PotentialProfit(inv::Investment, date::GenericDate)
+    date = Date(date)
+    currentValue = FetchAverageAssetValue(inv.asset, date)
     return Return(inv, currentValue).value
 end
 
-function PotentialProfit(pf::AbstractPortfolio, dateTime::DateTime = DateTime.now())
-    total = 0.
-    for inv in pf.investments
-        total += PotentialProfit(inv, dateTime)
-    end
-    total
-end
-
-function ClosedProfit(pf::AbstractPortfolio)
-    total = 0.
-    for inv in pf.investments
-        total += ClosedProfit(inv)
-    end
-    total
+function PotentialProfitPercentage(inv::Investment, date::GenericDate)
+    date = Date(date)
+    currentValue = FetchAverageAssetValue(inv.asset, date)
+    return Return(inv, currentValue).percentage
 end

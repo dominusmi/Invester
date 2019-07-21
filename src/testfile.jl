@@ -1,12 +1,20 @@
 using Invester
 using Plots
 using Dates, Query, JuliaDB, DataFrames, Statistics
+
+pf = Invester.MovingAveragePortfolio(upperClosePercentageThreshold=10,
+	maxInvestments = 20)
+Invester.SimulatePortfolioDecisionMaker(pf, Date(2019,1,1), Date(2019,2,1))
+Invester.PotentialProfit(pf, Date(2019,2,11))
+ClosedProfit(pf)
+size(pf.investments)
+
 asset = Asset("QCOM")
 history = LoadTop100History()
 
 mean
-hist = @from h in history[asset.symbol].history begin
-	@where  h[:timestamp] >= Date(2018,6,1) &&
+hist = @from h in history[:FOXA].history begin
+	@where  h[:timestamp] >= Date(2019,1,2) &&
 			h[:timestamp] <= Date(2019,6,25)
 	@select (open = h[:open], adjusted_close = h[:adjusted_close],
 		avg = mean([h[:open],h[:adjusted_close]]))
@@ -28,28 +36,6 @@ for days_interval in [2,7,30,60,180,360]
 end
 display(fig)
 
-
-pf = Invester.MovingAveragePortfolio()
-Juno.@enter Invester.SimulatePortfolioDecisionMaker(pf, Date(2019,1,1), Date(2019,1,10))
-
-
-history = CheckLoadHistory()
-assetHistory = @from h in history[:MSFT].history begin
-	@where  h[:timestamp] >= Date(2019,6,1) - Day(720) &&
-			h[:timestamp] <= Date(2019,6,1)
-	@select (open = h[:open], adjusted_close = h[:adjusted_close],
-		avg = mean([h[:open],h[:adjusted_close]]))
-	@collect DataFrame
-end
-trends = zeros(0)
-
-push!(trends, Invester.MovingAverageTrend(assetHistory[:avg], 7)[end])
-push!(trends, Invester.MovingAverageTrend(assetHistory[:avg], 14)[end])
-push!(trends, Invester.MovingAverageTrend(assetHistory[:avg], 30)[end])
-push!(trends, Invester.MovingAverageTrend(assetHistory[:avg], 90)[end])
-push!(trends, Invester.MovingAverageTrend(assetHistory[:avg], 365)[end])
-
-# Check how many of the trends indicate future improvement
-trends |>
-t -> (t .> assetHistory[:avg][end]) |>
-sum
+size(OpenInvestments(pf),1)
+Invester.MaxNumberOfInvestment(pf)
+size(OpenInvestments(pf),1) < Invester.MaxNumberOfInvestment(pf)

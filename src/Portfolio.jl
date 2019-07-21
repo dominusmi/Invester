@@ -1,8 +1,3 @@
-struct MovingAveragePortfolio <: AbstractPortfolio
-    investments::Array{<:AbstractInvestment}
-end
-MovingAveragePortfolio() = MovingAveragePortfolio(Array{AbstractInvestment,1}())
-
 """ Get all open investments """
 function OpenInvestments(pf::AbstractPortfolio)
     idxs = findall(x-> isopen(x), pf.investments)
@@ -15,45 +10,55 @@ function OpenInvestments(pf::AbstractPortfolio, a::Asset)
     pf.investments[idxs]
 end
 
-#region Moving Average Portfolio
-
-function LongConfidence(asset::Asset, pf::MovingAveragePortfolio, date::Date = Dates.today())
-    history = CheckLoadHistory()
-
-    assetHistory = @from h in history[asset.symbol].history begin
-    	@where  h[:timestamp] >= date - Day(720) &&
-    			h[:timestamp] <= date
-    	@select (open = h[:open], adjusted_close = h[:adjusted_close],
-    		avg = mean([h[:open],h[:adjusted_close]]))
-    	@collect DataFrame
-    end
-
-    trends = zeros(0)
-
-    push!(trends, MovingAverageTrend(assetHistory[:avg], 7)[end])
-    push!(trends, MovingAverageTrend(assetHistory[:avg], 14)[end])
-    push!(trends, MovingAverageTrend(assetHistory[:avg], 30)[end])
-    push!(trends, MovingAverageTrend(assetHistory[:avg], 90)[end])
-    push!(trends, MovingAverageTrend(assetHistory[:avg], 365)[end])
-
-    # Check how many of the trends indicate future improvement
-    _sum = trends |>
-    t -> (t .> assetHistory[:avg][end]) |>
-    sum
-
-    return _sum / 5.
+""" Get all closed investments """
+function ClosedInvestments(pf::AbstractPortfolio)
+    idxs = findall(x-> isclosed(x), pf.investments)
+    pf.investments[idxs]
 end
 
-function CloseConfidence(investment::Investment, pf::MovingAveragePortfolio, date::Date = Dates.today())
-    history = CheckLoadHistory()
-
-    currentValue = FetchCloseAssetValue(investment.asset, date)
-    pot = PotentialProfitPercentage(investment, currentValue)
-
-    if pot > 0.05 || pot < 0.05
-        return 1
-    end
-    return 0
+""" Get all closed investments of a given asset """
+function ClosedInvestments(pf::AbstractPortfolio, a::Asset)
+    idxs = findall(x-> isclosed(x) && x.asset == a, pf.investments)
+    pf.investments[idxs]
 end
 
-#endregion
+function PotentialProfit(pf::AbstractPortfolio, date::GenericDate = Dates.today())
+    date = Date(date)
+    total = 0.
+    for inv in OpenInvestments(pf)
+        total += PotentialProfit(inv, date)
+    end
+    total
+end
+
+function PotentialProfitPercentage(pf::AbstractPortfolio, date::GenericDate = Dates.today())
+    date = Date(date)
+    total = 0.
+    for inv in OpenInvestments(pf)
+        total += PotentialProfitPercentage(inv, date) / inv.invested
+    end
+    total
+end
+
+function ClosedProfit(pf::AbstractPortfolio)
+    total = 0.
+    for inv in ClosedInvestments(pf)
+        total += ClosedProfit(inv)
+    end
+    total
+end
+
+function ClosedProfitPercentage(pf::AbstractPortfolio)
+    total = 0.
+    for inv in ClosedInvestments(pf)
+        total += ClosedProfitPercentage(inv)
+    end
+    total
+end
+
+
+LowerClosePercentageThreshold(pf::AbstractPortfolio) = pf.lowerClosePercentageThreshold
+UpperClosePercentageThreshold(pf::AbstractPortfolio) = pf.upperClosePercentageThreshold
+MaxNumberOfInvestment(pf::AbstractPortfolio) = pf.maxInvestments
+LongThreshold(pf::AbstractPortfolio) = pf.longThreshold
+CloseThreshold(pf::AbstractPortfolio) = pf.closeThreshold

@@ -67,11 +67,12 @@ abstract type AbstractInvestment end
 struct Investment{T} <: AbstractInvestment where T <: InvestmentType
     asset::Asset
     value::Number
+    invested::Number
     dateOpen::DateTime
     uuid::UUID
 end
-Investment{T}(asset::Asset, v::Number, dateOpen::GenericDate) where T <: InvestmentType =
-    Investment{T}(asset,v,DateTime(dateOpen),uuid1())
+Investment{T}(asset::Asset, v::Number, invested::Number,dateOpen::GenericDate) where T <: InvestmentType =
+    Investment{T}(asset,v,invested,DateTime(dateOpen),uuid1())
 
 
 struct InvestmentReturn
@@ -85,6 +86,7 @@ struct ClosedInvestment{T} <: AbstractInvestment where T <: InvestmentType
     asset::Asset
     valueOpen::Number
     valueClose::Number
+    invested::Number
     dateOpen::DateTime
     dateClosed::DateTime
     closedReturn::InvestmentReturn
@@ -92,7 +94,7 @@ struct ClosedInvestment{T} <: AbstractInvestment where T <: InvestmentType
 end
 function ClosedInvestment(inv::Investment{T}, closeValue::Number, dateClosed::DateTime = Date.now()) where T <: InvestmentType
     ClosedInvestment{T}(
-        inv.asset, inv.value, closeValue, inv.dateOpen,
+        inv.asset, inv.value, closeValue, inv.invested, inv.dateOpen,
         dateClosed, InvestmentReturn(inv, closeValue), uuid1()
     )
 end
@@ -111,4 +113,17 @@ end
 Base.get(d::LoadedDataAccessor, s::Symbol, a::Any) = get(d.history, symbol, a)
 
 
+#endregion
+
+#region Utilities
+mutable struct WallStreetDayIterator
+    startDate::Date
+    endDate::Date
+    function WallStreetDayIterator(s::Date, e::Date)
+        if IsWallStreetHoliday(s)
+            s = NextWallStreetDay(s)
+        end
+        new(s, e)
+    end
+end
 #endregion

@@ -15,8 +15,12 @@ function FetchAverageAssetValue(asset::Asset, date::GenericDate)
             @select mean([h[:open], h[:adjusted_close]])
             @collect
     end
-
-    value[1]
+    try
+        return value[1]
+    catch e
+        @show asset.symbol, date
+        throw(e)
+    end
 end
 
 
@@ -49,7 +53,7 @@ function FetchCloseAssetValue(asset::Asset, date::GenericDate)
 
     value = @from h in history[asset.symbol].history begin
             @where h[:timestamp] == Date(date)
-            @select h[:close_adjusted]
+            @select h[:adjusted_close]
             @collect
     end
 

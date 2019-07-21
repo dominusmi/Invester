@@ -4,6 +4,7 @@ using Dates
 history = nothing
 const DefaultDate = DateTime(Date(2019,6,18))
 const CloseDate = DateTime(Date(2019,6,25))
+const InvestedAmount = 100
 
 @testset "LoadTop100" begin
     global history
@@ -18,7 +19,7 @@ end
     @assert history != nothing
 
     asset = Asset("FB")
-    investment = Investment{LongInvestment}(asset, 188.75, DefaultDate)
+    investment = Investment{LongInvestment}(asset, 188.75, InvestedAmount,  DefaultDate)
 
     @test PotentialProfit(investment, 188.75) ≈ 0.
 
@@ -26,14 +27,14 @@ end
     @test ClosedPercentage(investment) ≈ 0.
 
     closedInv = Close(investment, 190)
-    @test ClosedProfit(closedInv) ≈ 1.25
+    @test ClosedProfit(closedInv) ≈ (190-188.75) / 188.75 * InvestedAmount
     @test ClosedPercentage(closedInv) ≈ (190-188.75)/188.75 * 100
 
-    investment = Investment{ShortInvestment}(asset, 188.75, DefaultDate)
+    investment = Investment{ShortInvestment}(asset, 188.75, InvestedAmount, DefaultDate)
 
     @test typeof(investment) == Investment{ShortInvestment}
 
-    @test PotentialProfit(investment, 190) ≈ -1.25
+    @test PotentialProfit(investment, 190) ≈ - (190-188.75) / 188.75 * InvestedAmount
 
     @test ClosedProfit(investment) ≈ 0.
     @test ClosedPercentage(investment) ≈ 0.
@@ -41,15 +42,15 @@ end
     closedInv = Close(investment, 190)
     @test typeof(closedInv) == ClosedInvestment{ShortInvestment}
 
-    @test ClosedProfit(closedInv) ≈ -1.25
+    @test ClosedProfit(closedInv) ≈ - (190-188.75) / 188.75 * InvestedAmount
     @test ClosedPercentage(closedInv) ≈ (188.75-190)/188.75 * 100
 end
 
 @testset "Fetching asset value" begin
     asset = Asset("FB")
-    investment = Investment{LongInvestment}(asset, 188.75, DefaultDate)
+    investment = Investment{LongInvestment}(asset, 188.75, InvestedAmount, DefaultDate)
     pot = PotentialProfit(investment, CloseDate)
-    @test pot == 190.86 - 188.75
+    @test pot == (190.86 - 188.75) / 188.75 * InvestedAmount
 end
 
 @testset "Portfolio basic operations" begin
@@ -57,21 +58,23 @@ end
     pf = Portfolio()
     @test typeof(pf) == Portfolio
 
-    Add!(pf, Investment{LongInvestment}(Asset("FB"), 188.75, DefaultDate))
-    Add!(pf, Investment{ShortInvestment}(Asset("MSFT"), 120., DefaultDate))
+    inv1 = Investment{LongInvestment}(Asset("FB"), 188.75, InvestedAmount, DefaultDate)
+    inv2 = Investment{ShortInvestment}(Asset("MSFT"), 120., InvestedAmount, DefaultDate)
+    Add!(pf, inv1)
+    Add!(pf, inv2)
 
     @test size(pf.investments,1) == 2
 
     pot = PotentialProfit(pf, CloseDate)
     @test ClosedProfit(pf) ≈ 0.
-    @test pot ≈ (190.86 - 188.75) + (120-135.34)
+    @test pot ≈ PotentialProfit(inv1,190.86) + PotentialProfit(inv2, 135.34)
 
     @test size(OpenInvestments(pf, Asset("FB")),1) == 1
 
     Close!(pf, pf.investments[1], 190, CloseDate)
 
-    @test ClosedProfit(pf) ≈ 1.25
-    @test PotentialProfit(pf, CloseDate) == (120-135.34)
+    @test ClosedProfit(pf) ≈ ClosedProfit(pf.investments[1])
+    @test PotentialProfit(pf, CloseDate) == PotentialProfit(pf.investments[2], 135.34)
 
     @test size(OpenInvestments(pf, Asset("FB")),1) == 0
 

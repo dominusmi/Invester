@@ -1,6 +1,5 @@
 module Invester
 
-using HTTP
 using JSON
 using Dates
 using CSV
@@ -17,12 +16,15 @@ import Base.==
 
 export Asset, AssetHistory, AssetHistoryBuffer, Investment, InvestmentType, InvestmentReturn,
 	LongInvestment, ShortInvestment, AbstractInvestment, AbstractPortfolio, Portfolio, API,
-	IEXTradingAPI, AlphadvantageAPI, ClosedInvestment
+	IEXTradingAPI, AlphadvantageAPI, ClosedInvestment,
 
-export LoadTop100History, PotentialProfit, ClosedPercentage, ClosedProfit, Close,
+	LoadTop100History, PotentialProfit, ClosedPercentage, ClosedProfit, Close,
 	Close!, ClosedProfit, Return, Add!, Long!, Short!, FetchAverageAssetValue,
-	MovingAverage, OneWeekMA, OneMonthMA, ThreeMonthsMA, SixMonthsMA, OpenInvestments,
-	CheckLoadHistory
+	MovingAverage, OneWeekMA, OneMonthMA, ThreeMonthsMA, SixMonthsMA,
+	CheckLoadHistory, PotentialProfitPercentage,
+
+	ClosedProfitPercentage, ClosedInvestments, OpenInvestments, isopen, isclosed
+
 
 GenericDate = Union{Date,DateTime}
 
@@ -34,6 +36,7 @@ include("Utilities.jl")
 include("DataAccess.jl")
 include("Analysis.jl")
 include("Portfolio.jl")
+include("Portfolios/MovingAverage.jl")
 include("Brain.jl")
 
 
