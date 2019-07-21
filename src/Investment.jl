@@ -48,6 +48,11 @@ function Return(inv::Investment{ShortInvestment}, value::Number)::InvestmentRetu
     perc = (_return) / inv.value
     InvestmentReturn(perc * inv.invested, perc * 100)
 end
+function Return(inv::ClosedInvestment, value::Number)::InvestmentReturn
+    _return = value - Float64(inv.valueOpen)
+    perc = (_return) / inv.valueOpen
+    InvestmentReturn(perc * inv.invested, perc * 100)
+end
 Return(inv::ClosedInvestment) = inv.closedReturn
 
 PotentialProfit(inv::AbstractInvestment) = 0.
@@ -58,22 +63,24 @@ ClosedProfitPercentage(inv::AbstractInvestment) = 0.
 ClosedProfit(inv::ClosedInvestment) = inv.closedReturn.value
 ClosedProfitPercentage(inv::ClosedInvestment) = inv.closedReturn.percentage
 
-PotentialProfit(inv::Investment, currentValue::Number)::InvestmentReturn =
+PotentialProfit(inv::AbstractInvestment, currentValue::Number)::Number =
     Return(inv, currentValue).value
-PotentialProfitPercentage(inv::Investment, currentValue::Number)::InvestmentReturn =
+PotentialProfitPercentage(inv::AbstractInvestment, currentValue::Number)::Number =
     Return(inv, currentValue).percentage
 
-function PotentialProfit(inv::Investment, date::GenericDate)::InvestmentReturn
+function PotentialProfit(inv::Investment, date::GenericDate)::Number
     date = Date(date)
     currentValue = FetchAverageAssetValue(inv.asset, date)
     return Return(inv, currentValue).value
 end
 
-function PotentialProfitPercentage(inv::Investment, date::GenericDate)::InvestmentReturn
+function PotentialProfitPercentage(inv::Investment, date::GenericDate)::Number
     date = Date(date)
     currentValue = FetchAverageAssetValue(inv.asset, date)
     return Return(inv, currentValue).percentage
 end
 
 
-Duration(inv::ClosedInvestment)::Integer = (inv.DateClose - inv.dateOpen).value
+# Convert milliseconds to days
+""" Duration in days (possibly partial) of a closed investment """
+Duration(inv::ClosedInvestment)::Number = (inv.dateClosed - inv.dateOpen).value / 86400000

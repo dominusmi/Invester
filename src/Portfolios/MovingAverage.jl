@@ -51,3 +51,7 @@ function CloseConfidence(investment::Investment, pf::MovingAveragePortfolio,
     end
     return 0
 end
+
+function Hook(pf::MovingAveragePortfolio, day::Date, logger)
+    nothing
+end

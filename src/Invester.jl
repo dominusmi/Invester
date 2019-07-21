@@ -23,7 +23,9 @@ export Asset, AssetHistory, AssetHistoryBuffer, Investment, InvestmentType, Inve
 	MovingAverage, OneWeekMA, OneMonthMA, ThreeMonthsMA, SixMonthsMA,
 	CheckLoadHistory, PotentialProfitPercentage,
 
-	ClosedProfitPercentage, ClosedInvestments, OpenInvestments, isopen, isclosed
+	ClosedProfitPercentage, ClosedInvestments, OpenInvestments, isopen, isclosed,
+
+	Select
 
 
 GenericDate = Union{Date,DateTime}

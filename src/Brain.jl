@@ -1,4 +1,6 @@
-function SimulatePortfolioDecisionMaker(pf::AbstractPortfolio, initDate::Date, endDate::Date)
+Hook(pf::AbstractPortfolio, date::Date, logger) = nothing
+
+function SimulatePortfolioDecisionMaker(pf::AbstractPortfolio, initDate::Date, endDate::Date, logger=nothing)
 	history = CheckLoadHistory()
 	for day in WallStreetDayIterator(initDate,endDate)
 		@show day
@@ -25,5 +27,7 @@ function SimulatePortfolioDecisionMaker(pf::AbstractPortfolio, initDate::Date, e
 				end
 			end
 		end
+		# Hook in process
+		Hook(pf, day, logger)
 	end
 end

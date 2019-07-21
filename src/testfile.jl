@@ -3,11 +3,47 @@ using Plots
 using Dates, Query, JuliaDB, DataFrames, Statistics
 
 pf = Invester.MovingAveragePortfolio(upperClosePercentageThreshold=10,
+	lowerClosePercentageThreshold=-1,
 	maxInvestments = 20)
-Invester.SimulatePortfolioDecisionMaker(pf, Date(2019,1,1), Date(2019,2,1))
+Invester.SimulatePortfolioDecisionMaker(pf, Date(2019,1,1), Date(2019,6,1))
 Invester.PotentialProfit(pf, Date(2019,2,11))
 ClosedProfit(pf)
 size(pf.investments)
+
+
+startDate = Date(pf.investments[1].dateOpen)
+openInvs = OpenInvestments(pf)
+closedInvs = ClosedInvestments(pf)
+endDate = Date(max(openInvs[end].dateOpen, closedInvs[end].dateClosed))
+
+potProfits = []
+closedProfits = []
+
+
+wsdi = Invester.WallStreetDayIterator(startDate+Day(1),endDate)
+for date in wsdi
+    toFetchOpen = [x for x in Invester.Select(x->x.dateOpen <= date, openInvs)]
+    toFetchClosed = [x for x in Invester.Select(x->x.dateOpen <= date && x.dateClosed > date, closedInvs)]
+    invsToFetch = vcat(toFetchOpen, toFetchClosed)
+
+	assets = map(x->x.asset, invsToFetch)
+	closeValues = Invester.FetchCloseAssetValue.(assets,date)
+
+	dayPotProfits = [ PotentialProfit(inv, closeValues[i]) for (i, inv) in enumerate(invsToFetch) ]
+	push!(potProfits, sum(dayPotProfits))
+
+	closedAtDate = Invester.Select(x->x.dateClosed < date, ClosedInvestments(pf))
+	push!(closedProfits, sum(ClosedProfit.(closedAtDate)))
+end
+closedProfits
+
+plot(potProfits)
+plot!(closedProfits)
+
+
+date = Date(2019,1,4)
+toFetchClosed = [x.asset for x in Invester.Select(x->x.dateOpen < date && x.dateClosed > date, closedInvs)]
+
 
 asset = Asset("QCOM")
 history = LoadTop100History()

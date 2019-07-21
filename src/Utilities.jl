@@ -114,3 +114,6 @@ function NextWallStreetDay(day::Date)
     end
     return currReturn
 end
+
+
+Select(f::Function, a::AbstractArray) = a[findall(f,a)]

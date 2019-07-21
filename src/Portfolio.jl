@@ -66,5 +66,10 @@ CloseThreshold(pf::AbstractPortfolio) = pf.closeThreshold
 
 function AverageInvestmentLength(pf::AbstractPortfolio)
     closedInvs = ClosedInvestments(pf)
-    
+    mean(Duration.(closedInvs))
+end
+
+function AveragePercentageProfit(pf::AbstractPortfolio)
+    closedInvs = ClosedInvestments(pf)
+    mean(ClosedProfitPercentage.(closedInvs))
 end
