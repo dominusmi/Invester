@@ -1,5 +1,5 @@
-isopen(i::AbstractInvestment) = typeof(i) <: Investment
-isclosed(i::AbstractInvestment) = typeof(i) <: ClosedInvestment
+isopen(i::AbstractInvestment)::Bool = typeof(i) <: Investment
+isclosed(i::AbstractInvestment)::Bool = typeof(i) <: ClosedInvestment
 
 Add!(portfolio::AbstractPortfolio, inv::AbstractInvestment) = push!(portfolio.investments, inv)
 
@@ -38,12 +38,12 @@ function Close!(pf::AbstractPortfolio, inv::Investment, value::Number, dateClose
 end
 
 
-function Return(inv::Investment{LongInvestment}, value::Number)
+function Return(inv::Investment{LongInvestment}, value::Number)::InvestmentReturn
     _valueDiff = Float64(value) - inv.value
     perc = (_valueDiff) / inv.value
     InvestmentReturn(perc * inv.invested, perc * 100)
 end
-function Return(inv::Investment{ShortInvestment}, value::Number)
+function Return(inv::Investment{ShortInvestment}, value::Number)::InvestmentReturn
     _return = Float64(inv.value) - value
     perc = (_return) / inv.value
     InvestmentReturn(perc * inv.invested, perc * 100)
@@ -58,17 +58,22 @@ ClosedProfitPercentage(inv::AbstractInvestment) = 0.
 ClosedProfit(inv::ClosedInvestment) = inv.closedReturn.value
 ClosedProfitPercentage(inv::ClosedInvestment) = inv.closedReturn.percentage
 
-PotentialProfit(inv::Investment, currentValue::Number) = Return(inv, currentValue).value
-PotentialProfitPercentage(inv::Investment, currentValue::Number) = Return(inv, currentValue).percentage
+PotentialProfit(inv::Investment, currentValue::Number)::InvestmentReturn =
+    Return(inv, currentValue).value
+PotentialProfitPercentage(inv::Investment, currentValue::Number)::InvestmentReturn =
+    Return(inv, currentValue).percentage
 
-function PotentialProfit(inv::Investment, date::GenericDate)
+function PotentialProfit(inv::Investment, date::GenericDate)::InvestmentReturn
     date = Date(date)
     currentValue = FetchAverageAssetValue(inv.asset, date)
     return Return(inv, currentValue).value
 end
 
-function PotentialProfitPercentage(inv::Investment, date::GenericDate)
+function PotentialProfitPercentage(inv::Investment, date::GenericDate)::InvestmentReturn
     date = Date(date)
     currentValue = FetchAverageAssetValue(inv.asset, date)
     return Return(inv, currentValue).percentage
 end
+
+
+Duration(inv::ClosedInvestment)::Integer = (inv.DateClose - inv.dateOpen).value

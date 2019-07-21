@@ -62,3 +62,9 @@ UpperClosePercentageThreshold(pf::AbstractPortfolio) = pf.upperClosePercentageTh
 MaxNumberOfInvestment(pf::AbstractPortfolio) = pf.maxInvestments
 LongThreshold(pf::AbstractPortfolio) = pf.longThreshold
 CloseThreshold(pf::AbstractPortfolio) = pf.closeThreshold
+
+
+function AverageInvestmentLength(pf::AbstractPortfolio)
+    closedInvs = ClosedInvestments(pf)
+    
+end
