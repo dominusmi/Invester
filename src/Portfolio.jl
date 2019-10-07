@@ -1,26 +1,49 @@
 """ Get all open investments """
 function OpenInvestments(pf::AbstractPortfolio)
-    idxs = findall(x-> isopen(x), pf.investments)
+    idxs = findall(x-> isOpenInvestment(x), pf.investments)
     pf.investments[idxs]
 end
 
 """ Get all open investments of a given asset """
 function OpenInvestments(pf::AbstractPortfolio, a::Asset)
-    idxs = findall(x-> isopen(x) && x.asset == a, pf.investments)
+    idxs = findall(x-> isOpenInvestment(x) && x.asset == a, pf.investments)
     pf.investments[idxs]
 end
 
 """ Get all closed investments """
 function ClosedInvestments(pf::AbstractPortfolio)
-    idxs = findall(x-> isclosed(x), pf.investments)
+    idxs = findall(x-> isClosedInvestment(x), pf.investments)
     pf.investments[idxs]
 end
 
 """ Get all closed investments of a given asset """
 function ClosedInvestments(pf::AbstractPortfolio, a::Asset)
-    idxs = findall(x-> isclosed(x) && x.asset == a, pf.investments)
+    idxs = findall(x-> isClosedInvestment(x) && x.asset == a, pf.investments)
     pf.investments[idxs]
 end
+
+""" Get all investments opened on date """
+function InvestmentsOpenedOn(pf::AbstractPortfolio, date::GenericDate)
+    Invester.Select(x->x.dateOpen ~ date, pf.investments)
+end
+
+""" Get all investments closed on date """
+function InvestmentsClosedOn(pf::AbstractPortfolio, date::GenericDate)
+    Invester.Select(x->x.dateClosed ~ date, ClosedInvestments(pf))
+end
+
+""" Get all investments which were open at date """
+function InvestmentsOpenOn(pf::AbstractPortfolio, date::GenericDate; includeOpenedOn=false, includeClosedOn=false)
+    inInterval = Invester.Select(x->isOpen(x, date), pf.investments)
+    if includeOpenedOn
+        inInterval = vcat(inInterval, Invester.Select(x->x.dateOpen ~ date, pf.investments) )
+    end
+    if includeClosedOn
+        inInterval = vcat(inInterval, Invester.Select(x->x.dateClosed ~ date, ClosedInvestments(pf)) )
+    end
+    inInterval
+end
+
 
 function PotentialProfit(pf::AbstractPortfolio, date::GenericDate = Dates.today())
     date = Date(date)

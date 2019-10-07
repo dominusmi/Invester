@@ -117,3 +117,5 @@ end
 
 
 Select(f::Function, a::AbstractArray) = a[findall(f,a)]
+
+~(dt::GenericDate, d::GenericDate) = Date(dt) == Date(d)

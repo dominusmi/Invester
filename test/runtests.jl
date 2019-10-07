@@ -24,11 +24,11 @@ end
     @test PotentialProfit(investment, 188.75) ≈ 0.
 
     @test ClosedProfit(investment) ≈ 0.
-    @test ClosedPercentage(investment) ≈ 0.
+    @test ClosedProfitPercentage(investment) ≈ 0.
 
     closedInv = Close(investment, 190)
     @test ClosedProfit(closedInv) ≈ (190-188.75) / 188.75 * InvestedAmount
-    @test ClosedPercentage(closedInv) ≈ (190-188.75)/188.75 * 100
+    @test ClosedProfitPercentage(closedInv) ≈ (190-188.75)/188.75 * 100
 
     investment = Investment{ShortInvestment}(asset, 188.75, InvestedAmount, DefaultDate)
 
@@ -37,13 +37,13 @@ end
     @test PotentialProfit(investment, 190) ≈ - (190-188.75) / 188.75 * InvestedAmount
 
     @test ClosedProfit(investment) ≈ 0.
-    @test ClosedPercentage(investment) ≈ 0.
+    @test ClosedProfitPercentage(investment) ≈ 0.
 
     closedInv = Close(investment, 190)
     @test typeof(closedInv) == ClosedInvestment{ShortInvestment}
 
     @test ClosedProfit(closedInv) ≈ - (190-188.75) / 188.75 * InvestedAmount
-    @test ClosedPercentage(closedInv) ≈ (188.75-190)/188.75 * 100
+    @test ClosedProfitPercentage(closedInv) ≈ (188.75-190)/188.75 * 100
 end
 
 @testset "Fetching asset value" begin
@@ -78,6 +78,28 @@ end
 
     @test size(OpenInvestments(pf, Asset("FB")),1) == 0
 
+end
+
+@testset "Portfolio history functions" begin
+    pf = Portfolio()
+    @test typeof(pf) == Portfolio
+
+    inv1 = Investment{LongInvestment}(Asset("FB"), 188.75, InvestedAmount, DefaultDate)
+    inv2 = Investment{ShortInvestment}(Asset("MSFT"), 120., InvestedAmount, DefaultDate)
+    Add!(pf, inv1)
+    Add!(pf, inv2)
+
+    Close!(pf, pf.investments[1], 190, CloseDate)
+
+    @test size(InvestmentsOpenedOn(pf, DefaultDate),1) == 2
+    @test size(InvestmentsOpenOn(pf, DefaultDate),1) == 0
+    @test size(InvestmentsOpenOn(pf, DefaultDate+Day(1)),1) == 2
+    @test size(InvestmentsOpenOn(pf, DefaultDate, includeOpenedOn=true),1) == 2
+
+    @test size(InvestmentsClosedOn(pf, DefaultDate),1) == 0
+    @test size(InvestmentsClosedOn(pf, CloseDate),1) == 1
+    @test size(InvestmentsOpenOn(pf, CloseDate),1) == 1
+    @test size(InvestmentsOpenOn(pf, CloseDate, includeClosedOn=true),1) == 2
 end
 
 

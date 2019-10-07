@@ -1,5 +1,9 @@
-isopen(i::AbstractInvestment)::Bool = typeof(i) <: Investment
-isclosed(i::AbstractInvestment)::Bool = typeof(i) <: ClosedInvestment
+isOpenInvestment(i::AbstractInvestment)::Bool = typeof(i) <: Investment
+isClosedInvestment(i::AbstractInvestment)::Bool = typeof(i) <: ClosedInvestment
+
+isOpen(i::Investment, d::GenericDate) = Date(i.dateOpen) < Date(d)
+isOpen(i::ClosedInvestment, d::GenericDate) = Date(i.dateOpen) < Date(d) && Date(i.dateClosed) > Date(d)
+
 
 Add!(portfolio::AbstractPortfolio, inv::AbstractInvestment) = push!(portfolio.investments, inv)
 
@@ -80,6 +84,8 @@ function PotentialProfitPercentage(inv::Investment, date::GenericDate)::Number
     return Return(inv, currentValue).percentage
 end
 
+ValueOpen(i::Investment) = i.value
+ValueOpen(i::ClosedInvestment) = i.valueOpen
 
 # Convert milliseconds to days
 """ Duration in days (possibly partial) of a closed investment """

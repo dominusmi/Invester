@@ -81,7 +81,7 @@ struct InvestmentReturn
 end
 InvestmentReturn(inv::Investment, closeValue::Number) = Return(inv, closeValue)
 
-
+#TODO: rename dateClosed -> dateClose
 struct ClosedInvestment{T} <: AbstractInvestment where T <: InvestmentType
     asset::Asset
     valueOpen::Number

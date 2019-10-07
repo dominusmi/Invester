@@ -12,20 +12,23 @@ using DataFrames: DataFrame
 using Statistics
 using UUIDs
 
-import Base.==
+import Base.==, Base.~
 
 export Asset, AssetHistory, AssetHistoryBuffer, Investment, InvestmentType, InvestmentReturn,
 	LongInvestment, ShortInvestment, AbstractInvestment, AbstractPortfolio, Portfolio, API,
-	IEXTradingAPI, AlphadvantageAPI, ClosedInvestment,
+	IEXTradingAPI, AlphadvantageAPI, ClosedInvestment, isOpen, ValueOpen,
 
 	LoadTop100History, PotentialProfit, ClosedPercentage, ClosedProfit, Close,
 	Close!, ClosedProfit, Return, Add!, Long!, Short!, FetchAverageAssetValue,
 	MovingAverage, OneWeekMA, OneMonthMA, ThreeMonthsMA, SixMonthsMA,
 	CheckLoadHistory, PotentialProfitPercentage,
 
-	ClosedProfitPercentage, ClosedInvestments, OpenInvestments, isopen, isclosed,
+	ClosedProfitPercentage, ClosedInvestments, OpenInvestments, isOpenInvestment, isClosedInvestment,
+	InvestmentsClosedOn, InvestmentsOpenedOn, InvestmentsOpenOn,
 
-	Select
+	Select,
+	# Date - DateTime comparison function
+	~
 
 
 GenericDate = Union{Date,DateTime}
