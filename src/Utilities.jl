@@ -115,6 +115,15 @@ function NextWallStreetDay(day::Date)
     return currReturn
 end
 
+function FetchCloseAssetsValueDictionary(assets::Array{Asset,1}, date::GenericDate)
+    marketCloseValuesOnDate = Invester.FetchCloseAssetValue.(assets,date)
+    asset2MarketPrice = Dict()
+    for i in 1:size(marketCloseValuesOnDate,1)
+        asset2MarketPrice[assets[i]] = marketCloseValuesOnDate[i]
+    end
+    asset2MarketPrice
+end
+
 
 Select(f::Function, a::AbstractArray) = a[findall(f,a)]
 

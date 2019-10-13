@@ -6,10 +6,9 @@ using Dates, Query, JuliaDB, DataFrames
 pf = Invester.MovingAveragePortfolio(upperClosePercentageThreshold=10,
 	lowerClosePercentageThreshold=-1,
 	maxInvestments = 20)
-Invester.SimulatePortfolioDecisionMaker(pf, Date(2019,1,1), Date(2019,6,1))
+Invester.SimulatePortfolioDecisionMaker(pf, Date(2019,1,1), Date(2019,6,28))
 Invester.PotentialProfit(pf, Date(2019,2,11))
 ClosedProfit(pf)
-
 
 function test(pf)
 	startDate = Date(pf.investments[1].dateOpen)
@@ -66,6 +65,11 @@ function test(pf)
 end
 
 test(pf)
+
+date = Date(2019,1,11)
+invs = InvestmentsOpenOn(pf,date)
+Invester.FetchCloseAssetsValueDictionary([inv.asset for inv in invs], date)
+dayPotProfits = [ PotentialProfit(inv, asset2MarketPrice[inv.asset]) for inv in InvestmentsOpenOn(pf,date)]
 
 date = Date(2019,1,4)
 toFetchClosed = [x.asset for x in Invester.Select(x->x.dateOpen < date && x.dateClosed > date, closedInvs)]
