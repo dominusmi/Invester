@@ -32,8 +32,8 @@ function LongConfidence(asset::Asset, pf::MovingAveragePortfolio, date::Date = D
 
     # Check how many of the trends indicate future improvement
     _sum = trends |>
-    t -> (t .> assetHistory[:avg][end]) |>
-    sum
+        t -> (t .> assetHistory[:avg][end]) |>
+        sum
 
     return _sum / 5.
 end
