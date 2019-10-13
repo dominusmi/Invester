@@ -2,11 +2,10 @@ using Invester
 using Plots
 using Dates, Query, JuliaDB, DataFrames
 
-
 pf = Invester.MovingAveragePortfolio(upperClosePercentageThreshold=10,
-	lowerClosePercentageThreshold=-1,
+	lowerClosePercentageThreshold=-0.1,
 	maxInvestments = 20)
-Invester.SimulatePortfolioDecisionMaker(pf, Date(2019,1,1), Date(2019,6,28))
+Invester.SimulatePortfolioDecisionMaker(pf, Date(2019,1,1), Date(2019,3,15))
 Invester.PotentialProfit(pf, Date(2019,2,11))
 ClosedProfit(pf)
 
@@ -29,6 +28,7 @@ function test(pf)
 	    invsToFetch = vcat(toFetchOpen, toFetchClosed)
 
 		# Fetch price on historic day
+		## Not too sure about this code, why not simply call FetchCloseAssetValue in loop directly?
 		assets = map(x->x.asset, invsToFetch)
 		marketCloseValuesOnDate = Invester.FetchCloseAssetValue.(assets,date)
 		asset2MarketPrice = Dict()
@@ -52,9 +52,9 @@ function test(pf)
 		println("\tOpened today:")
 		for cad in InvestmentsOpenedOn(pf,date)
 			if typeof(cad) <: Investment
-				println("\t\t$(cad.asset): $(cad.dateOpen) => $(cad.value)")
+				println("\t\t$(Asset(cad)): $(DateOpen(cad)) => $(ValueOpen(cad))")
 			elseif typeof(cad) <: ClosedInvestment
-				println("\t\t$(cad.asset): $(cad.dateOpen) => $(cad.valueOpen)")
+				println("\t\t$(Asset(cad)): $(DateOpen(cad)) => $(ValueOpen(cad))")
 			end
 		end
 	end
@@ -65,6 +65,7 @@ function test(pf)
 end
 
 test(pf)
+sum([ PotentialProfit(inv, Invester.FetchCloseAssetValue(inv.asset, Date(2019,6,28))) for inv in OpenInvestments(pf)])
 
 date = Date(2019,1,11)
 invs = InvestmentsOpenOn(pf,date)

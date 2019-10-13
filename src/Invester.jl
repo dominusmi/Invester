@@ -24,7 +24,7 @@ export Asset, AssetHistory, AssetHistoryBuffer, Investment, InvestmentType, Inve
 	CheckLoadHistory, PotentialProfitPercentage,
 
 	ClosedProfitPercentage, ClosedInvestments, OpenInvestments, isOpenInvestment, isClosedInvestment,
-	InvestmentsClosedOn, InvestmentsOpenedOn, InvestmentsOpenOn,
+	InvestmentsClosedOn, InvestmentsOpenedOn, InvestmentsOpenOn, ValueOpen, DateOpen,
 
 	Select,
 	# Date - DateTime comparison function

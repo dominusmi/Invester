@@ -87,6 +87,10 @@ end
 ValueOpen(i::Investment) = i.value
 ValueOpen(i::ClosedInvestment) = i.valueOpen
 
+DateOpen(i::AbstractInvestment) = i.dateOpen
+
+Asset(i::AbstractInvestment) = i.asset
+
 # Convert milliseconds to days
 """ Duration in days (possibly partial) of a closed investment """
 Duration(inv::ClosedInvestment)::Number = (inv.dateClosed - inv.dateOpen).value / 86400000
