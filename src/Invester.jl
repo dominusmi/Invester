@@ -11,6 +11,7 @@ using Query
 using DataFrames: DataFrame
 using Statistics
 using UUIDs
+using HTTP
 
 import Base.==, Base.~
 
@@ -30,6 +31,7 @@ export Asset, AssetHistory, AssetHistoryBuffer, Investment, InvestmentType, Inve
 	# Date - DateTime comparison function
 	~
 
+const global BASE_PATH = dirname(pathof(Invester))
 
 GenericDate = Union{Date,DateTime}
 
