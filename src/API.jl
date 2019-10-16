@@ -3,9 +3,14 @@ Format(api::AlphadvantageAPI, endpoint::String) = api.base * endpoint * "&apikey
 
 function FetchSymbols(iex::IEXTradingAPI)
     endpoint = "/ref-data/symbols"
-    JSON.Parse(Request(iex,endpoint))
+    JSON.Parse(RequestBody(iex,endpoint))
 end
 
+"""
+    method: TIME_SERIES_DAILY_ADJUSTED or TIME_SERIES_WEEKLY_ADJUSTED
+    outputsize: compact or full
+    datatype: json or csv
+"""
 function FetchHistory(api::AlphadvantageAPI, asset::Asset, method::String, outputsize::String; datatype=nothing)
     endpoint = "symbol=$(asset.symbol)&"
     endpoint *= "function=$method&"
@@ -13,7 +18,7 @@ function FetchHistory(api::AlphadvantageAPI, asset::Asset, method::String, outpu
 
     !isnothing(datatype) ? endpoint *= "&datatype=$datatype" : nothing
 
-    Request(api, endpoint)
+    RequestBody(api, endpoint)
 end
 
 FetchWeeklyHistory(api::AlphadvantageAPI, asset::Asset, outputsize::String; datatype=nothing) =
@@ -24,7 +29,7 @@ FetchDailyHistory(api::AlphadvantageAPI, asset::Asset, outputsize::String; datat
 
 
 
-function Request(api::API, endpoint::String)
+function RequestBody(api::API, endpoint::String)
     url = Format(api, endpoint)
     println("Requesting $url")
     r = HTTP.request("GET", url)
