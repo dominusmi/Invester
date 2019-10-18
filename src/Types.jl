@@ -119,11 +119,21 @@ Base.get(d::LoadedDataAccessor, s::Symbol, a::Any) = get(d.history, symbol, a)
 mutable struct WallStreetDayIterator
     startDate::Date
     endDate::Date
+    intervalLength::Integer
+    currIteration::Integer
+    """ Using end date as finish condition """
     function WallStreetDayIterator(s::Date, e::Date)
         if IsWallStreetHoliday(s)
             s = NextWallStreetDay(s)
         end
-        new(s, e)
+        new(s, e, 1e5, 0)
+    end
+    """ Using interval length as finish condition """
+    function WallStreetDayIterator(s::Date, e::Integer)
+        if IsWallStreetHoliday(s)
+            s = NextWallStreetDay(s)
+        end
+        new(s, Date(3000,1,1), e, 0)
     end
 end
 #endregion

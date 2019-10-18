@@ -65,14 +65,15 @@ end
 
 function Base.iterate(iter::WallStreetDayIterator, currDay=iter.startDate)
 
-    if currDay >= iter.endDate
+    if currDay >= iter.endDate || iter.currIteration >= iter.intervalLength
        return nothing
     end
 
     next = NextWallStreetDay(currDay)
-
+    iter.currIteration += 1
     return (currDay, next)
 end
+Base.IteratorSize(itr::WallStreetDayIterator) = Base.SizeUnknown()
 
 EndOf(date::Date) = DateTime(date, Dates.Time(23,59,59))
 
