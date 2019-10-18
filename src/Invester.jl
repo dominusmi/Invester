@@ -45,6 +45,7 @@ include("Analysis.jl")
 include("Portfolio.jl")
 include("Portfolios/MovingAverage.jl")
 include("Brain.jl")
+include("Utilities/DateUtilities.jl")
 
 
 history = Dict{Symbol, AssetHistory}()
