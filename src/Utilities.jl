@@ -48,4 +48,27 @@ function FetchCloseAssetsValueDictionary(assets::Array{Asset,1}, date::GenericDa
     asset2MarketPrice
 end
 
+"""
+Get asset data during a interval specified by first date and number of working days
+"""
+function GetIntervalData(asset::Asset, initDate::Date, intervalLength::Integer)::DataFrame
+    endDate = collect(Invester.WallStreetDayIterator(initDate, intervalLength))[end]
+    data = @from h in history[asset.symbol].history begin
+        # We pick more than the actual interval length to account for unforseen reasons for closed days
+        @where h[:timestamp] >= initDate && h[:timestamp] <= endDate+Day(20)
+        @select h
+        @collect DataFrame
+        end;
+    data
+end
+
+" Makes a Flux compatible minibatch out of arrays"
+function make_minibatch(X, Y, idxs)
+    batch = Array{Tuple}(undef, length(idxs))
+    for (i,idx) in enumerate(idxs)
+       batch[i] = (reshape(trainX[:,idx], (size(trainX,1),1,1,1)), Y[:,idx])
+    end
+    batch
+end
+
 Select(f::Function, a::AbstractArray) = a[findall(f,a)]

@@ -76,19 +76,7 @@ function NextWallStreetDay(day::Date)
     return currReturn
 end
 
-"""
-Get asset data during a interval specified by first date and number of working days
-"""
-function GetIntervalData(asset::Asset, initDate::Date, intervalLength::Integer)::DataFrame
-    endDate = collect(Invester.WallStreetDayIterator(initDate, intervalLength))[end]
-    data = @from h in history[asset.symbol].history begin
-        # We pick more than the actual interval length to account for unforseen reasons for closed days
-        @where h[:timestamp] >= initDate && h[:timestamp] <= endDate+Day(5)
-        @select h
-        @collect DataFrame
-        end;
-    data
-end
+AvailableAssets() = keys(history)
 
 """ Generic date day comparator """
 ~(dt::GenericDate, d::GenericDate) = Date(dt) == Date(d)
