@@ -62,8 +62,8 @@ function GetIntervalData(asset::Asset, initDate::Date, intervalLength::Integer):
     data
 end
 
-" Makes a Flux compatible minibatch out of arrays"
-function make_minibatch(X, Y, idxs)
+" Transforms N x M episodes (Episode length x Episode index) into Flux compatible episodes "
+function MakeBatch(X, Y, idxs)
     batch = Array{Tuple}(undef, length(idxs))
     for (i,idx) in enumerate(idxs)
        batch[i] = (reshape(trainX[:,idx], (size(trainX,1),1,1,1)), Y[:,idx])
