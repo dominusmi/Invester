@@ -12,6 +12,7 @@ using DataFrames: DataFrame
 using Statistics
 using UUIDs
 using HTTP
+using MySQL
 
 import Base.==, Base.~
 
@@ -50,5 +51,5 @@ include("Utilities/Logging.jl")
 
 
 history = Dict{Symbol, AssetHistory}()
-
+DbConnection = nothing
 end # module
