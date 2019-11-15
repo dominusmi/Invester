@@ -6,6 +6,12 @@ function CheckLoadHistory()
     history
 end
 
+function ReloadHistory()
+    global history
+    history = LoadTop100History()
+    history
+end
+
 """ Fetches the average between open and close for a given date """
 function FetchAverageAssetValue(asset::Asset, date::GenericDate)
     history = CheckLoadHistory()
