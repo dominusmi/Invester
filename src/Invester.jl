@@ -22,7 +22,7 @@ export Asset, AssetHistory, AssetHistoryBuffer, Investment, InvestmentType, Inve
 	LoadTop100History, PotentialProfit, ClosedPercentage, ClosedProfit, Close,
 	Close!, ClosedProfit, Return, Add!, Long!, Short!, FetchAverageAssetValue,
 	MovingAverage, OneWeekMA, OneMonthMA, ThreeMonthsMA, SixMonthsMA,
-	CheckLoadHistory, PotentialProfitPercentage,
+	CheckLoadHistory, PotentialProfitPercentage, ReloadHistory,
 
 	ClosedProfitPercentage, ClosedInvestments, OpenInvestments, isOpenInvestment, isClosedInvestment,
 	InvestmentsClosedOn, InvestmentsOpenedOn, InvestmentsOpenOn, ValueOpen, DateOpen,
