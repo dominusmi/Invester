@@ -24,11 +24,11 @@ function LongConfidence(asset::Asset, pf::MovingAveragePortfolio, date::Date = D
         return 0
     end
 
-    push!(trends, MovingAverageTrend(assetHistory[:avg], 7)[end])
-    push!(trends, MovingAverageTrend(assetHistory[:avg], 14)[end])
-    push!(trends, MovingAverageTrend(assetHistory[:avg], 30)[end])
-    push!(trends, MovingAverageTrend(assetHistory[:avg], 90)[end])
-    push!(trends, MovingAverageTrend(assetHistory[:avg], 365)[end])
+    push!(trends, MovingAverageTrend(assetHistory[!,:avg], 7)[end])
+    push!(trends, MovingAverageTrend(assetHistory[!,:avg], 14)[end])
+    push!(trends, MovingAverageTrend(assetHistory[!,:avg], 30)[end])
+    push!(trends, MovingAverageTrend(assetHistory[!,:avg], 90)[end])
+    push!(trends, MovingAverageTrend(assetHistory[!,:avg], 365)[end])
 
     # Check how many of the trends indicate future improvement
     _sum = trends |>
