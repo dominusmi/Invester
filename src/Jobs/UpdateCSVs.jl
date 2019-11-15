@@ -20,8 +20,20 @@ function SaveTop100CompaniesCSV()
     # Get 100 companies
     top100List = readtable(Top100CompaniesPath)
 
+    # Rename current folder
+    oldDirectoryPath = Invester.BASE_PATH * "/resources/Top100CompaniesOld"
+    newDirectoryPath = Invester.BASE_PATH * "/resources/Top100Companies"
+
+    # Remove old directory and rename new if they exist
+    if isdir(oldDirectoryPath)
+        run(`rm -r $oldDirectoryPath`)
+        if isdir(newDirectoryPath)
+            run(`mv $newDirectoryPath $oldDirectoryPath`)
+        end
+    end
+
     # Make new directory to store info
-    save_path = Invester.BASE_PATH * "/resources/BillionCompaniesStockHistory $date"
+    save_path = Invester.BASE_PATH * "/resources/Top100Companies"
     alreadySaved = Set()
     if isdir(save_path)
         alreadySaved = getAlreadySavedSymbols(save_path)
@@ -46,7 +58,8 @@ function SaveTop100CompaniesCSV()
             open("$save_path/$company.csv", "w") do out
                 write(out, body)
             end
-        catch
+        catch e
+            LogJobError("Failed to load $company - $e")
             push!(companies_not_fetched, company)
         end
 
