@@ -33,6 +33,8 @@ export Asset, AssetHistory, AssetHistoryBuffer, Investment, InvestmentType, Inve
 	~
 
 const global BASE_PATH = dirname(pathof(Invester))
+const global ROOT_PATH = realpath(dirname(pathof(Invester))*"/..")
+const global CONFIG_PATH = ROOT_PATH * "/Config"
 
 GenericDate = Union{Date,DateTime}
 
@@ -48,6 +50,7 @@ include("Portfolios/MovingAverage.jl")
 include("Brain.jl")
 include("Utilities/DateUtilities.jl")
 include("Utilities/Logging.jl")
+include("DatabaseHandle.jl")
 
 
 history = Dict{Symbol, AssetHistory}()

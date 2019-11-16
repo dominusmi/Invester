@@ -2,7 +2,7 @@ isOpenInvestment(i::AbstractInvestment)::Bool = typeof(i) <: Investment
 isClosedInvestment(i::AbstractInvestment)::Bool = typeof(i) <: ClosedInvestment
 
 isOpen(i::Investment, d::GenericDate) = Date(i.dateOpen) < Date(d)
-isOpen(i::ClosedInvestment, d::GenericDate) = Date(i.dateOpen) < Date(d) && Date(i.dateClosed) > Date(d)
+isOpen(i::ClosedInvestment, d::GenericDate) = Date(i.dateOpen) < Date(d) && Date(i.dateClose) > Date(d)
 
 
 Add!(portfolio::AbstractPortfolio, inv::AbstractInvestment) = push!(portfolio.investments, inv)
@@ -30,15 +30,15 @@ function Short!(portfolio::AbstractPortfolio, asset::Asset, dateOpen::DateTime)
     Short!(portfolio, asset, value, dateOpen = dateOpen)
 end
 
-Close(inv::Investment, value::Number, dateClosed::DateTime = Dates.now()) = ClosedInvestment(inv, value, dateClosed)
+Close(inv::Investment, value::Number, dateClose::DateTime = Dates.now()) = ClosedInvestment(inv, value, dateClose)
 
 
-function Close!(pf::AbstractPortfolio, uuid::UUID, value::Number, dateClosed::DateTime = Date.Today())
+function Close!(pf::AbstractPortfolio, uuid::UUID, value::Number, dateClose::DateTime = Date.Today())
     idx = findfirst(x -> x.uuid == uuid, pf.investments)
-    pf.investments[idx] = Close(pf.investments[idx], value, dateClosed)
+    pf.investments[idx] = Close(pf.investments[idx], value, dateClose)
 end
-function Close!(pf::AbstractPortfolio, inv::Investment, value::Number, dateClosed::DateTime = Date.Today())
-    Close!(pf, inv.uuid, value, dateClosed)
+function Close!(pf::AbstractPortfolio, inv::Investment, value::Number, dateClose::DateTime = Date.Today())
+    Close!(pf, inv.uuid, value, dateClose)
 end
 
 
@@ -93,4 +93,4 @@ Asset(i::AbstractInvestment) = i.asset
 
 # Convert milliseconds to days
 """ Duration in days (possibly partial) of a closed investment """
-Duration(inv::ClosedInvestment)::Number = (inv.dateClosed - inv.dateOpen).value / 86400000
+Duration(inv::ClosedInvestment)::Number = (inv.dateClose - inv.dateOpen).value / 86400000
