@@ -29,7 +29,7 @@ end
 
 """ Get all investments closed on date """
 function InvestmentsClosedOn(pf::AbstractPortfolio, date::GenericDate)
-    Invester.Select(x->x.dateClosed ~ date, ClosedInvestments(pf))
+    Invester.Select(x->x.dateClose ~ date, ClosedInvestments(pf))
 end
 
 """ Get all investments which were open at date """
@@ -39,7 +39,7 @@ function InvestmentsOpenOn(pf::AbstractPortfolio, date::GenericDate; includeOpen
         inInterval = vcat(inInterval, Invester.Select(x->x.dateOpen ~ date, pf.investments) )
     end
     if includeClosedOn
-        inInterval = vcat(inInterval, Invester.Select(x->x.dateClosed ~ date, ClosedInvestments(pf)) )
+        inInterval = vcat(inInterval, Invester.Select(x->x.dateClose ~ date, ClosedInvestments(pf)) )
     end
     inInterval
 end

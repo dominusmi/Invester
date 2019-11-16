@@ -81,21 +81,21 @@ struct InvestmentReturn
 end
 InvestmentReturn(inv::Investment, closeValue::Number) = Return(inv, closeValue)
 
-#TODO: rename dateClosed -> dateClose
+#TODO: rename dateClose -> dateClose
 struct ClosedInvestment{T} <: AbstractInvestment where T <: InvestmentType
     asset::Asset
     valueOpen::Number
     valueClose::Number
     invested::Number
     dateOpen::DateTime
-    dateClosed::DateTime
+    dateClose::DateTime
     closedReturn::InvestmentReturn
     uuid::UUID
 end
-function ClosedInvestment(inv::Investment{T}, closeValue::Number, dateClosed::DateTime = Date.now()) where T <: InvestmentType
+function ClosedInvestment(inv::Investment{T}, closeValue::Number, dateClose::DateTime = Date.now()) where T <: InvestmentType
     ClosedInvestment{T}(
         inv.asset, inv.value, closeValue, inv.invested, inv.dateOpen,
-        dateClosed, InvestmentReturn(inv, closeValue), uuid1()
+        dateClose, InvestmentReturn(inv, closeValue), uuid1()
     )
 end
 
