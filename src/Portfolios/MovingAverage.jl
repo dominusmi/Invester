@@ -2,10 +2,11 @@
     investments::Array{<:AbstractInvestment} = Array{AbstractInvestment,1}()
     lowerClosePercentageThreshold::Number = -5
     upperClosePercentageThreshold::Number = 5
-    maxInvestments = 1e4
-    longThreshold = 0.5
-    closeThreshold = 0.5
+    maxInvestments::Integer = 1e4
+    longThreshold::Number = 0.5
+    closeThreshold::Number = 0.5
 end
+
 
 function LongConfidence(asset::Asset, pf::MovingAveragePortfolio, date::Date = Dates.today())
     history = CheckLoadHistory()

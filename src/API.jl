@@ -28,7 +28,6 @@ FetchDailyHistory(api::AlphadvantageAPI, asset::Asset, outputsize::String; datat
     FetchHistory(api, asset, "TIME_SERIES_DAILY_ADJUSTED", outputsize, datatype=datatype)
 
 
-
 function RequestBody(api::API, endpoint::String)
     url = Format(api, endpoint)
     println("Requesting $url")
