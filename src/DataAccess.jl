@@ -62,6 +62,8 @@ function FetchCloseAssetValue(asset::Asset, date::GenericDate)
             @select h[:adjusted_close]
             @collect
     end
-
+    if isempty(value)
+        return nothing
+    end
     value[1]
 end

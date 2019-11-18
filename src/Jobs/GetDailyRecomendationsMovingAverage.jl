@@ -8,7 +8,6 @@ Invester.CheckLoadHistory()
 
 pf = Invester.LoadPortfolio("testdaily")
 
-pf
 Invester.SimulatePortfolioDecisionMaker(pf, Dates.today() - Dates.Day(1), Dates.today())
 pf.investments
 

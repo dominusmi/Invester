@@ -45,6 +45,10 @@ function CloseConfidence(investment::Investment, pf::MovingAveragePortfolio,
     history = CheckLoadHistory()
 
     currentValue = FetchCloseAssetValue(investment.asset, date)
+    if currentValue == nothing
+        return 0
+    end
+    
     pot = PotentialProfitPercentage(investment, currentValue)
 
     if pot > UpperClosePercentageThreshold(pf) || pot < LowerClosePercentageThreshold(pf)
