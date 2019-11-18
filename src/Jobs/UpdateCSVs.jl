@@ -1,8 +1,10 @@
 using Invester
+using Invester: LogJobInfo, LogJobError
 using DataFrames
 using Dates
 using HTTP
 using CSV
+using Glob
 
 function getAlreadySavedSymbols(path)::Set
     glob("*.csv", path)   |>
@@ -12,10 +14,12 @@ function getAlreadySavedSymbols(path)::Set
         Set
 end
 
-function SaveTop100CompaniesCSV()
+function SaveTop100CompaniesCSV(;update_only=false)
     date = Dates.today()
     Top100CompaniesPath = Invester.BASE_PATH * "/resources/top100.tsv"
     api = AlphadvantageAPI()
+
+    update_only ? LogJobInfo("Running update mode") : LogJobInfo("Running replace mode")
 
     # Get 100 companies
     top100List = readtable(Top100CompaniesPath)
@@ -25,20 +29,23 @@ function SaveTop100CompaniesCSV()
     newDirectoryPath = Invester.BASE_PATH * "/resources/Top100Companies"
 
     # Remove old directory and rename new if they exist
-    if isdir(oldDirectoryPath)
-        run(`rm -r $oldDirectoryPath`)
+    if !update_only
+        if isdir(oldDirectoryPath)
+            LogJobInfo("Removing old directory")
+            run(`rm -r $oldDirectoryPath`)
+        end
         if isdir(newDirectoryPath)
+            LogJobInfo("Renaming current directory")
             run(`mv $newDirectoryPath $oldDirectoryPath`)
         end
     end
 
     # Make new directory to store info
-    save_path = Invester.BASE_PATH * "/resources/Top100Companies"
     alreadySaved = Set()
-    if isdir(save_path)
-        alreadySaved = getAlreadySavedSymbols(save_path)
+    if isdir(newDirectoryPath)
+        alreadySaved = getAlreadySavedSymbols(newDirectoryPath)
     else
-        mkdir(save_path)
+        mkdir(newDirectoryPath)
     end
 
     companies_not_fetched = []
@@ -55,7 +62,7 @@ function SaveTop100CompaniesCSV()
         # Check it worked
         try
             CSV.File(body)
-            open("$save_path/$company.csv", "w") do out
+            open("$newDirectoryPath/$company.csv", "w") do out
                 write(out, body)
             end
         catch e
@@ -66,12 +73,13 @@ function SaveTop100CompaniesCSV()
         # Wait due to API limits
         i += 1
         if i % 5 == 0
-            println("Sleeping for $(61-time_to_remove)")
-            sleep(61-time_to_remove)
+            println("Sleeping for $(65-time_to_remove)")
+            sleep(65-time_to_remove)
             time_to_remove = 0
         end
     end
     companies_not_fetched
 end
 
-companies_not_fetched = SaveTop100CompaniesCSV()
+update_only = isempty(ARGS) ? false : true
+companies_not_fetched = SaveTop100CompaniesCSV(; update_only=update_only)
