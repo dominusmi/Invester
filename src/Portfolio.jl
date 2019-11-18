@@ -96,3 +96,28 @@ function AveragePercentageProfit(pf::AbstractPortfolio)
     closedInvs = ClosedInvestments(pf)
     mean(ClosedProfitPercentage.(closedInvs))
 end
+
+"""
+    Serialises portfolio by creating dictionary with every field set.
+    Note: investments are not saved likes this.
+    Warning: only works if types of fields are simple (numbers, strings)
+"""
+function Serialise(pf::AbstractPortfolio)::AbstractString
+    fn = fieldnames(typeof(pf))
+    fields = Set(fn)
+    delete!(fields, :investments)
+
+    serialised = Dict()
+    for field in fields
+        serialised[field] = getfield(pf, field)
+    end
+    "$serialised"
+end
+
+function Deserialise(::Type{<:AbstractPortfolio}, serialisedType::AbstractString, serialisedPf::AbstractString)::AbstractPortfolio
+    parsed = Meta.parse(serialisedPf)
+
+    dict = eval(parsed)
+    type = include_string(Invester,serialisedType)
+    return type(;dict...)
+end

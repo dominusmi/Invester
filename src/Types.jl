@@ -64,6 +64,11 @@ abstract type AbstractInvestment end
 
 ==(inv1::AbstractInvestment, inv2::AbstractInvestment) = (inv1.uuid == inv2.uuid)
 
+struct InvestmentReturn
+    value::Number
+    percentage::Number
+end
+
 struct Investment{T} <: AbstractInvestment where T <: InvestmentType
     asset::Asset
     value::Number
@@ -74,14 +79,6 @@ end
 Investment{T}(asset::Asset, v::Number, invested::Number,dateOpen::GenericDate) where T <: InvestmentType =
     Investment{T}(asset,v,invested,DateTime(dateOpen),uuid1())
 
-
-struct InvestmentReturn
-    value::Number
-    percentage::Number
-end
-InvestmentReturn(inv::Investment, closeValue::Number) = Return(inv, closeValue)
-
-#TODO: rename dateClose -> dateClose
 struct ClosedInvestment{T} <: AbstractInvestment where T <: InvestmentType
     asset::Asset
     valueOpen::Number
@@ -89,15 +86,19 @@ struct ClosedInvestment{T} <: AbstractInvestment where T <: InvestmentType
     invested::Number
     dateOpen::DateTime
     dateClose::DateTime
-    closedReturn::InvestmentReturn
     uuid::UUID
 end
 function ClosedInvestment(inv::Investment{T}, closeValue::Number, dateClose::DateTime = Date.now()) where T <: InvestmentType
     ClosedInvestment{T}(
         inv.asset, inv.value, closeValue, inv.invested, inv.dateOpen,
-        dateClose, InvestmentReturn(inv, closeValue), uuid1()
+        dateClose, uuid1()
     )
 end
+
+InvestmentReturn(inv::Investment, closeValue::Number) = Return(inv, closeValue)
+InvestmentReturn(inv::ClosedInvestment) = Return(inv)
+
+
 
 abstract type AbstractPortfolio end
 

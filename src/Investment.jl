@@ -57,15 +57,19 @@ function Return(inv::ClosedInvestment, value::Number)::InvestmentReturn
     perc = (_return) / inv.valueOpen
     InvestmentReturn(perc * inv.invested, perc * 100)
 end
-Return(inv::ClosedInvestment) = inv.closedReturn
+function Return(inv::ClosedInvestment)::InvestmentReturn
+    _return = inv.valueClose - Float64(inv.valueOpen)
+    perc = (_return) / inv.valueOpen
+    InvestmentReturn(perc * inv.invested, perc * 100)
+end
 
 PotentialProfit(inv::AbstractInvestment) = 0.
 PotentialProfit(inv::AbstractInvestment, args...) = 0.
 ClosedProfit(inv::AbstractInvestment) = 0.
 ClosedProfitPercentage(inv::AbstractInvestment) = 0.
 
-ClosedProfit(inv::ClosedInvestment) = inv.closedReturn.value
-ClosedProfitPercentage(inv::ClosedInvestment) = inv.closedReturn.percentage
+ClosedProfit(inv::ClosedInvestment) = Return(inv).value
+ClosedProfitPercentage(inv::ClosedInvestment) = Return(inv).percentage
 
 PotentialProfit(inv::AbstractInvestment, currentValue::Number)::Number =
     Return(inv, currentValue).value

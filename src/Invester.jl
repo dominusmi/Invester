@@ -8,7 +8,7 @@ using Parameters
 using Glob
 using JuliaDB
 using Query
-using DataFrames: DataFrame
+using DataFrames: DataFrame, DataFrameRow
 using Statistics
 using UUIDs
 using HTTP
