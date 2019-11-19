@@ -101,6 +101,7 @@ InvestmentReturn(inv::ClosedInvestment) = Return(inv)
 
 
 abstract type AbstractPortfolio end
+abstract type AbstractEquityPortfolio <: AbstractPortfolio end
 
 struct Portfolio <: AbstractPortfolio
     investments::Array{<:AbstractInvestment}
