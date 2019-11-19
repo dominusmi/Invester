@@ -45,7 +45,7 @@ function InvestmentsOpenOn(pf::AbstractPortfolio, date::GenericDate; includeOpen
 end
 
 
-function PotentialProfit(pf::AbstractPortfolio, date::GenericDate = Dates.today())
+function PotentialProfit(pf::AbstractPortfolio, date::GenericDate = Dates.today()-Dates.Day(1))
     date = Date(date)
     total = 0.
     for inv in OpenInvestments(pf)
@@ -54,7 +54,7 @@ function PotentialProfit(pf::AbstractPortfolio, date::GenericDate = Dates.today(
     total
 end
 
-function PotentialProfitPercentage(pf::AbstractPortfolio, date::GenericDate = Dates.today())
+function PotentialProfitPercentage(pf::AbstractPortfolio, date::GenericDate = Dates.today()-Dates.Day(1))
     date = Date(date)
     total = 0.
     for inv in OpenInvestments(pf)
