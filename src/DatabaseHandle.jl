@@ -29,7 +29,7 @@ SaveInvestment(_inv::ClosedInvestment{ShortInvestment}, pfId::Integer)  = SaveIn
 function SavePortfolio(pf::MovingAveragePortfolio, name::String)
 
     netClosedPercentageEquity = ClosedProfitPercentage(pf)
-    potentialProfitPercentage = nothing
+    potentialProfitPercentage = "NULL"
     try
         potentialPercentageEquity = PotentialProfitPercentage(pf)
     catch e
