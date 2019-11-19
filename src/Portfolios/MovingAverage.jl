@@ -48,7 +48,7 @@ function CloseConfidence(investment::Investment, pf::MovingAveragePortfolio,
     if currentValue == nothing
         return 0
     end
-    
+
     pot = PotentialProfitPercentage(investment, currentValue)
 
     if pot > UpperClosePercentageThreshold(pf) || pot < LowerClosePercentageThreshold(pf)
@@ -60,3 +60,25 @@ end
 function Hook(pf::MovingAveragePortfolio, day::Date, logger)
     nothing
 end
+
+
+#region Profit calculation functions
+
+function PotentialProfitPercentage(pf::MovingAveragePortfolio, date::GenericDate = Dates.today()-Dates.Day(1))
+    date = Date(date)
+    total = 0.
+    for inv in OpenInvestments(pf)
+        total += PotentialProfitPercentage(inv, date) / inv.invested
+    end
+    total / pf.maxInvestments
+end
+
+function ClosedProfitPercentage(pf::MovingAveragePortfolio)
+    total = 0.
+    for inv in ClosedInvestments(pf)
+        total += ClosedProfitPercentage(inv)
+    end
+    total / pf.maxInvestments
+end
+
+#endregion
