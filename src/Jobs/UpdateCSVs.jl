@@ -104,4 +104,8 @@ for i in 1:3
         SaveTop100CompaniesCSV(;update_only=true, max_time_to_wait = 65 + 30*i)
     end
 end
-LogJobInfo("Did not manage to retrieve $companies_not_fetched. Ending process.")
+if isempty(companies_not_fetched)
+    LogJobInfo("Succesfully finished updating CSVs")
+else
+    LogJobInfo("Did not manage to retrieve $companies_not_fetched. Ending process.")
+end
