@@ -78,13 +78,13 @@ PotentialProfitPercentage(inv::AbstractInvestment, currentValue::Number)::Number
 
 function PotentialProfit(inv::Investment, date::GenericDate)::Number
     date = Date(date)
-    currentValue = FetchAverageAssetValue(inv.asset, date)
+    currentValue = FetchCloseAssetValue(inv.asset, date)
     return Return(inv, currentValue).value
 end
 
 function PotentialProfitPercentage(inv::Investment, date::GenericDate)::Number
     date = Date(date)
-    currentValue = FetchAverageAssetValue(inv.asset, date)
+    currentValue = FetchCloseAssetValue(inv.asset, date)
     return Return(inv, currentValue).percentage
 end
 
