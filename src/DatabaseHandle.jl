@@ -29,11 +29,11 @@ SaveInvestment(_inv::ClosedInvestment{ShortInvestment}, pfId::Integer)  = SaveIn
 function SavePortfolio(pf::MovingAveragePortfolio, name::String)
 
     netClosedPercentageEquity = ClosedProfitPercentage(pf)
+    potentialProfitPercentage = nothing
     try
         potentialPercentageEquity = PotentialProfitPercentage(pf)
     catch e
         LogJobError(e)
-        potentialProfitPercentage = 0
     end
 
     conn = Connect()
@@ -43,7 +43,7 @@ function SavePortfolio(pf::MovingAveragePortfolio, name::String)
         kwargs = VALUES(kwargs),
         NetClosedPercentageEquity=VALUES(NetClosedPercentageEquity),
         PotentialPercentageEquity=VALUES(PotentialPercentageEquity);"""
-        
+
     MySQL.Query(conn, query)
 
     res = MySQL.Query(conn, """SELECT id FROM Portfolios WHERE name='$name';""") |> DataFrame
