@@ -14,7 +14,7 @@ function getAlreadySavedSymbols(path)::Set
         Set
 end
 
-function SaveTop100CompaniesCSV(;update_only=false)
+function SaveTop100CompaniesCSV(;update_only=false, max_time_to_wait = 65)
     date = Dates.today()
     Top100CompaniesPath = Invester.BASE_PATH * "/resources/top100.tsv"
     api = AlphadvantageAPI()
@@ -51,6 +51,7 @@ function SaveTop100CompaniesCSV(;update_only=false)
     companies_not_fetched = []
 
     # Loop to save each company history
+    LogJobInfo("Started fetching stock prices")
     i = 0
     time_to_remove = 0.
     for company in top100List.Symbol[1:100]
@@ -59,22 +60,29 @@ function SaveTop100CompaniesCSV(;update_only=false)
         # Fetch company csv
         time_to_remove += @elapsed body = Invester.FetchDailyHistory(api, Asset(company), "full", datatype="csv")
 
-        # Check it worked
-        try
-            CSV.File(body)
-            open("$newDirectoryPath/$company.csv", "w") do out
-                write(out, body)
-            end
-        catch e
-            LogJobError("Failed to load $company - $e")
+        # Check if there was an API limit error
+        if length(r.body) < 250
+            LogJobError("Reached API limit with $company - waiting")
             push!(companies_not_fetched, company)
-        end
+            time_to_remove = 0
+            i=0
+        else
+            # Check it worked
+            try
+                open("$newDirectoryPath/$company.csv", "w") do out
+                    write(out, body)
+                end
+            catch e
+                LogJobError("Failed to load $company - $e")
+                push!(companies_not_fetched, company)
+            end
 
-        # Wait due to API limits
-        i += 1
+            # Wait due to API limits
+            i += 1
+        end
         if i % 5 == 0
-            println("Sleeping for $(65-time_to_remove)")
-            sleep(65-time_to_remove)
+            LogJobInfo("Sleeping for $(max_time_to_wait-time_to_remove)")
+            sleep(max_time_to_wait-time_to_remove)
             time_to_remove = 0
         end
     end
@@ -82,4 +90,18 @@ function SaveTop100CompaniesCSV(;update_only=false)
 end
 
 update_only = isempty(ARGS) ? false : true
-companies_not_fetched = SaveTop100CompaniesCSV(; update_only=update_only)
+
+# Retries at most three times to fetch company information
+for i in 1:3
+    companies_not_fetched = SaveTop100CompaniesCSV(; update_only=update_only)
+
+    # If all companies fetched, success
+    if isempty(companies_not_fetched)
+        break
+    else
+        # If some companies were not fetched, and wait extra time for safety
+        LogJobInfo("Did not manage to retrieve $companies_not_fetched. Re-running for $i time.")
+        SaveTop100CompaniesCSV(;update_only=true, max_time_to_wait = 65 + 30*i)
+    end
+end
+LogJobInfo("Did not manage to retrieve $companies_not_fetched. Ending process.")

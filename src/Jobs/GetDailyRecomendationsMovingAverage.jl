@@ -6,9 +6,7 @@ using MySQL
 
 Invester.CheckLoadHistory()
 
+# Update long running portfolio
 pf = Invester.LoadPortfolio("testdaily")
-
 Invester.SimulatePortfolioDecisionMaker(pf, Dates.today() - Dates.Day(1), Dates.today())
-pf.investments
-
 Invester.SavePortfolio(pf, "testdaily")
