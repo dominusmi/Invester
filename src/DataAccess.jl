@@ -29,7 +29,6 @@ function FetchAverageAssetValue(asset::Asset, date::GenericDate)
     end
 end
 
-
 function FetchAverageAssetValue(asset::Asset, startDate::GenericDate, endDate::GenericDate)
     history = CheckLoadHistory()
 
@@ -50,11 +49,19 @@ function FetchOpenAssetValue(asset::Asset, date::GenericDate)
             @select h[:open]
             @collect
     end
-
+    if isempty(value)
+        # If date not defined, get latest
+        date = Date(history[asset.symbol].history[end][:timestamp])
+        value = @from h in history[asset.symbol].history begin
+                @where h[:timestamp] == date
+                @select h[:open]
+                @collect
+        LogWarn("Couldn't fetch asset value for $(asset.symbol) on $date, instead fetched $")
+    end
     value[1]
 end
 
-function FetchCloseAssetValue(asset::Asset, date::GenericDate)
+function FetchCloseAssetValue(asset::Asset, date::GenericDate)::Number
     history = CheckLoadHistory()
 
     value = @from h in history[asset.symbol].history begin
@@ -63,7 +70,13 @@ function FetchCloseAssetValue(asset::Asset, date::GenericDate)
             @collect
     end
     if isempty(value)
-        return nothing
+        # If date not defined, get latest
+        date = Date(history[asset.symbol].history[end][:timestamp])
+        value = @from h in history[asset.symbol].history begin
+                @where h[:timestamp] == date
+                @select h[:adjusted_close]
+                @collect
+        LogWarn("Couldn't fetch asset value for $(asset.symbol) on $date, instead fetched $")
     end
     value[1]
 end
