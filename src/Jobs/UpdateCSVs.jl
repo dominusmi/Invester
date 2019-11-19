@@ -88,6 +88,8 @@ function SaveTop100CompaniesCSV(;update_only=false, max_time_to_wait = 65)
     end
     companies_not_fetched
 end
+LogJobInfo("--------------------------------------------")
+LogJobInfo("Running Update CSV job")
 
 update_only = isempty(ARGS) ? false : true
 
