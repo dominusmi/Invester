@@ -29,7 +29,7 @@ SaveInvestment(_inv::ClosedInvestment{ShortInvestment}, pfId::Integer)  = SaveIn
 function SavePortfolio(pf::MovingAveragePortfolio, name::String)
 
     netClosedPercentageEquity = ClosedProfitPercentage(pf)
-    potentialPercentageEquity = PotentialProfitPercentage(pf)
+    potentialProfitPercentage = PotentialProfitPercentage(pf)
 
     conn = Connect()
     query = """INSERT INTO Portfolios (name, type, kwargs, NetClosedPercentageEquity, PotentialPercentageEquity)
