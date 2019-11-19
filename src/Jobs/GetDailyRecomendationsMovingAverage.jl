@@ -1,4 +1,5 @@
 using Invester
+using Invester: LogJobInfo, LogJobError
 using Plots
 using Dates, Query, JuliaDB, DataFrames
 using Statistics
