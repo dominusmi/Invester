@@ -27,10 +27,23 @@ SaveInvestment(_inv::ClosedInvestment{LongInvestment}, pfId::Integer)   = SaveIn
 SaveInvestment(_inv::ClosedInvestment{ShortInvestment}, pfId::Integer)  = SaveInvestment(_inv, pfId, "ShortInvestment")
 
 function SavePortfolio(pf::MovingAveragePortfolio, name::String)
+
+    netClosedPercentageEquity = ClosedProfitPercentage(pf)
+    try
+        potentialPercentageEquity = PotentialProfitPercentage(pf)
+    catch e
+        LogJobError(e)
+        potentialProfitPercentage = 0
+    end
+
     conn = Connect()
-    query = """INSERT INTO Portfolios (name, type, kwargs)
-    	VALUES ('$name', 'MovingAveragePortfolio','$(Serialise(pf))')
-        ON DUPLICATE KEY UPDATE kwargs = VALUES(kwargs);"""
+    query = """INSERT INTO Portfolios (name, type, kwargs, NetClosedPercentageEquity, PotentialPercentageEquity)
+    	VALUES ('$name', 'MovingAveragePortfolio','$(Serialise(pf))', $netClosedPercentageEquity, $potentialProfitPercentage)
+        ON DUPLICATE KEY UPDATE
+        kwargs = VALUES(kwargs),
+        NetClosedPercentageEquity=VALUES(NetClosedPercentageEquity),
+        PotentialPercentageEquity=VALUES(PotentialPercentageEquity);"""
+        
     MySQL.Query(conn, query)
 
     res = MySQL.Query(conn, """SELECT id FROM Portfolios WHERE name='$name';""") |> DataFrame
