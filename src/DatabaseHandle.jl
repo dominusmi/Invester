@@ -33,7 +33,7 @@ function SavePortfolio(pf::MovingAveragePortfolio, name::String)
     try
         potentialPercentageEquity = PotentialProfitPercentage(pf)
     catch e
-        LogJobError(e)
+        LogError(e)
     end
 
     conn = Connect()
