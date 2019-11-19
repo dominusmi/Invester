@@ -51,12 +51,13 @@ function FetchOpenAssetValue(asset::Asset, date::GenericDate)
     end
     if isempty(value)
         # If date not defined, get latest
-        date = Date(history[asset.symbol].history[end][:timestamp])
+        newdate = Date(history[asset.symbol].history[end][:timestamp])
         value = @from h in history[asset.symbol].history begin
-                @where h[:timestamp] == date
+                @where h[:timestamp] == newdate
                 @select h[:open]
                 @collect
-        LogWarn("Couldn't fetch asset value for $(asset.symbol) on $date, instead fetched $")
+        end
+        LogWarn("Couldn't fetch asset value for $(asset.symbol) on $date, instead fetched $newdate")
     end
     value[1]
 end
@@ -71,12 +72,13 @@ function FetchCloseAssetValue(asset::Asset, date::GenericDate)::Number
     end
     if isempty(value)
         # If date not defined, get latest
-        date = Date(history[asset.symbol].history[end][:timestamp])
+        newdate = Date(history[asset.symbol].history[end][:timestamp])
         value = @from h in history[asset.symbol].history begin
-                @where h[:timestamp] == date
+                @where h[:timestamp] == newdate
                 @select h[:adjusted_close]
                 @collect
-        LogWarn("Couldn't fetch asset value for $(asset.symbol) on $date, instead fetched $")
+        end
+        LogWarn("Couldn't fetch asset value for $(asset.symbol) on $date, instead fetched $newdate")
     end
     value[1]
 end
