@@ -61,7 +61,7 @@ function SaveTop100CompaniesCSV(;update_only=false, max_time_to_wait = 65)
         time_to_remove += @elapsed body = Invester.FetchDailyHistory(api, Asset(company), "full", datatype="csv")
 
         # Check if there was an API limit error
-        if length(r.body) < 250
+        if length(body) < 250
             LogJobError("Reached API limit with $company - waiting")
             push!(companies_not_fetched, company)
             time_to_remove = 0
