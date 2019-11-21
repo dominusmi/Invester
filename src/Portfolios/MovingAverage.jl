@@ -25,6 +25,7 @@ function LongConfidence(asset::Asset, pf::MovingAveragePortfolio, date::Date = D
         return 0
     end
 
+    # Note: doesn't taking the last element of MAT simply correspond to instantaneous MA?!
     push!(trends, MovingAverageTrend(assetHistory[!,:avg], 7)[end])
     push!(trends, MovingAverageTrend(assetHistory[!,:avg], 14)[end])
     push!(trends, MovingAverageTrend(assetHistory[!,:avg], 30)[end])

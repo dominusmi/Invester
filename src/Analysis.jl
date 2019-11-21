@@ -6,9 +6,11 @@ const SixMonths = Dates.Day(180)
 const OneYear = Dates.Day(365)
 const TwoYears = Dates.Day(730)
 
-""" Calculates the instantaneous moving average """
-function MovingAverage(array::Array{<:Number,1}, window::Integer; offset::Integer = 0)
+""" Calculates the instantaneous moving average = ∑xᵢ⋅i / ∑i"""
+function InstantaneousMovingAverage(array::Array{<:Number,1}, window::Integer; offset::Integer = 0)
 	_range = collect(1.:window)
+	# Since moving average is taken w.r.t. last number of array (-offset),
+	# need to find start index
 	start = size(array,1) - window + 1 - offset
 	finish = size(array,1) - offset
 	return sum(array[start:finish] .* _range) / sum(_range)
@@ -22,7 +24,7 @@ function MovingAverageTrend(array::Array{<:Number,1}, window::Integer; offset=0)
 	trend = zeros(0)
 
 	for i in 1:interval-window
-		push!(trend, MovingAverage(array[i:i+window], window))
+		push!(trend, InstantaneousMovingAverage(array[i:i+window], window))
 	end
 	trend
 end
@@ -35,35 +37,35 @@ end
 function SixMonthsMA(asset::Asset, today::GenericDate = Dates.Today)
 	yesterday = Date(today) - Dates.Day(1)
 	array = FetchAverageAssetValue(asset, yesterday - SixMonths, yesterday)
-	MovingAverage(array, size(array,1))
+	InstantaneousMovingAverage(array, size(array,1))
 end
 
 function ThreeMonthsMA(asset::Asset, today::GenericDate = Dates.Today)
 	yesterday = Date(today) - Dates.Day(1)
 	array = FetchAverageAssetValue(asset, yesterday - ThreeMonths, yesterday)
-	MovingAverage(array, size(array,1))
+	InstantaneousMovingAverage(array, size(array,1))
 end
 
 function OneMonthMA(asset::Asset, today::GenericDate = Dates.Today)
 	yesterday = Date(today) - Dates.Day(1)
 	array = FetchAverageAssetValue(asset, yesterday - OneMonth, yesterday)
-	MovingAverage(array, size(array,1))
+	InstantaneousMovingAverage(array, size(array,1))
 end
 
 function ThreeWeeksMA(asset::Asset, today::GenericDate = Dates.Today)
 	yesterday = Date(today) - Dates.Day(1)
 	array = FetchAverageAssetValue(asset, yesterday - ThreeWeeks, yesterday)
-	MovingAverage(array, size(array,1))
+	InstantaneousMovingAverage(array, size(array,1))
 end
 
 function OneWeekMA(asset::Asset, today::GenericDate = Dates.Today)
 	yesterday = Date(today) - Dates.Day(1)
 	array = FetchAverageAssetValue(asset, yesterday - OneWeek, yesterday)
-	MovingAverage(array, size(array,1))
+	InstantaneousMovingAverage(array, size(array,1))
 end
 
 function DaysIntervalMA(asset::Asset, interval::Dates.Day, today::GenericDate = Dates.Today)
 	yesterday = Date(today) - Dates.Day(1)
 	array = FetchAverageAssetValue(asset, yesterday - interval, yesterday)
-	MovingAverage(array, size(array,1))
+	InstantaneousMovingAverage(array, size(array,1))
 end

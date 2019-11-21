@@ -1,19 +1,26 @@
 using Invester
 using Plots
-using Dates, Query, JuliaDB, DataFrames
+using Dates, Query, JuliaDB, DataFrames, MySQL
 
-pf = Invester.MovingAveragePortfolio(upperClosePercentageThreshold=10,
-	lowerClosePercentageThreshold=-0.1,
-	maxInvestments = 20)
-Invester.SimulatePortfolioDecisionMaker(pf, Date(2019,1,1), Date(2019,3,15))
-Invester.PotentialProfit(pf, Date(2019,2,11))
-ClosedProfit(pf)
+Invester.ReloadHistory()
+
+pf = Invester.MovingAveragePortfolio(upperClosePercentageThreshold=5,
+	lowerClosePercentageThreshold=-10,
+	maxInvestments = 13)
+
+Invester.SimulatePortfolioDecisionMaker(pf, Date(2019,10,11), Date(2019,11,13))
+pf.investments
+
+
+
+# Invester.PotentialProfit(pf, Date(2019,2,11))
+# ClosedProfit(pf)
 
 function test(pf)
 	startDate = Date(pf.investments[1].dateOpen)
 	openInvs = OpenInvestments(pf)
 	closedInvs = ClosedInvestments(pf)
-	endDate = Date(max(openInvs[end].dateOpen, closedInvs[end].dateClosed))
+	endDate = Date(max(openInvs[end].dateOpen, closedInvs[end].dateClose))
 
 	potProfits = []
 	closedProfits = []
@@ -24,7 +31,7 @@ function test(pf)
 	for date in wsdi
 		# Fetch all investments which were open and not yet closed
 	    toFetchOpen = [x for x in Invester.Select(x->x.dateOpen <= date, openInvs)]
-	    toFetchClosed = [x for x in Invester.Select(x->x.dateOpen <= date && x.dateClosed > date, closedInvs)]
+	    toFetchClosed = [x for x in Invester.Select(x->x.dateOpen <= date && x.dateClose > date, closedInvs)]
 	    invsToFetch = vcat(toFetchOpen, toFetchClosed)
 
 		# Fetch price on historic day
@@ -39,14 +46,14 @@ function test(pf)
 		dayPotProfits = [ PotentialProfit(inv, asset2MarketPrice[inv.asset]) for inv in InvestmentsOpenOn(pf,date)]
 		push!(potProfits, sum(dayPotProfits))
 
-		closedAtDate = Invester.Select(x->x.dateClosed <= date, ClosedInvestments(pf))
+		closedAtDate = Invester.Select(x->x.dateClose <= date, ClosedInvestments(pf))
 		push!(closedProfits, sum(ClosedProfit.(closedAtDate)))
 
 		println("On $date:")
 		println("Current potential profit: $dayPotProfits")
 		println("\tClosed today:")
 		for cad in InvestmentsClosedOn(pf,date)
-			println("\t\t$(cad.asset): $(cad.dateOpen) => $(cad.valueOpen) - $(cad.valueClose) = $(cad.closedReturn.value)")
+			println("\t\t$(cad.asset): $(cad.dateOpen) => $(cad.valueOpen) - $(cad.valueClose) = $(Return(cad).value)")
 			println("\t\tClosed profit up to now: $(closedProfits[end])")
 		end
 		println("\tOpened today:")
@@ -60,7 +67,7 @@ function test(pf)
 	end
 	closedProfits
 
-	plot(potProfits, label="Potential Profit", xticks=0:3:100)
+	plot(potProfits, label="Potential Profit", xticks=0:7:size(potProfits,1))
 	plot!(closedProfits, label="Closed Profit")
 end
 
@@ -73,7 +80,7 @@ Invester.FetchCloseAssetsValueDictionary([inv.asset for inv in invs], date)
 dayPotProfits = [ PotentialProfit(inv, asset2MarketPrice[inv.asset]) for inv in InvestmentsOpenOn(pf,date)]
 
 date = Date(2019,1,4)
-toFetchClosed = [x.asset for x in Invester.Select(x->x.dateOpen < date && x.dateClosed > date, closedInvs)]
+toFetchClosed = [x.asset for x in Invester.Select(x->x.dateOpen < date && x.dateClose > date, closedInvs)]
 
 
 asset = Asset("QCOM")
