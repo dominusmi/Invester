@@ -26,6 +26,12 @@ SaveInvestment(_inv::Investment{ShortInvestment}, pfId::Integer)        = SaveIn
 SaveInvestment(_inv::ClosedInvestment{LongInvestment}, pfId::Integer)   = SaveInvestment(_inv, pfId, "LongInvestment")
 SaveInvestment(_inv::ClosedInvestment{ShortInvestment}, pfId::Integer)  = SaveInvestment(_inv, pfId, "ShortInvestment")
 
+function DeletePortfolioInvestments(pfId::Integer)
+    conn = Connect()
+    query = """DELETE FROM Investments WHERE portfolioId=$pfId;"""
+    MySQL.Query(conn, query)
+end
+
 function SavePortfolio(pf::MovingAveragePortfolio, name::String)
 
     netClosedPercentageEquity = ClosedProfitPercentage(pf)
@@ -38,7 +44,6 @@ function SavePortfolio(pf::MovingAveragePortfolio, name::String)
         kwargs = VALUES(kwargs),
         NetClosedPercentageEquity=VALUES(NetClosedPercentageEquity),
         PotentialPercentageEquity=VALUES(PotentialPercentageEquity);"""
-
     MySQL.Query(conn, query)
 
     res = MySQL.Query(conn, """SELECT id FROM Portfolios WHERE name='$name';""") |> DataFrame
