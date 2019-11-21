@@ -17,7 +17,7 @@ function InstantaneousMovingAverage(array::Array{<:Number,1}, window::Integer; o
 end
 
 """ Calculates the trend of the moving average """
-function MovingAverageTrend(array::Array{<:Number,1}, window::Integer; offset=0)
+function MovingAverage(array::Array{<:Number,1}, window::Integer; offset=0)
 	interval = size(array,1) - offset
 	interval <= window ? throw("Window must be smaller than array size: interval $interval, window $window") : nothing
 
