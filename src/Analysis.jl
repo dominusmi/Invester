@@ -7,7 +7,7 @@ const OneYear = Dates.Day(365)
 const TwoYears = Dates.Day(730)
 
 """ Calculates the instantaneous moving average """
-function MovingAverage(array::Array{<:AbstractFloat,1}, window::Integer; offset::Integer = 0)
+function MovingAverage(array::Array{<:Number,1}, window::Integer; offset::Integer = 0)
 	_range = collect(1.:window)
 	start = size(array,1) - window + 1 - offset
 	finish = size(array,1) - offset
@@ -15,7 +15,7 @@ function MovingAverage(array::Array{<:AbstractFloat,1}, window::Integer; offset:
 end
 
 """ Calculates the trend of the moving average """
-function MovingAverageTrend(array::Array{<:AbstractFloat,1}, window::Integer; offset=0)
+function MovingAverageTrend(array::Array{<:Number,1}, window::Integer; offset=0)
 	interval = size(array,1) - offset
 	interval <= window ? throw("Window must be smaller than array size: interval $interval, window $window") : nothing
 
