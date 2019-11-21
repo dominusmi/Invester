@@ -3,3 +3,5 @@ src/resources/*
 src/Logs/
 
 Config/
+
+*.csv#
