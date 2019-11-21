@@ -32,6 +32,14 @@ function DeletePortfolioInvestments(pfId::Integer)
     MySQL.Query(conn, query)
 end
 
+function DeletePortfolioInvestments(pfName::AbstractString)
+    conn = Connect()
+    pfDf = MySQL.Query(conn, """SELECT * FROM Portfolios WHERE name='$pfName'""") |> DataFrame
+    pfId = pfDf[1,:id]
+    query = """DELETE FROM Investments WHERE portfolioId=$pfId;"""
+    MySQL.Query(conn, query)
+end
+
 function SavePortfolio(pf::MovingAveragePortfolio, name::String)
 
     netClosedPercentageEquity = ClosedProfitPercentage(pf)
