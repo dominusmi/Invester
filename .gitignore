@@ -5,3 +5,5 @@ src/Logs/
 Config/
 
 *.csv#
+
+*.csv
