@@ -1,7 +1,7 @@
 @with_kw struct MovingAverageWithTrendPortfolio <: AbstractPortfolio
     investments::Array{<:AbstractInvestment} = Array{AbstractInvestment,1}()
-    lowerClosePercentageThreshold::Number = -5
-    upperClosePercentageThreshold::Number = 5
+    lowerClosePercentageThreshold::Number = -6
+    upperClosePercentageThreshold::Number = 2
     maxInvestments::Integer = 1e4
     longThreshold::Number = 0.5
     closeThreshold::Number = 0.5
@@ -22,7 +22,7 @@ function LongConfidence(asset::Asset, pf::MovingAverageWithTrendPortfolio, date:
     end
 
     minimumSequenceLength = pf.trendWindow * pf.movingAverageWindow
-    if size(assetHistory,1) < minimumSequenceLength+1
+    if size(assetHistory,1) < minimumSequenceLength+2
         return 0
     end
 
@@ -46,6 +46,7 @@ function CloseConfidence(investment::Investment, pf::MovingAverageWithTrendPortf
                          date::Date = Dates.today())
 
     history = CheckLoadHistory()
+    asset = investment.asset
 
     currentValue = FetchCloseAssetValue(investment.asset, date)
     if currentValue == nothing
@@ -54,7 +55,28 @@ function CloseConfidence(investment::Investment, pf::MovingAverageWithTrendPortf
 
     pot = PotentialProfitPercentage(investment, currentValue)
 
-    if pot > UpperClosePercentageThreshold(pf) || pot < LowerClosePercentageThreshold(pf)
+    assetHistory = @from h in history[asset.symbol].history begin
+    	@where  h[:timestamp] >= date - Day(365) &&
+    			h[:timestamp] <= date
+    	@select (open = h[:open], adjusted_close = h[:adjusted_close],
+    		avg = mean([h[:open],h[:adjusted_close]]))
+    	@collect DataFrame
+    end
+
+    minimumSequenceLength = pf.trendWindow * pf.movingAverageWindow
+    if size(assetHistory,1) < minimumSequenceLength+1
+        return 0
+    end
+
+    # Calculate moving averages over last days (to calculate the linear trend)
+    MAs = MovingAverage(assetHistory[(end-minimumSequenceLength-1):end,:adjusted_close], pf.movingAverageWindow)
+
+    # Calculate trend of moving average
+    subArrayMAs = MAs[(end-pf.trendWindow): end]
+    trend = LinearTrend(subArrayMAs)
+
+
+    if pot > UpperClosePercentageThreshold(pf) || pot < LowerClosePercentageThreshold(pf) || (pot > 0 && trend < 0)
         return 1
     end
     return 0

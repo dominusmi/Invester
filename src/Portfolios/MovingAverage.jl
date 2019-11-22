@@ -1,7 +1,7 @@
 @with_kw struct MovingAveragePortfolio <: AbstractPortfolio
     investments::Array{<:AbstractInvestment} = Array{AbstractInvestment,1}()
-    lowerClosePercentageThreshold::Number = -5
-    upperClosePercentageThreshold::Number = 5
+    lowerClosePercentageThreshold::Number = -6
+    upperClosePercentageThreshold::Number = 2
     maxInvestments::Integer = 1e4
     longThreshold::Number = 0.5
     closeThreshold::Number = 0.5
