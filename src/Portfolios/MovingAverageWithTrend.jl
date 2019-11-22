@@ -6,7 +6,7 @@
     longThreshold::Number = 0.5
     closeThreshold::Number = 0.5
     trendWindow::Integer = 3
-    movingAverageWindow::Integer = 3
+    movingAverageWindow::Integer = 4
 end
 
 
@@ -21,13 +21,17 @@ function LongConfidence(asset::Asset, pf::MovingAverageWithTrendPortfolio, date:
     	@collect DataFrame
     end
 
-    if size(assetHistory,1) < 50
+    minimumSequenceLength = pf.trendWindow * pf.movingAverageWindow
+    if size(assetHistory,1) < minimumSequenceLength+1
         return 0
     end
 
     # Calculate moving averages over last days (to calculate the linear trend)
-    MAs = MovingAverage(assetHistory[(end-pf.trendWindow-1):end,:adjusted_close], pf.movingAverageWindow)
-    trend = LinearTrend(MAs, pf.trendWindow)
+    MAs = MovingAverage(assetHistory[(end-minimumSequenceLength-1):end,:adjusted_close], pf.movingAverageWindow)
+
+    # Calculate trend of moving average
+    subArrayMAs = MAs[(end-pf.trendWindow): end]
+    trend = LinearTrend(subArrayMAs)
     currMA = MAs[end]
 
     # If current moving average is higher than price (asset undervalued) and trend is upward
