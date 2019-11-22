@@ -44,39 +44,27 @@ end
 function FetchOpenAssetValue(asset::Asset, date::GenericDate)
     history = CheckLoadHistory()
 
-    value = @from h in history[asset.symbol].history begin
+    df = @from h in history[asset.symbol].history begin
             @where h[:timestamp] == Date(date)
-            @select h[:open]
-            @collect
+            @select (open=h[:open],timestamp=h[:timestamp])
+            @collect DataFrame
     end
-    if isempty(value)
-        # If date not defined, get latest
-        value = @from h in history[asset.symbol].history begin
-                @where h[:timestamp] < Date(date)
-                @select h[:open]
-                @collect
-        end
-        LogWarn("Couldn't fetch asset value for $(asset.symbol) on $date, instead fetched $(value[end])")
+    if df[end,:timestamp] != date
+        LogWarn("Couldn't fetch asset value for $(asset.symbol) on $date, instead fetched $(df[end,:timestamp])")
     end
-    value[1]
+    value[end, :open]
 end
 
 function FetchCloseAssetValue(asset::Asset, date::GenericDate)::Number
     history = CheckLoadHistory()
 
-    value = @from h in history[asset.symbol].history begin
+    df = @from h in history[asset.symbol].history begin
             @where h[:timestamp] == Date(date)
-            @select h[:adjusted_close]
-            @collect
+            @select (adjusted_close=h[:adjusted_close],timestamp=h[:timestamp])
+            @collect DataFrame
     end
-    if isempty(value)
-        # If date not defined, get last before
-        value = @from h in history[asset.symbol].history begin
-                @where h[:timestamp] < Date(date)
-                @select h[:adjusted_close]
-                @collect
-        end
-        LogWarn("Couldn't fetch asset value for $(asset.symbol) on $date, instead fetched $(value[end])")
+    if df[end,:timestamp] != date
+        LogWarn("Couldn't fetch asset value for $(asset.symbol) on $date, instead fetched $(df[end,:timestamp])")
     end
-    value[end]
+    value[end, :adjusted_close]
 end
