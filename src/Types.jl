@@ -35,7 +35,7 @@ end
 
 struct AssetHistory
     asset::Asset
-    history::IndexedTable
+    history::IndexedTables.AbstractIndexedTable
 end
 AssetHistory(symbol::String) = AssetHistory(Symbol(symbol))
 AssetHistory(asset::Asset) = AssetHistory(asset.symbol)

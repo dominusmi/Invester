@@ -14,6 +14,7 @@ using UUIDs
 using HTTP
 using MySQL
 using OnlineStats
+using IndexedTables
 
 import Base.==, Base.~
 
