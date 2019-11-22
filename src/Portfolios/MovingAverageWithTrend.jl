@@ -5,10 +5,12 @@
     maxInvestments::Integer = 1e4
     longThreshold::Number = 0.5
     closeThreshold::Number = 0.5
+    trendWindow::Integer = 3
+    movingAverageWindow::Integer = 3
 end
 
 
-function LongConfidence(asset::Asset, pf::MovingAveragePortfolio, date::Date = Dates.today())
+function LongConfidence(asset::Asset, pf::MovingAverageWithTrendPortfolio, date::Date = Dates.today())
     history = CheckLoadHistory()
 
     assetHistory = @from h in history[asset.symbol].history begin
@@ -19,18 +21,24 @@ function LongConfidence(asset::Asset, pf::MovingAveragePortfolio, date::Date = D
     	@collect DataFrame
     end
 
-    MAs = MovingAverage(assetHistory[(end-10):end,:adjusted_close], 3)
-    trend = LinearTrend(MAs, 3)
-    currMA = InstantaneousMovingAverage(assetHistory[!,:adjusted_close], 10))
+    if size(assetHistory,1) < 50
+        return 0
+    end
 
-    if currMA < assetHistory[!,:adjusted_close][end] && trend > 0
+    # Calculate moving averages over last days (to calculate the linear trend)
+    MAs = MovingAverage(assetHistory[(end-pf.trendWindow-1):end,:adjusted_close], pf.movingAverageWindow)
+    trend = LinearTrend(MAs, pf.trendWindow)
+    currMA = MAs[end]
+
+    # If current moving average is higher than price (asset undervalued) and trend is upward
+    if currMA > assetHistory[!,:adjusted_close][end] && trend > 0
         # Any excess is used for extra confidence
         return trend + .5
     end
     return 0
 end
 
-function CloseConfidence(investment::Investment, pf::MovingAveragePortfolio,
+function CloseConfidence(investment::Investment, pf::MovingAverageWithTrendPortfolio,
                          date::Date = Dates.today())
 
     history = CheckLoadHistory()
@@ -55,7 +63,7 @@ end
 
 #region Profit calculation functions
 
-function PotentialProfitPercentage(pf::MovingAveragePortfolio, date::GenericDate = Dates.today()-Dates.Day(1))
+function PotentialProfitPercentage(pf::MovingAverageWithTrendPortfolio, date::GenericDate = Dates.today()-Dates.Day(1))
     date = Date(date)
     total = 0.
     for inv in OpenInvestments(pf)
@@ -64,7 +72,7 @@ function PotentialProfitPercentage(pf::MovingAveragePortfolio, date::GenericDate
     total / pf.maxInvestments
 end
 
-function ClosedProfitPercentage(pf::MovingAveragePortfolio)
+function ClosedProfitPercentage(pf::MovingAverageWithTrendPortfolio)
     total = 0.
     for inv in ClosedInvestments(pf)
         total += ClosedProfitPercentage(inv)
