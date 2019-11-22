@@ -24,3 +24,11 @@ pf = Invester.LoadPortfolio("dailyMovingAverage")
 Invester.SimulatePortfolioDecisionMaker(pf, Dates.today() - Dates.Day(1), Dates.today())
 Invester.SavePortfolio(pf, "dailyMovingAverage")
 LogJobInfo("Succesfully terminated daily historical Moving Average")
+
+
+LogJobInfo("--------------------------------------------")
+LogJobInfo("Running historical Moving Average with Trend")
+pf = Invester.LoadPortfolio("dailyMovingAverageTrend")
+Invester.SimulatePortfolioDecisionMaker(pf, Dates.today() - Dates.Day(1), Dates.today())
+Invester.SavePortfolio(pf, "dailyMovingAverageTrend")
+LogJobInfo("Succesfully terminated daily historical Moving Average")
