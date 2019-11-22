@@ -4,6 +4,8 @@ function SimulatePortfolioDecisionMaker(pf::AbstractPortfolio, initDate::Date, e
 	history = CheckLoadHistory()
 	for day in WallStreetDayIterator(initDate,endDate)
 		@show day
+		toLong = Array{Tuple{Asset,Number},1}()
+		dateOpen = NextWallStreetDay(day)
 		for (k,v) in history
 			# Check that haven't already invested in asset in last 10 days
 			openInvts = sort( OpenInvestments(pf, v.asset), by = x->x.dateOpen )
@@ -11,13 +13,10 @@ function SimulatePortfolioDecisionMaker(pf::AbstractPortfolio, initDate::Date, e
 				continue
 			end
 
-			if size(OpenInvestments(pf),1) < MaxNumberOfInvestment(pf)
-				# Buy if confidence higher than threshold
-				if LongConfidence(v.asset, pf, day) > LongThreshold(pf)
-					dateOpen = NextWallStreetDay(day)
-					open = FetchOpenAssetValue(v.asset, dateOpen)
-					Long!(pf, v.asset, open, 100, dateOpen = dateOpen)
-				end
+			# Buy if confidence higher than threshold
+			confidence = LongConfidence(v.asset, pf, day)
+			if confidence > LongThreshold(pf)
+				push!(toLong, (v.asset,confidence))
 			end
 
 			# Close if either has reached high point or too low
@@ -27,6 +26,19 @@ function SimulatePortfolioDecisionMaker(pf::AbstractPortfolio, initDate::Date, e
 				end
 			end
 		end
+
+		sort!(toLong, by = x->x[2], rev=true)
+		for (asset, confidence) in toLong
+			# Check if there are still spots to invest
+			if size(OpenInvestments(pf),1) > MaxNumberOfInvestment(pf)
+				break
+			end
+
+			# Long position
+			openValue = FetchOpenAssetValue(asset, dateOpen)
+			Long!(pf, asset, openValue, 100, dateOpen = dateOpen)
+		end
+
 		# Hook in process
 		Hook(pf, day, logger)
 	end
