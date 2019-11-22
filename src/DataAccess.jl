@@ -52,7 +52,7 @@ function FetchOpenAssetValue(asset::Asset, date::GenericDate)
     if df[end,:timestamp] != date
         LogWarn("Couldn't fetch asset value for $(asset.symbol) on $date, instead fetched $(df[end,:timestamp])")
     end
-    value[end, :open]
+    df[end, :open]
 end
 
 function FetchCloseAssetValue(asset::Asset, date::GenericDate)::Number
@@ -66,5 +66,5 @@ function FetchCloseAssetValue(asset::Asset, date::GenericDate)::Number
     if df[end,:timestamp] != date
         LogWarn("Couldn't fetch asset value for $(asset.symbol) on $date, instead fetched $(df[end,:timestamp])")
     end
-    value[end, :adjusted_close]
+    df[end, :adjusted_close]
 end

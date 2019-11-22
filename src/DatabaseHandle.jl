@@ -40,7 +40,7 @@ function DeletePortfolioInvestments(pfName::AbstractString)
     MySQL.Query(conn, query)
 end
 
-function SavePortfolio(pf::MovingAveragePortfolio, name::String)
+function SavePortfolio(pf::AbstractPortfolio, name::String)
 
     netClosedPercentageEquity = ClosedProfitPercentage(pf)
     potentialProfitPercentage = PotentialProfitPercentage(pf)
