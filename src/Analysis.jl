@@ -16,7 +16,7 @@ function InstantaneousMovingAverage(array::Array{<:Number,1}, window::Integer; o
 	return sum(array[start:finish] .* _range) / sum(_range)
 end
 
-""" Calculates the trend of the moving average """
+""" Calculates the moving average of an array"""
 function MovingAverage(array::Array{<:Number,1}, window::Integer; offset=0)
 	interval = size(array,1) - offset
 	interval <= window ? throw("Window must be smaller than array size: interval $interval, window $window") : nothing
@@ -27,6 +27,24 @@ function MovingAverage(array::Array{<:Number,1}, window::Integer; offset=0)
 		push!(trend, InstantaneousMovingAverage(array[i:i+window], window))
 	end
 	trend
+end
+
+""" Calculates the coefficient for the ridge linear regression of an array"""
+function LinearTrend(array::AbstractArray{<:Number,1}, λ::Number=0.001)
+	o = fit!(LinRegBuilder(), zip(1:size(array,1), array .- array[1]))
+	weights = coef(o, λ, y=2, x=[1], bias=false)
+
+	weights[1]
+end
+
+""" Calculates the trend over all the windows of a one-dimensional array """
+function MovingLinearTrend(array::AbstractArray{<:Number,1}, window::Integer)
+	lreg_coef = zeros(size(array,1)-window+1)
+	for (i,_) in enumerate( (window):size(array,1) )
+	    subArray = view(array, i:(i+window-1))
+	    lreg_coef[i] = LinearRegressionCoefficient(subArray)
+	end
+	lreg_coef
 end
 
 

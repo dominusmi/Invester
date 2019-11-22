@@ -13,6 +13,7 @@ using Statistics
 using UUIDs
 using HTTP
 using MySQL
+using OnlineStats
 
 import Base.==, Base.~
 
@@ -47,6 +48,7 @@ include("DataAccess.jl")
 include("Analysis.jl")
 include("Portfolio.jl")
 include("Portfolios/MovingAverage.jl")
+include("Portfolios/MovingAverageWithTrend.jl")
 include("Brain.jl")
 include("Utilities/DateUtilities.jl")
 include("Utilities/Logging.jl")
