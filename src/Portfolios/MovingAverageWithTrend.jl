@@ -82,10 +82,6 @@ function CloseConfidence(investment::Investment, pf::MovingAverageWithTrendPortf
     return 0
 end
 
-function Hook(pf::MovingAveragePortfolio, day::Date, logger)
-    nothing
-end
-
 
 #region Profit calculation functions
 
