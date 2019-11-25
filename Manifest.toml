@@ -8,9 +8,9 @@ version = "0.3.1"
 
 [[ArrayLayouts]]
 deps = ["FillArrays", "LinearAlgebra"]
-git-tree-sha1 = "d9215d1294a89571977eda8fdec5830646b27a7e"
+git-tree-sha1 = "bc779df8d73be70e4e05a63727d3a4dfb4c52b1f"
 uuid = "4c555306-a7a7-4459-81d9-ec55ddd5c99a"
-version = "0.1.4"
+version = "0.1.5"
 
 [[AssetRegistry]]
 deps = ["Distributed", "JSON", "Pidfile", "SHA", "Test"]
@@ -47,9 +47,9 @@ version = "0.5.16"
 
 [[CategoricalArrays]]
 deps = ["Compat", "DataAPI", "Future", "JSON", "Missings", "Printf", "Reexport", "Unicode"]
-git-tree-sha1 = "2473560b9c7cb18f98c3c926af0dc7bedccfc7ab"
+git-tree-sha1 = "4d85a015093760ff23b20f3e25fa195b4cb76794"
 uuid = "324d7699-5711-5eae-9e2f-1d82baa6b597"
-version = "0.7.2"
+version = "0.7.3"
 
 [[CodecZlib]]
 deps = ["BinaryProvider", "Libdl", "TranscodingStreams"]
@@ -146,10 +146,10 @@ uuid = "ffbed154-4ef7-542d-bbb7-c09d3a79fcae"
 version = "0.8.1"
 
 [[DoubleFloats]]
-deps = ["GenericSVD", "GenericSchur", "LinearAlgebra", "Polynomials", "Printf", "Quadmath", "Random", "Requires"]
-git-tree-sha1 = "e4d8b2947fb7d855ba84d6ce8481c8351563fec9"
+deps = ["GenericSVD", "GenericSchur", "LinearAlgebra", "Polynomials", "Printf", "Quadmath", "Random", "Requires", "SpecialFunctions"]
+git-tree-sha1 = "d3f403e885304c26c74f8fb11ce5407c29999c01"
 uuid = "497a8b3b-efae-58df-a0af-a86822472b78"
-version = "0.9.13"
+version = "1.0.0"
 
 [[FFMPEG]]
 deps = ["BinaryProvider", "Libdl"]
@@ -305,9 +305,9 @@ version = "0.13.2"
 
 [[LazyArrays]]
 deps = ["ArrayLayouts", "FillArrays", "LinearAlgebra", "MacroTools", "StaticArrays"]
-git-tree-sha1 = "9b12c5346242923c8d51f99f3dfa2cd0c156090f"
+git-tree-sha1 = "cc98c58f97eda8f710dcf5bbf9f28c1d960ca0ee"
 uuid = "5078a376-72f3-5289-bfd5-ec5146d43c02"
-version = "0.14.7"
+version = "0.14.8"
 
 [[LearnBase]]
 deps = ["LinearAlgebra", "SparseArrays", "StatsBase", "Test"]
