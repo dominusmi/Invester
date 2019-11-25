@@ -9,19 +9,10 @@ end
 
 
 function LongConfidence(asset::Asset, pf::MovingAveragePortfolio, date::Date = Dates.today())
-    history = CheckLoadHistory()
-
-    assetHistory = @from h in history[asset.symbol].history begin
-    	@where  h[:timestamp] >= date - Day(720) &&
-    			h[:timestamp] <= date
-    	@select (open = h[:open], adjusted_close = h[:adjusted_close],
-    		avg = mean([h[:open],h[:adjusted_close]]))
-    	@collect DataFrame
-    end
-
+    assetHistory = FetchOpenCloseAssetHistory(asset, date)
     trends = zeros(0)
 
-    if size(assetHistory[:avg],1) < 365
+    if size(assetHistory[!,:avg],1) < 365
         return 0
     end
 
