@@ -118,7 +118,8 @@ Base.get(d::LoadedDataAccessor, s::Symbol, a::Any) = get(d.history, symbol, a)
 #endregion
 
 #region Utilities
-mutable struct WallStreetDayIterator
+abstract type AbstractDayIterator end
+mutable struct WallStreetDayIterator <: AbstractDayIterator
     startDate::Date
     endDate::Date
     intervalLength::Integer
@@ -138,4 +139,16 @@ mutable struct WallStreetDayIterator
         new(s, Date(3000,1,1), e, 0)
     end
 end
+
+struct DayIterator <:AbstractDayIterator
+    startDate::Date
+    length::Integer
+end
+DayIterator(s::Date, e::Date) = DayIterator(s, (e-s).value)
+
+mutable struct DayOfWeekIterator <:AbstractDayIterator
+    startDate::Date
+    length::Integer
+end
+DayOfWeekIterator(s::Date, e::Date) = DayOfWeekIterator(s, (e-s).value)
 #endregion

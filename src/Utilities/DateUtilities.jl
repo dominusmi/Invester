@@ -1,9 +1,10 @@
-mutable struct DayOfWeekIterator
-    startDate::Date
-    length::Integer
+function Base.iterate(iter::DayIterator, state=(iter.startDate, 0))
+    element, count = state
+    if count >= iter.length
+       return nothing
+    end
+    return (element, (element + Day(1), count + 1))
 end
-DayOfWeekIterator(s::Date, e::Date) = DayOfWeekIterator(s, (e-s).value)
-
 
 function Base.iterate(iter::DayOfWeekIterator, state=(iter.startDate, 0))
     element, count = state

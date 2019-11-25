@@ -1,8 +1,10 @@
 Hook(pf::AbstractPortfolio, date::Date, logger) = nothing
 
-function SimulatePortfolioDecisionMaker(pf::AbstractPortfolio, initDate::Date, endDate::Date, logger=nothing; verbose=true)
+function SimulatePortfolioDecisionMaker(pf::AbstractPortfolio, initDate::Date, endDate::Date, logger=nothing;
+										verbose=true, dayIterator::Type{<:AbstractDayIterator}=WallStreetDayIterator)
+										
 	history = CheckLoadHistory()
-	for day in WallStreetDayIterator(initDate,endDate)
+	for day in dayIterator(initDate, endDate)
 		verbose ? println("$day") : nothing
 		toLong = Array{Tuple{Asset,Number},1}()
 		dateOpen = NextWallStreetDay(day)

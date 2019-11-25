@@ -45,7 +45,7 @@ function FetchOpenAssetValue(asset::Asset, date::GenericDate)
     history = CheckLoadHistory()
 
     df = @from h in history[asset.symbol].history begin
-            @where h[:timestamp] == Date(date)
+            @where h[:timestamp] <= Date(date)
             @select (open=h[:open],timestamp=h[:timestamp])
             @collect DataFrame
     end
@@ -59,7 +59,7 @@ function FetchCloseAssetValue(asset::Asset, date::GenericDate)::Number
     history = CheckLoadHistory()
 
     df = @from h in history[asset.symbol].history begin
-            @where h[:timestamp] == Date(date)
+            @where h[:timestamp] <= Date(date)
             @select (adjusted_close=h[:adjusted_close],timestamp=h[:timestamp])
             @collect DataFrame
     end
