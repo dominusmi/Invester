@@ -2,7 +2,7 @@ Hook(pf::AbstractPortfolio, date::Date, logger) = nothing
 
 function SimulatePortfolioDecisionMaker(pf::AbstractPortfolio, initDate::Date, endDate::Date, logger=nothing;
 										verbose=true, dayIterator::Type{<:AbstractDayIterator}=WallStreetDayIterator)
-										
+
 	history = CheckLoadHistory()
 	for day in dayIterator(initDate, endDate)
 		verbose ? println("$day") : nothing
@@ -32,7 +32,7 @@ function SimulatePortfolioDecisionMaker(pf::AbstractPortfolio, initDate::Date, e
 		sort!(toLong, by = x->x[2], rev=true)
 		for (asset, confidence) in toLong
 			# Check if there are still spots to invest
-			if size(OpenInvestments(pf),1) > MaxNumberOfInvestment(pf)
+			if size(OpenInvestments(pf),1) >= MaxNumberOfInvestment(pf)
 				break
 			end
 
