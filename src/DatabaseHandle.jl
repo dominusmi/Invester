@@ -1,7 +1,7 @@
 function Connect()
     global DbConnection
     if DbConnection == nothing
-        ci = JSON.parsefile(Invester.CONFIG_PATH * "/appconfig.json")["Database"]
+        ci = JSON.parsefile(Invester.CONFIG_PATH * "/appconfig.$ENVIRONMENT.json")["Database"]
         DbConnection = MySQL.connect(ci["Server"], ci["Username"], ci["Password"], db = "Invester")
     end
     return DbConnection

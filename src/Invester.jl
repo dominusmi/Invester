@@ -15,6 +15,7 @@ using HTTP
 using MySQL
 using OnlineStats
 using IndexedTables
+using Base: eachrow, eachcol
 
 import Base.==, Base.~
 
@@ -37,6 +38,8 @@ export Asset, AssetHistory, AssetHistoryBuffer, Investment, InvestmentType, Inve
 const global BASE_PATH = dirname(pathof(Invester))
 const global ROOT_PATH = realpath(dirname(pathof(Invester))*"/..")
 const global CONFIG_PATH = ROOT_PATH * "/Config"
+
+const global ENVIRONMENT = JSON.parsefile(Invester.CONFIG_PATH * "/appconfig.json")["Environment"]
 
 GenericDate = Union{Date,DateTime}
 
