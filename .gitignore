@@ -7,3 +7,5 @@ Config/
 *.csv#
 
 *.csv
+
+fetchCSVfromServer.sh
