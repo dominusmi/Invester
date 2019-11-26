@@ -69,11 +69,11 @@ function FetchCloseAssetValue(asset::Asset, date::GenericDate)::Number
     df[end, :adjusted_close]
 end
 
-function FetchOpenCloseAssetHistory(asset::Asset, date::GenericDate)
+function FetchOpenCloseAssetHistory(asset::Asset, date::GenericDate; daysInHistory::Integer=720)
     history = CheckLoadHistory()
 
     return @from h in history[asset.symbol].history begin
-    	@where  h[:timestamp] >= Date(date) - Day(720) &&
+    	@where  h[:timestamp] >= Date(date) - Day(daysInHistory) &&
     			h[:timestamp] <= Date(date)
     	@select (open = h[:open], adjusted_close = h[:adjusted_close],
     		avg = mean([h[:open],h[:adjusted_close]]), timestamp=h[:timestamp])

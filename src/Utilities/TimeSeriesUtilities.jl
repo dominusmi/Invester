@@ -10,7 +10,7 @@ function GenerateTimeSeriesEpisodes(data::Union{Array{<:Number}, DataFrame}, epi
     fullEpisodeLength = episodeLength + predictLength
 
     if n_eps == nothing
-        n_eps = Int(floor(size(data,1)/fullEpisodeLength))
+        n_eps = Int(floor(size(data,1)/fullEpisodeLength))-1
     end
     interval = size(data,1)-fullEpisodeLength
 

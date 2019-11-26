@@ -57,6 +57,7 @@ include("Brain.jl")
 include("Utilities/DateUtilities.jl")
 include("Utilities/Logging.jl")
 include("DatabaseHandle.jl")
+include("Utilities/TimeSeriesUtilities.jl")
 
 
 history = Dict{Symbol, AssetHistory}()

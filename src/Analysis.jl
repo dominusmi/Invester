@@ -7,7 +7,7 @@ const OneYear = Dates.Day(365)
 const TwoYears = Dates.Day(730)
 
 """ Calculates the instantaneous moving average = ∑xᵢ⋅i / ∑i"""
-function InstantaneousMovingAverage(array::Array{<:Number,1}, window::Integer; offset::Integer = 0)
+function InstantaneousMovingAverage(array::AbstractArray{<:Number,1}, window::Integer; offset::Integer = 0)
 	_range = collect(1.:window)
 	# Since moving average is taken w.r.t. last number of array (-offset),
 	# need to find start index
@@ -17,7 +17,7 @@ function InstantaneousMovingAverage(array::Array{<:Number,1}, window::Integer; o
 end
 
 """ Calculates the moving average of an array"""
-function MovingAverage(array::Array{<:Number,1}, window::Integer; offset=0)
+function MovingAverage(array::AbstractArray{<:Number,1}, window::Integer; offset=0)
 	interval = size(array,1) - offset
 	interval <= window ? throw("Window must be smaller than array size: interval $interval, window $window") : nothing
 
@@ -42,7 +42,7 @@ function MovingLinearTrend(array::AbstractArray{<:Number,1}, window::Integer)
 	lreg_coef = zeros(size(array,1)-window+1)
 	for (i,_) in enumerate( (window):size(array,1) )
 	    subArray = view(array, i:(i+window-1))
-	    lreg_coef[i] = LinearRegressionCoefficient(subArray)
+	    lreg_coef[i] = LinearTrend(subArray)
 	end
 	lreg_coef
 end
