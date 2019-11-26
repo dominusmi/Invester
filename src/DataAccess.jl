@@ -49,9 +49,9 @@ function FetchOpenAssetValue(asset::Asset, date::GenericDate)
             @select (open=h[:open],timestamp=h[:timestamp])
             @collect DataFrame
     end
-    if df[end,:timestamp] != date
-        LogWarn("Couldn't fetch asset value for $(asset.symbol) on $date, instead fetched $(df[end,:timestamp])")
-    end
+    # if df[end,:timestamp] != date
+        # LogWarn("Couldn't fetch asset value for $(asset.symbol) on $date, instead fetched $(df[end,:timestamp])")
+    # end
     df[end, :open]
 end
 
@@ -59,13 +59,13 @@ function FetchCloseAssetValue(asset::Asset, date::GenericDate)::Number
     history = CheckLoadHistory()
 
     df = @from h in history[asset.symbol].history begin
-            @where h[:timestamp] <= Date(date)
+            @where h[:timestamp] <= Date(date) && h[:timestamp] > Date(date)-Dates.Day(10)
             @select (adjusted_close=h[:adjusted_close],timestamp=h[:timestamp])
             @collect DataFrame
     end
-    if df[end,:timestamp] != date
-        LogWarn("Couldn't fetch asset value for $(asset.symbol) on $date, instead fetched $(df[end,:timestamp])")
-    end
+    # if df[end,:timestamp] != date
+        # LogWarn("Couldn't fetch asset value for $(asset.symbol) on $date, instead fetched $(df[end,:timestamp])")
+    # end
     df[end, :adjusted_close]
 end
 
@@ -77,6 +77,32 @@ function FetchOpenCloseAssetHistory(asset::Asset, date::GenericDate; daysInHisto
     			h[:timestamp] <= Date(date)
     	@select (open = h[:open], adjusted_close = h[:adjusted_close],
     		avg = mean([h[:open],h[:adjusted_close]]), timestamp=h[:timestamp])
+    	@collect DataFrame
+    end
+end
+
+
+function FetchAssetVolume(asset::Asset, date::GenericDate)::Number
+    history = CheckLoadHistory()
+
+    arr = @from h in history[asset.symbol].history begin
+            @where h[:timestamp] <= Date(date) && h[:timestamp] > Date(date)-Dates.Day(10)
+            @select volume=h[:volume]
+            @collect
+    end
+    arr[end]
+end
+
+
+function FetchAssetHistory(asset::Asset, date::GenericDate; daysInHistory::Integer=720)
+    history = CheckLoadHistory()
+
+    return @from h in history[asset.symbol].history begin
+    	@where  h[:timestamp] >= Date(date) - Day(daysInHistory) &&
+    			h[:timestamp] <= Date(date)
+    	@select (open = h[:open], adjusted_close = h[:adjusted_close],
+    		avg = mean([h[:open], h[:adjusted_close]]), timestamp=h[:timestamp],
+            volume=h[:volume], high=[:high], low=[:low])
     	@collect DataFrame
     end
 end
