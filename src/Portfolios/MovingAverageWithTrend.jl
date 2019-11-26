@@ -13,13 +13,7 @@ end
 function LongConfidence(asset::Asset, pf::MovingAverageWithTrendPortfolio, date::Date = Dates.today())
     history = CheckLoadHistory()
 
-    assetHistory = @from h in history[asset.symbol].history begin
-    	@where  h[:timestamp] >= date - Day(365) &&
-    			h[:timestamp] <= date
-    	@select (open = h[:open], adjusted_close = h[:adjusted_close],
-    		avg = mean([h[:open],h[:adjusted_close]]))
-    	@collect DataFrame
-    end
+    assetHistory = FetchOpenCloseAssetHistory(asset, date; daysInHistory=365)
 
     minimumSequenceLength = pf.trendWindow * pf.movingAverageWindow
     if size(assetHistory,1) < minimumSequenceLength+2
@@ -55,13 +49,7 @@ function CloseConfidence(investment::Investment, pf::MovingAverageWithTrendPortf
 
     pot = PotentialProfitPercentage(investment, currentValue)
 
-    assetHistory = @from h in history[asset.symbol].history begin
-    	@where  h[:timestamp] >= date - Day(365) &&
-    			h[:timestamp] <= date
-    	@select (open = h[:open], adjusted_close = h[:adjusted_close],
-    		avg = mean([h[:open],h[:adjusted_close]]))
-    	@collect DataFrame
-    end
+    assetHistory = FetchOpenCloseAssetHistory(asset, date; daysInHistory=365)
 
     minimumSequenceLength = pf.trendWindow * pf.movingAverageWindow
     if size(assetHistory,1) < minimumSequenceLength+1
