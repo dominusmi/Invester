@@ -35,6 +35,6 @@ function GenerateTimeSeriesEpisodes(data::Union{Array{<:Number}, DataFrame}, epi
 end
 
 " divides episodes and predictions by the first value of the episode "
-function NormaliseEpisode(episodes::Array{<:Number}, predictions::Array{<:Number})
+function NormaliseEpisode(episodes::AbstractArray{<:Number}, predictions::Array{<:Number})
     episodes .\ episodes[1,:]', predictions .\ episodes[1,:]'
 end
