@@ -42,21 +42,26 @@ end
 #region Asset indicators
 """ Computes the advance decline ratio of an asset: (close value at date) / (close value x days earlier) """
 function AdvanceDeclineRatio(asset::Asset, date::GenericDate, interval::Integer=2)::AbstractFloat
-    _end = FetchCloseAssetValue(asset, date)
-    _ini = FetchCloseAssetValue(asset, date-Dates.Day(interval))
-   return _end / _ini
+    hist = FetchCloseAssetHistory(asset, date, daysInHistory=4*interval)
+    return AdvanceDeclineRatio(hist[!,:adjusted_close], interval)
+end
+function AdvanceDeclineRatio(closeValues::AbstractArray, interval::Integer=2)::AbstractFloat
+    closeValues[end] / closeValues[end-interval]
 end
 
+""" Computes the advance decline volume of an asset: (volume at date) / (volume x days earlier) """
 function AdvanceDeclineVolume(asset::Asset, date::GenericDate, interval::Integer=2)::AbstractFloat
-    _end = FetchAssetVolume(asset, date)
-    _ini = FetchAssetVolume(asset, date-Dates.Day(interval))
-   return _end / _ini
+    hist = FetchCloseAssetHistory(asset, date, daysInHistory=4*interval)
+    return AdvanceDeclineRatio(hist[!,:volume], interval)
+end
+function AdvanceDeclineVolume(volumes::AbstractArray,interval::Integer=2)::AbstractFloat
+    volumes[end] / volumes[end-interval]
 end
 
 """ On balance volume divergence"""
 function ∇OBV(asset::Asset, date::GenericDate, window::Integer=14)
     hist = FetchAssetHistory(asset,date,daysInHistory=3*window)
-    OBV(hist[!,:adjusted_close], hist[!,:volume], window)
+    ∇OBV(hist[!,:adjusted_close], hist[!,:volume], window)
 end
 
 function ∇OBV(values::AbstractArray{<:Number}, volumes::AbstractArray{<:Number}, window::Integer=14)
