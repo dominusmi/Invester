@@ -53,13 +53,13 @@ function AdvanceDeclineVolume(asset::Asset, date::GenericDate, interval::Integer
    return _end / _ini
 end
 
-""" On balance volume """
-function OBV(asset::Asset, date::GenericDate, window::Integer=14)
+""" On balance volume divergence"""
+function ∇OBV(asset::Asset, date::GenericDate, window::Integer=14)
     hist = FetchAssetHistory(asset,date,daysInHistory=3*window)
     OBV(hist[!,:adjusted_close], hist[!,:volume], window)
 end
 
-function OBV(values::AbstractArray{<:Number}, volumes::AbstractArray{<:Number}, window::Integer=14)
+function ∇OBV(values::AbstractArray{<:Number}, volumes::AbstractArray{<:Number}, window::Integer=14)
     MAs = MovingAverage(values, window)[end-window:end]
     MAs = (MAs.-minimum(MAs)) / (maximum(MAs)-minimum(MAs))
     _coefClose = LinearTrend(MAs)
@@ -80,14 +80,14 @@ end
 CMFV(Pl::Number, Ph::Number, Pc::Number, V::Number) = ( (Pc-Pl)-(Ph-Pc) ) / (Ph-Pl) * V
 
 """
-    Returns the ADLine values. The window is the interval to compute the values on: end-window to end of array
+    Returns the  Accumulation Distribution line values. The window is the interval to compute the values on: end-window to end of array
 """
-function ADLine(asset::Asset, date::GenericDate, window::Integer=5)
+function ADValues(asset::Asset, date::GenericDate, window::Integer=5)
     hist = FetchAssetHistory(asset, date, daysInHistory=3*window)
     ADLine(hist[!,:low], hist[!,:high], hist[!,:adjusted_close], hist[!,:volume], window)
 end
 
-function ADLine(lows::AbstractArray{<:Number}, highs::AbstractArray{<:Number}, closings::AbstractArray{<:Number},
+function ADValues(lows::AbstractArray{<:Number}, highs::AbstractArray{<:Number}, closings::AbstractArray{<:Number},
                 volumes::AbstractArray{<:Number}, window::Integer=5)
 
     AD = zeros(window)
