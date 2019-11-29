@@ -102,7 +102,7 @@ function FetchAssetHistory(asset::Asset, date::GenericDate; daysInHistory::Integ
     			h[:timestamp] <= Date(date)
     	@select (open = h[:open], adjusted_close = h[:adjusted_close],
     		avg = mean([h[:open], h[:adjusted_close]]), timestamp=h[:timestamp],
-            volume=h[:volume], high=[:high], low=[:low])
+            volume=h[:volume], high=h[:high], low=h[:low])
     	@collect DataFrame
     end
 end

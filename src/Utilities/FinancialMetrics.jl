@@ -52,7 +52,7 @@ end
 """ Computes the advance decline volume of an asset: (volume at date) / (volume x days earlier) """
 function AdvanceDeclineVolume(asset::Asset, date::GenericDate, interval::Integer=2)::AbstractFloat
     hist = FetchCloseAssetHistory(asset, date, daysInHistory=4*interval)
-    return AdvanceDeclineRatio(hist[!,:volume], interval)
+    return AdvanceDeclineVolume(hist[!,:volume], interval)
 end
 function AdvanceDeclineVolume(volumes::AbstractArray,interval::Integer=2)::AbstractFloat
     volumes[end] / volumes[end-interval]

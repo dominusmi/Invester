@@ -1,20 +1,18 @@
 module Invester
 
 using JSON
-using Dates
-using CSV
-
-using Parameters
-using Glob
+using Parameters, UUIDs, Glob, CSV, Dates
 using JuliaDB
 using Query
+using IndexedTables
 using DataFrames: DataFrame, DataFrameRow
 using Statistics
-using UUIDs
+using OnlineStats
 using HTTP
 using MySQL
-using OnlineStats
-using IndexedTables
+using Flux
+using BSON
+using CuArrays
 using Base: eachrow, eachcol
 
 import Base.==, Base.~
@@ -32,7 +30,7 @@ export Asset, AssetHistory, AssetHistoryBuffer, Investment, InvestmentType, Inve
 	InvestmentsClosedOn, InvestmentsOpenedOn, InvestmentsOpenOn, ValueOpen, DateOpen,
 
 	Select,
-	# Date - DateTime comparison function
+	# Operator for Date - DateTime comparison function
 	~
 
 const global BASE_PATH = dirname(pathof(Invester))
@@ -41,7 +39,11 @@ const global CONFIG_PATH = ROOT_PATH * "/Config"
 
 const global ENVIRONMENT = JSON.parsefile(Invester.CONFIG_PATH * "/appconfig.json")["Environment"]
 
+const global USING_GPU = parse(Bool, JSON.parsefile(Invester.CONFIG_PATH * "/appconfig.$ENVIRONMENT.json")["Using_GPU"])
+
 GenericDate = Union{Date,DateTime}
+
+CuArrays.allowscalar(false)
 
 include("Types.jl")
 include("API.jl")
@@ -51,14 +53,15 @@ include("Utilities.jl")
 include("DataAccess.jl")
 include("Analysis.jl")
 include("Portfolio.jl")
-include("Portfolios/MovingAverage.jl")
-include("Portfolios/MovingAverageWithTrend.jl")
 include("Brain.jl")
 include("Utilities/DateUtilities.jl")
 include("Utilities/Logging.jl")
 include("DatabaseHandle.jl")
 include("Utilities/TimeSeriesUtilities.jl")
 include("Utilities/FinancialMetrics.jl")
+include("Portfolios/MovingAverage.jl")
+include("Portfolios/MovingAverageWithTrend.jl")
+include("Portfolios/FinancialMetricsCNN.jl")
 
 
 
