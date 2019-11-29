@@ -42,7 +42,7 @@ function CloseConfidence(investment::Investment, pf::MovingAverageWithTrendPortf
     history = CheckLoadHistory()
     asset = investment.asset
 
-    currentValue = FetchCloseAssetValue(investment.asset, date)
+    currentValue = FetchCloseAssetValue(asset, date)
     if currentValue == nothing
         return 0
     end
