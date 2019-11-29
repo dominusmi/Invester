@@ -423,9 +423,9 @@ version = "0.13.2"
 
 [[LazyArrays]]
 deps = ["ArrayLayouts", "FillArrays", "LinearAlgebra", "MacroTools", "StaticArrays"]
-git-tree-sha1 = "6d67f19b661fb48599c5e980d4a7ca1779cff4c3"
+git-tree-sha1 = "f787fc888b28b83ae32863f2ae54f47e8ca40eaf"
 uuid = "5078a376-72f3-5289-bfd5-ec5146d43c02"
-version = "0.14.9"
+version = "0.14.10"
 
 [[LearnBase]]
 deps = ["LinearAlgebra", "SparseArrays", "StatsBase", "Test"]
@@ -820,6 +820,12 @@ deps = ["Printf"]
 git-tree-sha1 = "311765af81bbb48d7bad01fb016d9c328c6ede03"
 uuid = "a759f4b9-e2f1-59dc-863e-4aeb61b1ea8f"
 version = "0.5.3"
+
+[[Tracker]]
+deps = ["Adapt", "DiffRules", "ForwardDiff", "LinearAlgebra", "MacroTools", "NNlib", "NaNMath", "Printf", "Random", "Requires", "SpecialFunctions", "Statistics", "Test"]
+git-tree-sha1 = "439e3a4f6d54739bb17c36aa1b5855acec22fc1e"
+uuid = "9f7883ad-71c0-57eb-9f7f-b5c9e6d3789c"
+version = "0.2.5"
 
 [[TranscodingStreams]]
 deps = ["Random", "Test"]
