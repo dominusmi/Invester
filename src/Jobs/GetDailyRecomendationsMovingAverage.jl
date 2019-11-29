@@ -4,6 +4,10 @@ using Plots
 using Dates, Query, JuliaDB, DataFrames
 using Statistics
 using MySQL
+using Flux
+using CuArrays
+using Tracker
+using BSON
 
 Invester.CheckLoadHistory()
 
@@ -26,9 +30,16 @@ Invester.SavePortfolio(pf, "dailyMovingAverage")
 LogJobInfo("Succesfully terminated daily historical Moving Average")
 
 
-LogJobInfo("--------------------------------------------")
+# LogJobInfo("--------------------------------------------")
 LogJobInfo("Running historical Moving Average with Trend")
 pf = Invester.LoadPortfolio("dailyMovingAverageTrend")
 Invester.SimulatePortfolioDecisionMaker(pf, Dates.today() - Dates.Day(1), Dates.today(), dayIterator=Invester.DayIterator)
 Invester.SavePortfolio(pf, "dailyMovingAverageTrend")
 LogJobInfo("Succesfully terminated daily historical Moving Average")
+
+LogJobInfo("--------------------------------------------")
+LogJobInfo("Running Financial Metrics CNN portfolio")
+pf = Invester.LoadPortfolio("dailyFNCNN")
+Invester.SimulatePortfolioDecisionMaker(pf, Dates.today() - Dates.Day(1), Dates.today(), dayIterator=Invester.DayIterator)
+Invester.SavePortfolio(pf, "dailyFNCNN")
+LogJobInfo("Succesfully terminated daily Financial Metrics CNN portfolio")
