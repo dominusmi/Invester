@@ -1,0 +1,8 @@
+{
+  "Database":{
+    "Server": "edoardobarp.eu",
+    "Username": "barped",
+    "Password": "Th1s1sTheMysqlPa$$word"
+  },
+  "Using_GPU": "false"
+}

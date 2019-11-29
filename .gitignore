@@ -2,7 +2,7 @@ src/resources/*
 
 src/Logs/
 
-Config/
+Config/appconfig.json
 
 *.csv#
 
