@@ -150,3 +150,16 @@ function CloseConfidence(investment::Investment, pf::FinancialMetricsCNNPortfoli
     # end
     # return 0
 end
+
+function Serialise(pf::FinancialMetricsCNNPortfolio)::AbstractString
+    fn = fieldnames(typeof(pf))
+    fields = Set(fn)
+    delete!(fields, :investments)
+    delete!(fields, :model)
+
+    serialised = Dict()
+    for field in fields
+        serialised[field] = getfield(pf, field)
+    end
+    "$serialised"
+end
