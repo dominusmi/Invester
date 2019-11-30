@@ -3,6 +3,7 @@ src/resources/*
 src/Logs/
 
 Config/appconfig.json
+Config/appconfig.staging.json
 
 *.csv#
 
