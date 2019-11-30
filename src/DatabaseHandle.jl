@@ -47,8 +47,9 @@ function SavePortfolio(pf::AbstractPortfolio, name::String)
 
     conn = Connect()
     query = """INSERT INTO Portfolios (name, type, kwargs, NetClosedPercentageEquity, PotentialPercentageEquity)
-    	VALUES ('$name', 'MovingAveragePortfolio','$(Serialise(pf))', $netClosedPercentageEquity, $potentialProfitPercentage)
+    	VALUES ('$name', '$(typeof(pf))','$(Serialise(pf))', $netClosedPercentageEquity, $potentialProfitPercentage)
         ON DUPLICATE KEY UPDATE
+        type = VALUES(type),
         kwargs = VALUES(kwargs),
         NetClosedPercentageEquity=VALUES(NetClosedPercentageEquity),
         PotentialPercentageEquity=VALUES(PotentialPercentageEquity);"""
