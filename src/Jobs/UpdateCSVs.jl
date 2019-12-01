@@ -92,6 +92,7 @@ LogJobInfo("--------------------------------------------")
 LogJobInfo("Running Update CSV job")
 
 update_only = isempty(ARGS) ? false : true
+companies_not_fetched = []
 
 # Retries at most three times to fetch company information
 for i in 1:3
