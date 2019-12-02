@@ -51,6 +51,7 @@ function SaveTop100CompaniesCSV(;update_only=false, max_time_to_wait = 65)
     companies_not_fetched = []
 
     # Loop to save each company history
+    LogJobInfo("Alredy Saved items: $alreadySaved")
     LogJobInfo("Started fetching stock prices")
     i = 0
     time_to_remove = 0.
@@ -86,6 +87,7 @@ function SaveTop100CompaniesCSV(;update_only=false, max_time_to_wait = 65)
             time_to_remove = 0
         end
     end
+    LogJobInfo("Exiting main loop, companies not fetched: $companies_not_fetched")
     companies_not_fetched
 end
 LogJobInfo("--------------------------------------------")
