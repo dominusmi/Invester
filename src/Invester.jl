@@ -13,6 +13,7 @@ using MySQL
 using Flux
 using BSON
 using CuArrays
+using Tracker
 using Base: eachrow, eachcol
 
 import Base.==, Base.~
