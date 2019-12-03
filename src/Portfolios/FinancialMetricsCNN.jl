@@ -90,7 +90,7 @@ function LongConfidence(asset::Asset, pf::FinancialMetricsCNNPortfolio, date::Da
     engineered_episode = USING_GPU ? gpu(engineered_episode) : engineered_episode
 
     reshape_size = (FMCNN_ANALYSED_LENGTH, 8, 1, 1)
-    prediction = pf.model(reshape(engineered_episode, reshape_size)).data[1]
+    prediction = Tracker.data.( pf.model(reshape(engineered_episode, reshape_size)) )
 
     Δprediction = prediction - engineered_episode[end,2]
 
