@@ -6,6 +6,7 @@ struct FinancialMetricsCNNPortfolio <: AbstractPortfolio
     longThreshold::Number
     closeThreshold::Number
     model::Chain
+    modelName::AbstractString
 end
 
 function FinancialMetricsCNNPortfolio(;
@@ -14,16 +15,18 @@ function FinancialMetricsCNNPortfolio(;
     upperClosePercentageThreshold::Number = 2,
     maxInvestments::Integer = 1e4,
     longThreshold::Number = 0.5,
-    closeThreshold::Number = 0.5)
+    closeThreshold::Number = 0.5,
+    modelName::AbstractString = "CNN3C3D58p")
 
     global Using_GPU
 
-    model = BSON.load(BASE_PATH * "/Models/cnn_financial_metrics 3conv 3dense 58p acc.bson")[:cpu_model]
+    model_type = include_string(Invester, modelName)
+    model = LoadModel(model_type)
 
     model = USING_GPU ? gpu(model) : model
 
     FinancialMetricsCNNPortfolio(investments, lowerClosePercentageThreshold, upperClosePercentageThreshold,
-        maxInvestments, longThreshold, closeThreshold, model)
+        maxInvestments, longThreshold, closeThreshold, model, modelName)
 end
 
 

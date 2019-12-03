@@ -63,6 +63,8 @@ include("Portfolios/MovingAverage.jl")
 include("Portfolios/MovingAverageWithTrend.jl")
 include("Portfolios/FinancialMetricsCNN.jl")
 
+include("Models/CNN3C3D58p.jl")
+
 
 
 history = Dict{Symbol, AssetHistory}()
