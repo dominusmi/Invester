@@ -1,5 +1,10 @@
 Hook(pf::AbstractPortfolio, date::Date, logger) = nothing
 
+"""
+	Simulates the action of a portfolio through a date interval.
+	The end date is NOT included.
+	It is assumed that assets are closed/opened at the end of the market day, using the close values.
+"""
 function SimulatePortfolioDecisionMaker(pf::AbstractPortfolio, initDate::Date, endDate::Date, logger=nothing;
 										verbose=true, dayIterator::Type{<:AbstractDayIterator}=WallStreetDayIterator)
 
@@ -37,8 +42,8 @@ function SimulatePortfolioDecisionMaker(pf::AbstractPortfolio, initDate::Date, e
 			end
 
 			# Long position
-			openValue = FetchOpenAssetValue(asset, dateOpen)
-			Long!(pf, asset, openValue, 100, dateOpen = dateOpen)
+			openValue = FetchCloseAssetValue(asset, day)
+			Long!(pf, asset, openValue, 100, day = EndOf(day))
 		end
 
 		# Hook in process
