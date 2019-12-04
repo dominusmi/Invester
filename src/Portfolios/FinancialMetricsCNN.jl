@@ -90,11 +90,11 @@ function LongConfidence(asset::Asset, pf::FinancialMetricsCNNPortfolio, date::Da
     engineered_episode = USING_GPU ? gpu(engineered_episode) : engineered_episode
 
     reshape_size = (FMCNN_ANALYSED_LENGTH, 8, 1, 1)
-    prediction = Tracker.data.( pf.model(reshape(engineered_episode, reshape_size)) )[1]
+    prediction = Tracker.data.( pf.model(reshape(engineered_episode, reshape_size))[1] )
 
     Δprediction = prediction - engineered_episode[end,2]
 
-    Δprediction = USING_GPU ? cpu(Δprediction) : prediction
+    Δprediction = USING_GPU ? cpu(Δprediction) : Δprediction
 
     # If Δprediction <0, obviously no long. If greater than 0.05, probably anomaly.
     if Δprediction < 0 || Δprediction > 0.05
