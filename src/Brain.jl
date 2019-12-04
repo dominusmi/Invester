@@ -16,7 +16,7 @@ function SimulatePortfolioDecisionMaker(pf::AbstractPortfolio, initDate::Date, e
 		for (k,v) in history
 			# Check that haven't already invested in asset in last 10 days
 			openInvts = sort( OpenInvestments(pf, v.asset), by = x->x.dateOpen )
-			if !isempty(openInvts) && (day - Date(openInvts[end].dateOpen)).value < 10
+			if !isempty(openInvts) && abs((day - Date(openInvts[end].dateOpen)).value) < 10
 				continue
 			end
 
