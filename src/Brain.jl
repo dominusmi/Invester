@@ -43,7 +43,7 @@ function SimulatePortfolioDecisionMaker(pf::AbstractPortfolio, initDate::Date, e
 
 			# Long position
 			openValue = FetchCloseAssetValue(asset, day)
-			Long!(pf, asset, openValue, 100, day = EndOf(day))
+			Long!(pf, asset, openValue, 100, dateOpen = EndOf(day))
 		end
 
 		# Hook in process
