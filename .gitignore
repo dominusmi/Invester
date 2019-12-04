@@ -10,3 +10,5 @@ Config/appconfig.staging.json
 *.csv
 
 fetchCSVfromServer.sh
+
+.ipynb_checkpoints/
