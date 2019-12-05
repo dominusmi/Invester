@@ -98,10 +98,12 @@ end
 InvestmentReturn(inv::Investment, closeValue::Number) = Return(inv, closeValue)
 InvestmentReturn(inv::ClosedInvestment) = Return(inv)
 
-
+#endregion
+#region Portfolio
 
 abstract type AbstractPortfolio end
 abstract type AbstractEquityPortfolio <: AbstractPortfolio end
+abstract type AbstractNonEquityPortfolio <: AbstractPortfolio end
 
 struct Portfolio <: AbstractPortfolio
     investments::Array{<:AbstractInvestment}
