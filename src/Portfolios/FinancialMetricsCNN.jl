@@ -11,8 +11,8 @@ end
 
 function FinancialMetricsCNNPortfolio(;
     investments::Array{<:AbstractInvestment} = Array{AbstractInvestment,1}(),
-    lowerClosePercentageThreshold::Number = -6,
-    upperClosePercentageThreshold::Number = 2,
+    lowerClosePercentageThreshold::Number = -0.06,
+    upperClosePercentageThreshold::Number = 0.02,
     maxInvestments::Integer = 1e4,
     longThreshold::Number = 0.5,
     closeThreshold::Number = 0.5,

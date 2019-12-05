@@ -1,7 +1,7 @@
-@with_kw struct MovingAverageWithTrendPortfolio <: AbstractPortfolio
+@with_kw struct MovingAverageWithTrendPortfolio <: AbstractNonEquityPortfolio
     investments::Array{<:AbstractInvestment} = Array{AbstractInvestment,1}()
-    lowerClosePercentageThreshold::Number = -6
-    upperClosePercentageThreshold::Number = 2
+    lowerClosePercentageThreshold::Number = -0.06
+    upperClosePercentageThreshold::Number = 0.02
     maxInvestments::Integer = 1e4
     longThreshold::Number = 0.5
     closeThreshold::Number = 0.5
@@ -69,25 +69,3 @@ function CloseConfidence(investment::Investment, pf::MovingAverageWithTrendPortf
     end
     return 0
 end
-
-
-#region Profit calculation functions
-
-function PotentialProfitPercentage(pf::MovingAverageWithTrendPortfolio, date::GenericDate = Dates.today()-Dates.Day(1))
-    date = Date(date)
-    total = 0.
-    for inv in OpenInvestments(pf)
-        total += PotentialProfitPercentage(inv, date) / inv.invested
-    end
-    total / pf.maxInvestments
-end
-
-function ClosedProfitPercentage(pf::MovingAverageWithTrendPortfolio)
-    total = 0.
-    for inv in ClosedInvestments(pf)
-        total += ClosedProfitPercentage(inv)
-    end
-    total / pf.maxInvestments
-end
-
-#endregion

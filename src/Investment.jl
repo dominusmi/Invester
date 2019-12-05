@@ -41,26 +41,29 @@ function Close!(pf::AbstractPortfolio, inv::Investment, value::Number, dateClose
     Close!(pf, inv.uuid, value, dateClose)
 end
 
-
+"""
+    Returns the real amount (e.g. euro difference) for investment, and the percentage
+    profit in float format (i.e. 1.8% => 0.018, and not 1.8)
+"""
 function Return(inv::Investment{LongInvestment}, value::Number)::InvestmentReturn
     _valueDiff = Float64(value) - inv.value
     perc = (_valueDiff) / inv.value
-    InvestmentReturn(perc * inv.invested, perc * 100)
+    InvestmentReturn(perc * inv.invested, perc)
 end
 function Return(inv::Investment{ShortInvestment}, value::Number)::InvestmentReturn
     _return = Float64(inv.value) - value
     perc = (_return) / inv.value
-    InvestmentReturn(perc * inv.invested, perc * 100)
+    InvestmentReturn(perc * inv.invested, perc)
 end
 function Return(inv::ClosedInvestment, value::Number)::InvestmentReturn
     _return = value - Float64(inv.valueOpen)
     perc = (_return) / inv.valueOpen
-    InvestmentReturn(perc * inv.invested, perc * 100)
+    InvestmentReturn(perc * inv.invested, perc)
 end
 function Return(inv::ClosedInvestment)::InvestmentReturn
     _return = inv.valueClose - Float64(inv.valueOpen)
     perc = (_return) / inv.valueOpen
-    InvestmentReturn(perc * inv.invested, perc * 100)
+    InvestmentReturn(perc * inv.invested, perc)
 end
 
 PotentialProfit(inv::AbstractInvestment) = 0.

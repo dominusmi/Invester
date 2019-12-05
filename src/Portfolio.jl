@@ -57,10 +57,12 @@ end
 function PotentialProfitPercentage(pf::AbstractPortfolio, date::GenericDate = Dates.today()-Dates.Day(1))
     date = Date(date)
     total = 0.
+    totalInvested = 0.
     for inv in OpenInvestments(pf)
-        total += PotentialProfitPercentage(inv, date) / inv.invested
+        total += PotentialProfitPercentage(inv, date) * inv.invested
+        totalInvested += inv.invested
     end
-    total
+    total / totalInvested
 end
 
 function ClosedProfit(pf::AbstractPortfolio)
@@ -73,10 +75,12 @@ end
 
 function ClosedProfitPercentage(pf::AbstractPortfolio)
     total = 0.
+    totalInvested = 0.
     for inv in ClosedInvestments(pf)
-        total += ClosedProfitPercentage(inv)
+        total += ClosedProfitPercentage(inv) * inv.invested
+        totalInvested += inv.invested
     end
-    total
+    total / totalInvested
 end
 
 
