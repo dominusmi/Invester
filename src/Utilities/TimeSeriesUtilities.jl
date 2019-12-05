@@ -4,7 +4,8 @@
     Both are of shape m x n, where m is the length of each episode,
     and n the number of episodes.
 """
-function GenerateTimeSeriesEpisodes(data::Union{Array{<:Number}, DataFrame}, episodeLength, predictLength, cols::Integer=1;
+function GenerateTimeSeriesEpisodes(
+    data::Union{Array{<:Number}, DataFrame}, episodeLength::Integer, predictLength::Integer, cols::Integer=1;
         overlap=false, n_eps = nothing)
 
     fullEpisodeLength = episodeLength + predictLength
@@ -43,8 +44,8 @@ end
     n: number of episodes
 """
 function GenerateTimeSeriesEpisodes(
-        data::Union{Array{<:Number}, DataFrame}, episodeLength, predictLength,
-        cols::AbstractArray=1:size(data,2); overlap=false, n_eps = nothing)
+        data::Union{Array{<:Number}, DataFrame}, episodeLength::Integer, predictLength::Integer, cols::AbstractArray=1:size(data,2);
+        overlap::Bool=false, n_eps = nothing)
 
     fullEpisodeLength = episodeLength + predictLength
 
