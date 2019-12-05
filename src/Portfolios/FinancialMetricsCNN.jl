@@ -65,28 +65,21 @@ function ComputeEngineeredEpisode(episode)
     return engineered_episode
 end
 
-
-function LongConfidence(asset::Asset, pf::FinancialMetricsCNNPortfolio, date::Date = Dates.today())
+function GenerateCurrentEpisode(asset::Asset, date::Date = Dates.today())
     global USING_GPU
 
-    history = CheckLoadHistory()
     # Take more days to avoid bad surprises, overhead minimal
     episode = FetchAssetHistory(asset, date, daysInHistory = 2*FMCNN_EPISODE_LENGTH)
 
     # Sanity check
-    if size(episode,1) <= FMCNN_EPISODE_LENGTH
-        return 0
-    end
+    if (size(episode,1) <= FMCNN_EPISODE_LENGTH) return nothing end
 
     # Convert "episode" data into matrix
     episode = convert(Matrix, episode[end-FMCNN_EPISODE_LENGTH:end, FMCNN_FEATURES])
+    return episode
+end
 
-    # Gets episode with all metrics
-    engineered_episode = ComputeEngineeredEpisode(episode)
-    if engineered_episode == nothing
-        return 0
-    end
-
+function ComputeΔPrediction(pf::FinancialMetricsCNNPortfolio, engineered_episode)
     engineered_episode = USING_GPU ? gpu(engineered_episode) : engineered_episode
 
     reshape_size = (FMCNN_ANALYSED_LENGTH, 8, 1, 1)
@@ -95,6 +88,18 @@ function LongConfidence(asset::Asset, pf::FinancialMetricsCNNPortfolio, date::Da
     Δprediction = prediction - engineered_episode[end,2]
 
     Δprediction = USING_GPU ? cpu(Δprediction) : Δprediction
+    return Δprediction
+end
+
+function LongConfidence(asset::Asset, pf::FinancialMetricsCNNPortfolio, date::Date = Dates.today())
+
+    episode = GenerateCurrentEpisode(asset,date)
+    if (episode == nothing) return 0 end
+
+    # Gets episode with all metrics
+    engineered_episode = ComputeEngineeredEpisode(episode)
+
+    Δprediction = ComputeΔPrediction(pf, engineered_episode)
 
     # If Δprediction <0, obviously no long. If greater than 0.05, probably anomaly.
     if Δprediction < 0 || Δprediction > 0.05
@@ -109,18 +114,29 @@ end
 function CloseConfidence(investment::Investment, pf::FinancialMetricsCNNPortfolio,
                          date::Date = Dates.today())
 
-    history = CheckLoadHistory()
+
 
     currentValue = FetchCloseAssetValue(investment.asset, date)
-    if currentValue == nothing
-        return 0
-    end
+    # if (currentValue == nothing) return 0 end
+
+    episode = GenerateCurrentEpisode(investment.asset,date)
+
+    # Gets episode with all metrics
+    engineered_episode = ComputeEngineeredEpisode(episode)
+    if (engineered_episode == nothing) return 0  end
+
+    Δprediction = ComputeΔPrediction(pf, engineered_episode)
 
     pot = PotentialProfitPercentage(investment, currentValue)
 
-    if pot > UpperClosePercentageThreshold(pf) || pot < LowerClosePercentageThreshold(pf)
+    if Δprediction < -0.01 && pot > 0
+        return 1
+    elseif pot > pf.upperClosePercentageThreshold
+        return 1
+    elseif pot < pf.lowerClosePercentageThreshold
         return 1
     end
+
     return 0
 
     # history = CheckLoadHistory()
