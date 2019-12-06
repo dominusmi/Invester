@@ -98,6 +98,7 @@ function LongConfidence(asset::Asset, pf::FinancialMetricsCNNPortfolio, date::Da
 
     # Gets episode with all metrics
     engineered_episode = ComputeEngineeredEpisode(episode)
+    if (engineered_episode == nothing) return 0 end
 
     Δprediction = ComputeΔPrediction(pf, engineered_episode)
 
