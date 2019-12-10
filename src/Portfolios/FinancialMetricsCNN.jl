@@ -35,13 +35,13 @@ const FMCNN_ANALYSED_LENGTH = 20
 const FMCNN_FEATURES = [:open, :adjusted_close, :low, :high, :volume]
 const FMCNN_WINDOW = 10
 
-function ComputeEngineeredEpisode(episode)
+function ComputeEngineeredEpisode(episode; analysed_length=FMCNN_ANALYSED_LENGTH, window=FMCNN_WINDOW)
 
-    analysed_range = (size(episode,1)-FMCNN_ANALYSED_LENGTH+1):size(episode,1)
+    analysed_range = (size(episode,1)-analysed_length+1):size(episode,1)
     normaliser = episode[analysed_range[1],:]'
 
     # 8 is the number of columns: 5 main and 3 metrics
-    engineered_episode = zeros(FMCNN_ANALYSED_LENGTH, 8)
+    engineered_episode = zeros(analysed_length, 8)
 
     # This would later break due to division by zero
     if any(normaliser.==0.0)
@@ -54,7 +54,7 @@ function ComputeEngineeredEpisode(episode)
     advs = zeros(size(analysed_range,1))
     ∇obvs = zeros(size(analysed_range,1))
     for (j,range) in enumerate(analysed_range)
-        ∇obvs[j] = Invester.∇OBV(episode[1:range,2], episode[1:range,5], FMCNN_WINDOW)
+        ∇obvs[j] = Invester.∇OBV(episode[1:range,2], episode[1:range,5], window)
         adrs[j] = Invester.AdvanceDeclineRatio(episode[range-1:range],1)
         advs[j] = Invester.AdvanceDeclineVolume(episode[range-1:range],1)
     end
