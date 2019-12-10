@@ -66,6 +66,10 @@ function FetchCloseAssetValue(asset::Asset, date::GenericDate)::Number
     # if df[end,:timestamp] != date
         # LogWarn("Couldn't fetch asset value for $(asset.symbol) on $date, instead fetched $(df[end,:timestamp])")
     # end
+    if size(df,1) == 0
+        @warn "No value found for $(asset.symbol) on $date. Replaced with 0."
+        return 0.
+    end
     df[end, :adjusted_close]
 end
 

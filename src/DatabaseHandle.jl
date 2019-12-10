@@ -57,6 +57,7 @@ function SavePortfolio(pf::AbstractPortfolio, name::String)
 
     res = MySQL.Query(conn, """SELECT id FROM Portfolios WHERE name='$name';""") |> DataFrame
     portfolioId = res[1,1]
+    MySQL.Query(conn, """DELETE FROM Investments WHERE portfolioId=$portfolioId""")
     for _inv in pf.investments
         SaveInvestment(_inv, portfolioId)
     end
