@@ -9,6 +9,8 @@ using CuArrays
 using Tracker
 using BSON
 
+CuArrays.allowscalar(true)
+
 function main()
     Invester.CheckLoadHistory()
 
