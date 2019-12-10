@@ -80,7 +80,7 @@ function ClosedProfitPercentage(pf::AbstractPortfolio)
         total += ClosedProfitPercentage(inv) * inv.invested
         totalInvested += inv.invested
     end
-    total / totalInvested
+    return totalInvested < 1e-4 ? 0. : total / totalInvested
 end
 
 
